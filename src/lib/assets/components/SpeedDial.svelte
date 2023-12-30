@@ -6,7 +6,7 @@
 	export let y: number;
 </script>
 
-{#if y < 2660}
+{#if y < 2380}
 	<div in:fade out:fade>
 		<SpeedDial defaultClass="fixed end-8 bottom-6">
 			<SpeedDialButton name="Share">

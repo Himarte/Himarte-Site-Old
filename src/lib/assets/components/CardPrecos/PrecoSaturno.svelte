@@ -1,53 +1,66 @@
 <script>
 	import { Card, Button } from 'flowbite-svelte';
-	import { CheckCircleSolid } from 'flowbite-svelte-icons';
+	import { CheckCircle, Plus } from 'lucide-svelte';
+	import MelhorPreco from '$lib/assets/components/CardPrecos/MelhorPreco.svelte';
+
+	import planetaSaturno from '$lib/assets/img/panetas/saturno.svg';
 </script>
 
-<Card padding="xl">
-	<h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Standard plan</h5>
-	<div class="flex items-baseline text-gray-900 dark:text-white">
-		<span class="text-3xl font-semibold">$</span>
-		<span class="text-5xl font-extrabold tracking-tight">49</span>
-		<span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
+<Card
+	class="relative flex w-[18rem] flex-col justify-between gap-4  rounded-3xl border !border-primary-500/50 !bg-transparent p-6 shadow-[0_0px_50px_-20px]  shadow-primary-600   hover:!border-primary-600"
+>
+	<MelhorPreco />
+	<img
+		src={planetaSaturno}
+		alt="Planeta Saturno"
+		class="absolute -right-9 -top-9 w-32 rotate-12 hover:rotate-6"
+	/>
+	<div>
+		<h5 class=" text-4xl font-bold text-primary-600">Saturno</h5>
+		<div class="flex flex-col items-baseline text-white">
+			<span class="text-ter text-5xl font-extrabold tracking-tight"
+				>400 <span class="text-3xl font-extrabold tracking-tight">MEGAS</span>
+			</span>
+			<span class="flex"><Plus color="#EF562F" /> ROTEADOR</span>
+		</div>
 	</div>
 	<!-- List -->
-	<ul class="my-7 space-y-4">
-		<li class="flex space-x-2 rtl:space-x-reverse">
-			<CheckCircleSolid class="h-4 w-4 text-primary-600 dark:text-primary-500" />
-			<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
-				2 team members
-			</span>
+
+	<!-- <ul class=" flex flex-col gap-3 rounded-3xl py-7 leading-tight">
+		<li
+			class="flex items-center justify-start gap-3 uppercase text-white hover:font-semibold hover:text-gray-200"
+		>
+			<CheckCircle color="#EF562F" size={20} /> Mumo
 		</li>
-		<li class="flex space-x-2 rtl:space-x-reverse">
-			<CheckCircleSolid class="h-4 w-4 text-primary-600 dark:text-primary-500" />
-			<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
-				20GB Cloud storage
-			</span>
+		<li
+			class="flex items-center justify-start gap-3 uppercase text-white hover:font-semibold hover:text-gray-200"
+		>
+			<CheckCircle color="#EF562F" size={20} /> Toca Livros
 		</li>
-		<li class="flex space-x-2 rtl:space-x-reverse">
-			<CheckCircleSolid class="h-4 w-4 text-primary-600 dark:text-primary-500" />
-			<span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
-				Integration help
-			</span>
+		<li
+			class="flex items-center justify-start gap-3 uppercase text-white hover:font-semibold hover:text-gray-200"
+		>
+			<CheckCircle color="#EF562F" size={20} /> Sistema Exa
 		</li>
-		<li class="flex space-x-2 line-through decoration-gray-500 rtl:space-x-reverse">
-			<CheckCircleSolid class="h-4 w-4 text-gray-400 dark:text-gray-500" />
-			<span class="text-base font-normal leading-tight text-gray-500">Sketch Files</span>
+		<li
+			class="flex items-center justify-start gap-3 uppercase line-through hover:font-semibold hover:text-gray-400"
+		>
+			<CheckCircle color="#6b7280" size={20} /> Quilifica
 		</li>
-		<li class="flex space-x-2 line-through decoration-gray-500 rtl:space-x-reverse">
-			<CheckCircleSolid class="h-4 w-4 text-gray-400 dark:text-gray-500" />
-			<span class="text-base font-normal leading-tight text-gray-500">API Access</span>
-		</li>
-		<li class="flex space-x-2 line-through decoration-gray-500 rtl:space-x-reverse">
-			<CheckCircleSolid class="h-4 w-4 text-gray-400 dark:text-gray-500" />
-			<span class="text-base font-normal leading-tight text-gray-500">Complete documentation</span>
-		</li>
-		<li class="flex space-x-2 line-through decoration-gray-500 rtl:space-x-reverse">
-			<CheckCircleSolid class="h-4 w-4 text-gray-400 dark:text-gray-500" />
-			<span class="text-base font-normal leading-tight text-gray-500"
-				>24×7 phone & email support</span
-			>
-		</li>
-	</ul>
-	<Button class="w-full">Choose plan</Button>
+	</ul> -->
+
+	<div class="flex flex-col">
+		<span class="flex items-baseline justify-center text-white">
+			<span class="text-2xl font-semibold text-primary-600">R$</span>
+			<span class="text-4xl font-extrabold tracking-tight">109</span>
+			<span class="text-2xl font-extrabold tracking-tight text-primary-600">,</span>
+			<span class="text-2xl font-extrabold tracking-tight">90</span>
+			<span class="ms-1 text-xl font-normal text-gray-400">/Mes</span>
+		</span>
+		<Button
+			pill
+			class="mt-1 w-full !border !border-primary-500/50 !bg-tertiary-600 font-semibold uppercase text-primary-600 hover:!border-tertiary-600 hover:!bg-primary-700 hover:!text-white "
+			>Saber mais</Button
+		>
+	</div>
 </Card>

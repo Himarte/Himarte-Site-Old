@@ -1,20 +1,19 @@
 <script lang="ts">
 	import PrecoVenus from '$lib/assets/components/CardPrecos/PrecoVenus.svelte';
-	import PrecoUrano from '$lib/assets/components/CardPrecos/PrecoUrano.svelte';
+	import PrecoSaturno from '$lib/assets/components/CardPrecos/PrecoSaturno.svelte';
 	import PrecoMarte from '$lib/assets/components/CardPrecos/PrecoMarte.svelte';
 	import PrecoJupiter from '$lib/assets/components/CardPrecos/PrecoJupiter.svelte';
-	import PrecoSaturno from '$lib/assets/components/CardPrecos/PrecoSaturno.svelte';
+	import PrecoUrano from '$lib/assets/components/CardPrecos/PrecoUrano.svelte';
 	import PrecoPlutao from '$lib/assets/components/CardPrecos/PrecoPlutao.svelte';
-	import ParceiroUnimed from '$lib/assets/components/CardParceiros/CardUnimed.svelte';
-	import ParceiroRbs from '$lib/assets/components/CardParceiros/CardRbs.svelte';
-	import ParceiroSicred from '$lib/assets/components/CardParceiros/CardSicred.svelte';
-	import ParceiroMedlife from '$lib/assets/components/CardParceiros/CardMedlife.svelte';
 
 	import MainImg from '$lib/assets/img/extras/hi-astronauta-main.png';
 	import Wave1t from '$lib/assets/img/extras/wave1t.svg';
 
+	import funtoPrecos from '$lib/assets/img/extras/fundo-planos.jpeg';
 	import { onMount } from 'svelte';
-	import { P } from 'flowbite-svelte';
+
+	import { Tabs, TabItem } from 'flowbite-svelte';
+	import { Briefcase, Building2, Home } from 'lucide-svelte';
 
 	export let y: number;
 	let visible: boolean;
@@ -59,43 +58,92 @@
 </picture>
 
 <img src={Wave1t} alt="Wave1" class="w-full content-evenly" />
-<section class="flex flex-col items-center justify-center gap-10 p-10">
-	<div class="flex flex-col gap-10 lg:flex-row">
-		<PrecoVenus />
-		<PrecoUrano />
-		<PrecoMarte />
-	</div>
-	<div class="flex flex-col gap-10 lg:flex-row">
-		<PrecoSaturno />
-		<PrecoPlutao />
-		<PrecoJupiter />
-	</div>
-</section>
+
+<div class=" fundoPrecos flex flex-col items-center justify-center">
+	<Tabs
+		style="underline"
+		defaultClass="flex justify-center items-center gap-10 pb-10"
+		contentClass="flex  justify-center items-center "
+	>
+		<TabItem open>
+			<div slot="title" class="flex items-center gap-2 text-lg">
+				<Home />
+				<span class="hidden sm:flex">Residenciais</span>
+			</div>
+			<div class="">
+				<section class="flex flex-col items-center justify-center gap-10 p-10">
+					<div class="flex flex-col gap-10 lg:flex-row">
+						<PrecoSaturno />
+
+						<PrecoJupiter />
+						<PrecoMarte />
+					</div>
+					<div class="flex flex-col gap-10 lg:flex-row">
+						<PrecoUrano />
+						<PrecoVenus />
+
+						<PrecoPlutao />
+					</div>
+				</section>
+			</div>
+		</TabItem>
+		<TabItem>
+			<div slot="title" class="flex items-center gap-2 text-lg">
+				<Briefcase />
+				<span class="hidden sm:flex">Profissionais</span>
+			</div>
+			<section class="flex flex-col items-center justify-center gap-10 p-10">
+				<div class="flex flex-col gap-10 lg:flex-row">
+					<PrecoVenus />
+					<PrecoSaturno />
+
+					<PrecoMarte />
+				</div>
+			</section>
+		</TabItem>
+		<TabItem>
+			<div slot="title" class="flex items-center gap-2 text-lg">
+				<Building2 />
+				<span class="hidden sm:flex">Empresariais</span>
+			</div>
+			<section class="flex flex-col items-center justify-center gap-10 p-10">
+				<div class="flex flex-col gap-10 lg:flex-row">
+					<PrecoVenus />
+					<PrecoSaturno />
+					<PrecoMarte />
+					<PrecoPlutao />
+					<PrecoUrano />
+					<PrecoJupiter />
+				</div>
+			</section>
+		</TabItem>
+	</Tabs>
+</div>
 
 <section class=" flex flex-col gap-10 py-16">
 	<h2 class="fontSpace flex items-center justify-center text-center text-2xl lg:text-4xl">
 		Nossos clientes
 	</h2>
-	<div class="flex justify-center gap-5">
+	<div class="flex flex-wrap items-center justify-center gap-2">
 		<enhanced:img
 			src="/src/lib/assets/img/parceiros/logo-medlife.svg"
 			alt="Logo Medlife"
-			class="flex w-40 items-center justify-center rounded-3xl bg-tertiary-500"
+			class="  flex w-40 items-center justify-center rounded-3xl bg-tertiary-500"
 		/>
 		<enhanced:img
 			src="/src/lib/assets/img/parceiros/logo-sicredi.svg"
 			alt="Logo Sicredi"
-			class="flex w-40 items-center justify-center rounded-3xl bg-tertiary-500"
+			class="  flex w-40 items-center justify-center rounded-3xl bg-tertiary-500 bg-cover bg-center bg-no-repeat"
 		/>
 		<enhanced:img
 			src="/src/lib/assets/img/parceiros/logo-rbs.svg"
 			alt="Logo RBS"
-			class="flex w-40 items-center justify-center rounded-3xl bg-tertiary-500 p-3"
+			class="  flex w-40 items-center justify-center rounded-3xl bg-tertiary-500 p-3"
 		/>
 		<enhanced:img
 			src="/src/lib/assets/img/parceiros/logo-unimed.svg"
 			alt="Logo unimed"
-			class="flex w-40 items-center justify-center rounded-3xl bg-tertiary-500"
+			class="  flex w-40 items-center justify-center rounded-3xl bg-tertiary-500"
 		/>
 	</div>
 </section>
@@ -131,5 +179,13 @@
 	@font-face {
 		font-family: 'Xspace Regular';
 		src: url('/src/lib/fonts/Xspace.otf') format('truetype');
+	}
+
+	.fundoPrecos {
+		background-image: opacity(0.5);
+
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 </style>

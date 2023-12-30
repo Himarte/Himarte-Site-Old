@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.pcss';
-	import Header from './Header.svelte';
-	import Footer from './Footer.svelte';
+	import Header from '$lib/assets/components/Header.svelte';
+	import Footer from '$lib/assets/components/Footer.svelte';
 	import './styles.css';
 	import SpeedDial from '$lib/assets/components/SpeedDial.svelte';
 
@@ -10,12 +10,10 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="app">
-	<Header {y} />
+<Header {y} />
 
-	<main>
-		<slot {y} />
-		<SpeedDial {y} />
-	</main>
-</div>
+<main class="flex h-full w-full flex-col">
+	<slot />
+	<SpeedDial {y} />
+</main>
 <Footer />
