@@ -161,11 +161,14 @@
 			Quem somos?
 		</h1>
 		<p class="text-md p-5 text-justify lg:text-2xl">
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor aut, tempora possimus
-			dignissimos quae eligendi atque quos dolorum reprehenderit totam quis debitis quibusdam fugit
-			quod animi eius nam illum cum? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
-			nam excepturi amet aut repudiandae aliquam, nobis quas facilis perspiciatis voluptatem nemo
-			doloribus, tempore porro cupiditate placeat rem voluptatum quis deleniti.
+			Bem-vindo à Himarte, sua porta de entrada para o futuro digital! Somos mais do que um provedor
+			de internet, somos pioneiros em conectividade. Na Himarte, a experiência do cliente é nossa
+			prioridade, e nosso compromisso com a mais alta qualidade reflete-se em cada byte que
+			entregamos. Exploramos novos horizontes no universo digital, não apenas oferecemos internet
+			confiável, mas convidamos você a "Dizer Hi para o futuro".
+		</p>
+		<p class="text-md p-5 text-justify md:text-2xl">
+			Na Himarte, <span class="uppercase underline decoration-primary-600"> o futuro é aqui</span>!
 		</p>
 	</div>
 </section>
