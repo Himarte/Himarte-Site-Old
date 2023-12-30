@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	export let y: number;
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Button } from 'flowbite-svelte';
+	import { User } from 'lucide-svelte';
 	$: activeUrl = $page.url.pathname;
 	let activeClass = 'text-primary-600 hover:text-primary-500';
 	let nonActiveClass = 'text-white hover:text-gray-300';
@@ -24,7 +25,9 @@
 			href="https://portal.himarte.com.br/auth/facilita"
 			target="_blank"
 			pill
-			class=" flex h-8 text-base font-bold md:order-2 md:h-10 md:text-lg">Area do cliente</Button
+			class="flex h-8 w-14 border  border-primary-700 !bg-primary-700/40 text-base hover:!bg-primary-700 md:order-2 md:h-10 md:w-56 md:text-xl "
+			><span class="md:hidden"><User /></span><span class="hidden md:flex">Area do cliente</span
+			></Button
 		>
 		<NavUl
 			class="order-1"

@@ -4,8 +4,10 @@
 	import { Facebook, Instagram, Linkedin } from 'lucide-svelte';
 </script>
 
-<Footer class="flex h-full w-full flex-col border-t border-primary-500/30">
-	<div class="w-full items-center px-5 pb-5 md:flex">
+<Footer class="flex w-full border-t border-primary-500/30 md:flex-col">
+	<div
+		class="flex w-[80%] flex-col justify-evenly pb-5 pl-5 md:flex md:w-full md:flex-row md:items-center md:px-5"
+	>
 		<div class="md:w-1/3">
 			<h2 class="border-opacity-20 py-3 text-sm font-semibold uppercase text-white">Matriz</h2>
 			<FooterLinkGroup>
@@ -17,15 +19,17 @@
 		<div class="hidden justify-center md:flex md:w-1/3">
 			<FooterBrand imgClass="w-36" href="/" src={LogoRodape} alt="Logo HiMarte" />
 		</div>
-		<div class="text-end md:w-1/3">
+		<div class="md:w-1/3 md:text-end">
 			<h2 class="py-3 text-sm font-semibold uppercase text-white">Links Uteis</h2>
 			<FooterLinkGroup>
-				<FooterLink liClass="" href="/">GitHub</FooterLink>
-				<FooterLink liClass="" href="/">Discord</FooterLink>
+				<FooterLink liClass="" href="/sobre">Nossas Filiais</FooterLink>
+				<FooterLink liClass="" href="/">Trabalhe conosco</FooterLink>
 			</FooterLinkGroup>
 		</div>
 	</div>
-	<div class="flex items-center justify-center gap-16 p-5">
+	<div
+		class="flex w-[20%] flex-col items-center justify-center gap-16 py-5 md:w-full md:flex-row md:p-5"
+	>
 		<FooterIcon href="/">
 			<Facebook class="h-9 w-9  text-gray-500 hover:text-white" />
 		</FooterIcon>
