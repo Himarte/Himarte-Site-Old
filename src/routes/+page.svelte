@@ -95,7 +95,7 @@
 			<section class="flex flex-col items-center justify-center gap-10 p-10">
 				<div class="flex flex-col gap-10 lg:flex-row">
 					<PrecoVenus />
-					<PrecoSaturno />
+					<PrecoUrano />
 
 					<PrecoMarte />
 				</div>
@@ -109,9 +109,10 @@
 			<section class="flex flex-col items-center justify-center gap-10 p-10">
 				<div class="flex flex-col gap-10 lg:flex-row">
 					<PrecoVenus />
-					<PrecoSaturno />
 					<PrecoMarte />
 					<PrecoPlutao />
+					<PrecoPlutao />
+
 					<PrecoUrano />
 					<PrecoJupiter />
 				</div>

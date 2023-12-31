@@ -31,7 +31,7 @@
 		>
 		<NavUl
 			class="order-1"
-			divClass="w-full md:block md:w-auto "
+			divClass="w-full md:block md:w-auto pb-3 md:pb-0"
 			{activeUrl}
 			{activeClass}
 			{nonActiveClass}

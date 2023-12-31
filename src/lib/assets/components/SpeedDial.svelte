@@ -4,22 +4,14 @@
 	import { fade } from 'svelte/transition';
 
 	export let y: number;
+	$: console.log(y);
 </script>
 
-{#if y < 2380}
+{#if y < 2100}
 	<div in:fade out:fade>
-		<SpeedDial defaultClass="fixed end-8 bottom-6">
+		<SpeedDial defaultClass="fixed end-6 bottom-5" class="">
 			<SpeedDialButton name="Share">
-				<ShareNodesSolid class="h-5 w-5" />
-			</SpeedDialButton>
-			<SpeedDialButton name="Print">
-				<PrintSolid class="h-5 w-5" />
-			</SpeedDialButton>
-			<SpeedDialButton name="Download">
-				<DownloadSolid class="h-5 w-5" />
-			</SpeedDialButton>
-			<SpeedDialButton name="Copy">
-				<FileCopySolid class="h-5 w-5" />
+				<ShareNodesSolid class="h-3 w-3" />
 			</SpeedDialButton>
 		</SpeedDial>
 	</div>

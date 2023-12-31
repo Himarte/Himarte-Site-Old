@@ -11,7 +11,6 @@
 		<div class="md:w-1/3">
 			<h2 class="border-opacity-20 py-3 text-sm font-semibold uppercase text-white">Matriz</h2>
 			<FooterLinkGroup>
-				
 				<FooterLink liClass="" href="/">R. Manoel Antônio de Barros, 290</FooterLink>
 				<FooterLink liClass="" href="/">Centro, Santa Cruz do Sul</FooterLink>
 			</FooterLinkGroup>
