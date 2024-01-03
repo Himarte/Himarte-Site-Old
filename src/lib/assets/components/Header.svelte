@@ -38,7 +38,7 @@
 		>
 			<NavLi class="text-base md:text-2xl" href="/">Home</NavLi>
 			<NavLi class="text-base md:text-2xl" href="/sobre">Sobre</NavLi>
-			<NavLi class="text-base md:text-2xl" href="/contato">Contato</NavLi>
+			<NavLi class="text-base md:text-2xl" href="/trabalhe-conosco">Trabalhe Conosco</NavLi>
 		</NavUl>
 	</NavContainer>
 </Navbar>

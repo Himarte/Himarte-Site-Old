@@ -4,15 +4,19 @@
 	import { Facebook, Instagram, Linkedin } from 'lucide-svelte';
 </script>
 
-<Footer class="flex w-full border-t border-primary-500/30 md:flex-col">
+<Footer class="flex w-full border-t border-primary-500/30 bg-tertiary-600 md:flex-col">
 	<div
 		class="flex w-[80%] flex-col justify-evenly pb-5 pl-5 md:flex md:w-full md:flex-row md:items-center md:px-5"
 	>
 		<div class="md:w-1/3">
 			<h2 class="border-opacity-20 py-3 text-sm font-semibold uppercase text-white">Matriz</h2>
-			<FooterLinkGroup>
-				<FooterLink liClass="" href="/">R. Manoel Antônio de Barros, 290</FooterLink>
-				<FooterLink liClass="" href="/">Centro, Santa Cruz do Sul</FooterLink>
+			<FooterLinkGroup ulClass="flex flex-col ">
+				<FooterLink liClass="" href="/">
+					R. Manoel Antônio de Barros, 290 Centro, Santa Cruz do Sul</FooterLink
+				>
+				<FooterLink liClass="" href="/">CEP: 96825-000</FooterLink>
+				<a href="tel:513710-1000" class="text-white">51 3710-1000</a>
+				<FooterLink liClass="" href="/">Outras filiais</FooterLink>
 			</FooterLinkGroup>
 		</div>
 		<div class="hidden justify-center md:flex md:w-1/3">
