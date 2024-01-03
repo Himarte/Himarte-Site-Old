@@ -50,6 +50,7 @@ declare module '$env/static/private' {
 	export const OLDPWD: string;
 	export const SNAP_LIBRARY_PATH: string;
 	export const npm_package_devDependencies__typescript_eslint_parser: string;
+	export const npm_package_dependencies__vercel_speed_insights: string;
 	export const DESKTOP_SESSION: string;
 	export const GTK_PATH: string;
 	export const SNAP_USER_DATA: string;
@@ -242,6 +243,7 @@ declare module '$env/dynamic/private' {
 		OLDPWD: string;
 		SNAP_LIBRARY_PATH: string;
 		npm_package_devDependencies__typescript_eslint_parser: string;
+		npm_package_dependencies__vercel_speed_insights: string;
 		DESKTOP_SESSION: string;
 		GTK_PATH: string;
 		SNAP_USER_DATA: string;
