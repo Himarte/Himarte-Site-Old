@@ -1,7 +1,8 @@
 <script lang="ts">
 	import "../app.postcss";
-	import { AppShell, AppBar } from "@skeletonlabs/skeleton";
+	import { AppShell } from "@skeletonlabs/skeleton";
 	import Header from "$lib/assets/components/Header.svelte";
+	import Footer from "$lib/assets/components/Footer.svelte";
 	import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
 	// Highlight JS
 	import hljs from "highlight.js/lib/core";
@@ -37,10 +38,12 @@
 <!-- App Shell -->
 <AppShell on:scroll={scrollHandler}>
 	<svelte:fragment slot="header">
-		<!-- App Bar -->
-
 		<Header />
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<slot />
+
+	<svelte:fragment slot="pageFooter">
+		<Footer />
+	</svelte:fragment>
 </AppShell>

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import LogoPrincipal from '$lib/assets/img/logos/logo-nome.png';
-	import { page } from '$app/stores';
-	import { AppBar } from '@skeletonlabs/skeleton';
+	import LogoPrincipal from "$lib/assets/img/logos/logo-nome.png";
+	import { page } from "$app/stores";
+	import { AppBar } from "@skeletonlabs/skeleton";
 </script>
 
 <AppBar class="px-10" slotDefault="flex justify-center gap-5" background="bg-surface-700">
@@ -9,16 +9,21 @@
 		<a href="/"><img src={LogoPrincipal} class="h-8 sm:h-10" alt="Himarte Logo" /></a>
 	</svelte:fragment>
 	<svelte:fragment>
-		<a class=" md:text-2xl" href="/" class:active={$page.url.pathname === '/'}>Home</a>
-		<a class=" md:text-2xl" href="/sobre" class:active={$page.url.pathname === '/sobre'}>Sobre</a>
+		<a class=" md:text-2xl" href="/" class:active={$page.url.pathname === "/"}>Home</a>
+		<a class=" md:text-2xl" href="/sobre" class:active={$page.url.pathname === "/sobre"}
+			>Sobre</a
+		>
 		<a
 			class=" md:text-2xl"
 			href="/trabalhe-conosco"
-			class:active={$page.url.pathname === '/trabalhe-conosco'}>Trabalhe Conosco</a
+			class:active={$page.url.pathname === "/trabalhe-conosco"}>Trabalhe Conosco</a
 		>
 	</svelte:fragment>
 	<svelte:fragment slot="trail">
-		<button class="btn variant-ghost-primary font-semibold">Area do Cliente</button>
+		<a
+			href="https://portal.himarte.com.br/person_users/login"
+			class="btn variant-ghost-primary font-semibold">Area do Cliente</a
+		>
 	</svelte:fragment>
 </AppBar>
 
