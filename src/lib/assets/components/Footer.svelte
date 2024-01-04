@@ -13,17 +13,23 @@
 		</div>
 
 		<ul class="flex items-center p-8 md:p-0 gap-10 md:w-1/3 justify-center">
-			<li><a href="https://www.facebook.com/himarte.net/"><Facebook size={34} /></a></li>
+			<li>
+				<a href="https://www.facebook.com/himarte.net/"><Facebook size={34} /></a>
+			</li>
 			<li><a href="https://www.instagram.com/himarte_net/"><Instagram size={34} /></a></li>
 			<li>
 				<a href="https://www.linkedin.com/company/himarte-net/"><Linkedin size={34} /></a>
 			</li>
 		</ul>
 		<ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end">
-			<li><a href="/sobre">Sobre</a></li>
-			<li><a href="/contato">Trabalhe conosco</a></li>
-			<li><a href="/sobre">Filiais</a></li>
+			<li><a href="/sobre" class="text-primary-500 hover:text-primary-600">Sobre</a></li>
+			<li>
+				<a href="/contato" class="text-primary-500 hover:text-primary-600"
+					>Trabalhe conosco</a
+				>
+			</li>
+			<li><a href="/sobre" class="text-primary-500 hover:text-primary-600">Filiais</a></li>
 		</ul>
 	</div>
-	<p class="text-center text-sm">&copy; 2024 Quiliao</p>
+	<p class="text-center text-sm">&copy;2024 Quiliao</p>
 </footer>
