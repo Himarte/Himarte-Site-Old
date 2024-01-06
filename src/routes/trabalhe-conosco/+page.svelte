@@ -60,12 +60,12 @@
 </p>
 
 <form
-    class="card flex flex-col px-5 md:px-10 py-5 mx-2 md:border md:!bg-transparent md:border-primary-500/50 my-5 gap-5"
+    class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 md:border md:!bg-transparent md:border-primary-500/50 my-5 gap-5 md:mx-28"
 >
     <div class="md:flex w-full gap-5">
         <div class="flex flex-col gap-3 md:w-1/2">
             <label class="label space-y-2">
-                <span class="md:h4">Nome Completo:</span>
+                <span class="md:h4 text-primary-500">Nome Completo:</span>
                 <input
                     class="px-3 input"
                     type="text"
@@ -77,7 +77,7 @@
             </label>
 
             <label class="label space-y-2">
-                <span class="md:h4">Telefone:</span>
+                <span class="md:h4 text-primary-500">Telefone:</span>
                 <input
                     class="px-3 input"
                     title="Input (tel)"
@@ -88,7 +88,7 @@
         </div>
         <div class="flex flex-col gap-3 md:w-1/2">
             <label class="label space-y-2">
-                <span class="md:h4">Email:</span>
+                <span class="md:h4 text-primary-500">Email:</span>
                 <input
                     class="px-3 input"
                     type="email"
@@ -100,7 +100,7 @@
                 />
             </label>
             <label class="label space-y-2">
-                <span class="md:h4">Vaga desejada:</span>
+                <span class="md:h4 text-primary-500">Vaga desejada:</span>
                 <input
                     class="px-3 input"
                     type="text"
@@ -113,10 +113,10 @@
         </div>
     </div>
     <label class="label space-y-2">
-        <span class="md:h4">Mensagem/Corpo do E-mail:</span>
+        <span class="md:h4 text-primary-500">Mensagem/Corpo do E-mail:</span>
         <textarea
             class="textarea"
-            rows="5"
+            rows="8"
             placeholder="Conte-nos um pouco sobre você, suas experiências e por que essa vaga seria perfeita para você!"
         />
     </label>
@@ -135,13 +135,13 @@
         >
         <svelte:fragment slot="meta">Apenas PDF</svelte:fragment>
     </FileDropzone>
-    <div class="flex w-full flex-col md:flex-row gap-5 justify-around">
+    <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center">
         <button
-            class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/4 self-center"
+            class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center"
             >Limpar campos</button
         >
         <button
-            class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/4 self-center"
+            class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center"
             on:click={enviarEmail}>Enviar Currículo</button
         >
     </div>
