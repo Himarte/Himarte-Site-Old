@@ -50,27 +50,7 @@
 
 <section class="px-10 pt-10 space-y-5">
     <h1 class="h1 text-center font-bold gradient-heading fontSpace">Trabalhe Conosco</h1>
-    <h3 class="h3">Falar um pouco sobre a empresa...</h3>
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quam dolorem
-        aspernatur? Ab, voluptatibus ratione? Facere omnis iusto pariatur recusandae dolor cumque
-        accusamus explicabo consectetur officiis magni! Cupiditate, dolor! Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Earum tempora ut at, id repellat rem odio iste esse
-        nostrum inventore a, illum deserunt. Accusantium at necessitatibus temporibus reprehenderit
-        totam quasi?
-    </p>
-
-    <h3 class="h3">E foi assim que nos...</h3>
-
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quam dolorem
-        aspernatur? Ab, voluptatibus ratione? Facere omnis iusto pariatur recusandae dolor cumque
-        accusamus explicabo consectetur officiis magni! Cupiditate, dolor! Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Earum tempora ut at, id repellat rem odio iste esse
-        nostrum inventore a, illum deserunt. Accusantium at necessitatibus temporibus reprehenderit
-        totam quasi?
-    </p>
 </section>
 
 <form class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 my-5 gap-5 md:mx-28">
