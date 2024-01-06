@@ -9,21 +9,25 @@
 		<a href="/"><img src={LogoPrincipal} class="h-8 sm:h-10" alt="Himarte Logo" /></a>
 	</svelte:fragment>
 	<svelte:fragment>
-		<a class=" md:text-2xl" href="/" class:active={$page.url.pathname === "/"}>Home</a>
-		<a class=" md:text-2xl" href="/sobre" class:active={$page.url.pathname === "/sobre"}
-			>Sobre</a
-		>
-		<a
-			class=" md:text-2xl"
-			href="/trabalhe-conosco"
-			class:active={$page.url.pathname === "/trabalhe-conosco"}>Trabalhe Conosco</a
-		>
+		<ul class="hidden md:flex">
+			<a class="btn md:text-xl hover:variant-soft-primary" href="/" class:active={$page.url.pathname === "/"}>Home</a>
+			<a class="btn md:text-xl hover:variant-soft-primary" href="/sobre" class:active={$page.url.pathname === "/sobre"}
+				>Sobre</a
+			>
+			<a
+				class="btn md:text-xl hover:variant-soft-primary"
+				href="/trabalhe-conosco"
+				class:active={$page.url.pathname === "/trabalhe-conosco"}>Trabalhe Conosco</a
+			>
+		</ul>
 	</svelte:fragment>
 	<svelte:fragment slot="trail">
 		<a
 			href="https://portal.himarte.com.br/person_users/login"
-			class="btn variant-ghost-primary font-semibold">Area do Cliente</a
+			class="flex btn-sm rounded-full md:btn variant-ghost-primary font-semibold">Area do Cliente</a
 		>
+	
+		
 	</svelte:fragment>
 </AppBar>
 
