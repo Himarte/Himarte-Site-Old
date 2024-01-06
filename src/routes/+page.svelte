@@ -58,9 +58,9 @@
 	</p>
 </picture>
 
-<img src={Wave1t} alt="Wave1" class="w-full content-evenly" />
+<img src={Wave1t} alt="Wave1" class="flex w-full" />
 
-<section class="flex flex-col items-center justify-center gap-10 p-10">
+<section class="flex flex-col items-center justify-center gap-10 p-10 md:pt-20 ">
 	<div class="flex flex-col gap-10 md:flex-row">
 		<PrecoSaturno />
 
@@ -100,11 +100,7 @@
 			alt="Logo unimed"
 			class=" card card-hover flex w-40 items-center justify-center rounded-3xl"
 		/>
-		<img
-			src={imgSicredi}
-			alt="Logo Sicredi"
-			class="  card card-hover flex w-40 items-center justify-center rounded-3xl"
-		/>
+
 	</div>
 	<div class="flex flex-wrap items-center justify-center gap-4">
 		<img
@@ -127,11 +123,7 @@
 			alt="Logo unimed"
 			class=" card card-hover flex w-40 items-center justify-center rounded-3xl"
 		/>
-		<img
-			src={imgSicredi}
-			alt="Logo Sicredi"
-			class="  card card-hover flex w-40 items-center justify-center rounded-3xl"
-		/>
+
 	</div>
 </section>
 <section class=" flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-around">

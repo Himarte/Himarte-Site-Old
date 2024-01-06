@@ -26,6 +26,7 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const GJS_DEBUG_TOPICS: string;
 	export const npm_package_devDependencies__types_node: string;
 	export const npm_package_devDependencies__sveltejs_adapter_vercel: string;
 	export const SNAP_COMMON: string;
@@ -57,6 +58,7 @@ declare module '$env/static/private' {
 	export const TERM_PROGRAM_VERSION: string;
 	export const npm_package_devDependencies_eslint_config_prettier: string;
 	export const npm_package_devDependencies_eslint_plugin_svelte: string;
+	export const GIO_LAUNCHED_DESKTOP_FILE: string;
 	export const GTK_IM_MODULE_FILE: string;
 	export const LSCOLORS: string;
 	export const ZSH: string;
@@ -66,13 +68,14 @@ declare module '$env/static/private' {
 	export const PAGER: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const npm_package_devDependencies_svelte_check: string;
+	export const MANAGERPID: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const npm_package_scripts_check: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
-	export const DBUS_STARTER_BUS_TYPE: string;
 	export const P9K_TTY: string;
 	export const SYSTEMD_EXEC_PID: string;
 	export const COLORTERM: string;
+	export const GIO_LAUNCHED_DESKTOP_FILE_PID: string;
 	export const SNAP_REVISION: string;
 	export const npm_package_devDependencies__tailwindcss_forms: string;
 	export const npm_package_devDependencies_tailwindcss: string;
@@ -83,6 +86,7 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies_prettier: string;
 	export const LOGNAME: string;
 	export const npm_package_type: string;
+	export const JOURNAL_STREAM: string;
 	export const SNAP_CONTEXT: string;
 	export const _: string;
 	export const _P9K_SSH_TTY: string;
@@ -109,11 +113,12 @@ declare module '$env/static/private' {
 	export const npm_config_node_gyp: string;
 	export const PATH: string;
 	export const GTK_EXE_PREFIX: string;
+	export const INVOCATION_ID: string;
 	export const SESSION_MANAGER: string;
 	export const npm_package_name: string;
 	export const NODE: string;
+	export const BAMF_DESKTOP_FILE_HINT: string;
 	export const GDK_BACKEND: string;
-	export const GNOME_TERMINAL_SCREEN: string;
 	export const SNAP_DATA: string;
 	export const XDG_MENU_PREFIX: string;
 	export const XDG_RUNTIME_DIR: string;
@@ -125,7 +130,6 @@ declare module '$env/static/private' {
 	export const XDG_CURRENT_DESKTOP: string;
 	export const npm_package_devDependencies_eslint: string;
 	export const GIO_MODULE_DIR_VSCODE_SNAP_ORIG: string;
-	export const GNOME_TERMINAL_SERVICE: string;
 	export const LS_COLORS: string;
 	export const TERM_PROGRAM: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
@@ -156,6 +160,7 @@ declare module '$env/static/private' {
 	export const GTK_PATH_VSCODE_SNAP_ORIG: string;
 	export const SNAP_NAME: string;
 	export const GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG: string;
+	export const GJS_DEBUG_OUTPUT: string;
 	export const GPG_AGENT_INFO: string;
 	export const P9K_SSH: string;
 	export const QT_IM_MODULE: string;
@@ -164,7 +169,6 @@ declare module '$env/static/private' {
 	export const npm_package_scripts_format: string;
 	export const PWD: string;
 	export const npm_execpath: string;
-	export const DBUS_STARTER_ADDRESS: string;
 	export const SNAP_REAL_HOME: string;
 	export const XDG_CONFIG_DIRS: string;
 	export const XDG_DATA_DIRS: string;
@@ -179,7 +183,6 @@ declare module '$env/static/private' {
 	export const PNPM_SCRIPT_SRC_DIR: string;
 	export const npm_package_scripts_preview: string;
 	export const npm_package_devDependencies_prettier_plugin_svelte: string;
-	export const VTE_VERSION: string;
 	export const npm_package_devDependencies__skeletonlabs_tw_plugin: string;
 	export const npm_package_dependencies_lucide_svelte: string;
 	export const npm_package_devDependencies__skeletonlabs_skeleton: string;
@@ -219,6 +222,7 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		GJS_DEBUG_TOPICS: string;
 		npm_package_devDependencies__types_node: string;
 		npm_package_devDependencies__sveltejs_adapter_vercel: string;
 		SNAP_COMMON: string;
@@ -250,6 +254,7 @@ declare module '$env/dynamic/private' {
 		TERM_PROGRAM_VERSION: string;
 		npm_package_devDependencies_eslint_config_prettier: string;
 		npm_package_devDependencies_eslint_plugin_svelte: string;
+		GIO_LAUNCHED_DESKTOP_FILE: string;
 		GTK_IM_MODULE_FILE: string;
 		LSCOLORS: string;
 		ZSH: string;
@@ -259,13 +264,14 @@ declare module '$env/dynamic/private' {
 		PAGER: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		npm_package_devDependencies_svelte_check: string;
+		MANAGERPID: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		npm_package_scripts_check: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
-		DBUS_STARTER_BUS_TYPE: string;
 		P9K_TTY: string;
 		SYSTEMD_EXEC_PID: string;
 		COLORTERM: string;
+		GIO_LAUNCHED_DESKTOP_FILE_PID: string;
 		SNAP_REVISION: string;
 		npm_package_devDependencies__tailwindcss_forms: string;
 		npm_package_devDependencies_tailwindcss: string;
@@ -276,6 +282,7 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies_prettier: string;
 		LOGNAME: string;
 		npm_package_type: string;
+		JOURNAL_STREAM: string;
 		SNAP_CONTEXT: string;
 		_: string;
 		_P9K_SSH_TTY: string;
@@ -302,11 +309,12 @@ declare module '$env/dynamic/private' {
 		npm_config_node_gyp: string;
 		PATH: string;
 		GTK_EXE_PREFIX: string;
+		INVOCATION_ID: string;
 		SESSION_MANAGER: string;
 		npm_package_name: string;
 		NODE: string;
+		BAMF_DESKTOP_FILE_HINT: string;
 		GDK_BACKEND: string;
-		GNOME_TERMINAL_SCREEN: string;
 		SNAP_DATA: string;
 		XDG_MENU_PREFIX: string;
 		XDG_RUNTIME_DIR: string;
@@ -318,7 +326,6 @@ declare module '$env/dynamic/private' {
 		XDG_CURRENT_DESKTOP: string;
 		npm_package_devDependencies_eslint: string;
 		GIO_MODULE_DIR_VSCODE_SNAP_ORIG: string;
-		GNOME_TERMINAL_SERVICE: string;
 		LS_COLORS: string;
 		TERM_PROGRAM: string;
 		VSCODE_GIT_IPC_HANDLE: string;
@@ -349,6 +356,7 @@ declare module '$env/dynamic/private' {
 		GTK_PATH_VSCODE_SNAP_ORIG: string;
 		SNAP_NAME: string;
 		GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG: string;
+		GJS_DEBUG_OUTPUT: string;
 		GPG_AGENT_INFO: string;
 		P9K_SSH: string;
 		QT_IM_MODULE: string;
@@ -357,7 +365,6 @@ declare module '$env/dynamic/private' {
 		npm_package_scripts_format: string;
 		PWD: string;
 		npm_execpath: string;
-		DBUS_STARTER_ADDRESS: string;
 		SNAP_REAL_HOME: string;
 		XDG_CONFIG_DIRS: string;
 		XDG_DATA_DIRS: string;
@@ -372,7 +379,6 @@ declare module '$env/dynamic/private' {
 		PNPM_SCRIPT_SRC_DIR: string;
 		npm_package_scripts_preview: string;
 		npm_package_devDependencies_prettier_plugin_svelte: string;
-		VTE_VERSION: string;
 		npm_package_devDependencies__skeletonlabs_tw_plugin: string;
 		npm_package_dependencies_lucide_svelte: string;
 		npm_package_devDependencies__skeletonlabs_skeleton: string;
