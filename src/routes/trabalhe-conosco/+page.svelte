@@ -1,17 +1,17 @@
-<script>
-  let nome = "";
-  let emailRemetente = "";
-  let vagaDesejada = "";
-  let corpoEmail = "";
-  let anexos = [];
+<script lang="ts">
+  let nome: string = "";
+  let emailRemetente: string = "";
+  let vagaDesejada: string = "";
+  let corpoEmail: string = "";
+  let anexos: any[] = [];
 
-  async function enviarEmail() {
-    const destinatario = "trabalheconosco@himarte.com.br";
+  async function enviarEmail(): Promise<void> {
+    const destinatario: string = "trabalheconosco@himarte.com.br";
 
     // Adicione a vaga desejada ao assunto
-    const assunto = `Currículo para Trabalhe Conosco - ${vagaDesejada}`;
+    const assunto: string = `Currículo para Trabalhe Conosco - ${vagaDesejada}`;
 
-    const emailData = {
+    const emailData: any = {
       destinatario,
       assunto,
       corpoEmail,
@@ -24,17 +24,17 @@
     console.log("Anexos:", anexos);
 
     // Lógica para enviar o e-mail usando uma API ou serviço de e-mail
-    const resposta = await enviarEmailAPI(emailData);
+    const resposta: string = await enviarEmailAPI(emailData);
     console.log("Resposta da API de envio de e-mail:", resposta);
   }
 
-  function adicionarAnexo(event) {
-    const arquivo = event.target.files[0];
+  function adicionarAnexo(event: any): void {
+    const arquivo: File = event.target.files[0];
     anexos.push(arquivo);
   }
 
   // Função fictícia para simular o envio de e-mail
-  async function enviarEmailAPI(emailData) {
+  async function enviarEmailAPI(emailData: any): Promise<string> {
     // Implemente a lógica real de envio de e-mail aqui
     // Substitua este retorno por chamadas a uma API real ou serviço de e-mail
     return new Promise(resolve => {
