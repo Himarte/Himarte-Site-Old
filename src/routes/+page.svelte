@@ -153,13 +153,5 @@
 </section>
 
 <style>
-	.fontSpace {
-		font-family: "Xspace Regular";
-		src: url("/src/lib/fonts/Xspace.otf") format("otf");
-	}
 
-	@font-face {
-		font-family: "Xspace Regular";
-		src: url("/src/lib/fonts/Xspace.otf") format("truetype");
-	}
 </style>

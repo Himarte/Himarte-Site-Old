@@ -48,24 +48,36 @@
     }
 </script>
 
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, hic odio. Fugit sequi pariatur
-    mollitia at culpa harum delectus dolorum repellat ad doloremque rem natus impedit, quibusdam hic
-    incidunt adipisci!
-</p>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, hic odio. Fugit sequi pariatur
-    mollitia at culpa harum delectus dolorum repellat ad doloremque rem natus impedit, quibusdam hic
-    incidunt adipisci!
-</p>
+<section class="px-10 pt-10 space-y-5">
+    <h1 class="h1 text-center font-bold gradient-heading fontSpace">Trabalhe Conosco</h1>
+    <h3 class="h3">Falar um pouco sobre a empresa...</h3>
 
-<form
-    class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 md:border md:!bg-transparent md:border-primary-500/50 my-5 gap-5 md:mx-28"
->
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quam dolorem
+        aspernatur? Ab, voluptatibus ratione? Facere omnis iusto pariatur recusandae dolor cumque
+        accusamus explicabo consectetur officiis magni! Cupiditate, dolor! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Earum tempora ut at, id repellat rem odio iste esse
+        nostrum inventore a, illum deserunt. Accusantium at necessitatibus temporibus reprehenderit
+        totam quasi?
+    </p>
+
+    <h3 class="h3">E foi assim que nos...</h3>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quam dolorem
+        aspernatur? Ab, voluptatibus ratione? Facere omnis iusto pariatur recusandae dolor cumque
+        accusamus explicabo consectetur officiis magni! Cupiditate, dolor! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Earum tempora ut at, id repellat rem odio iste esse
+        nostrum inventore a, illum deserunt. Accusantium at necessitatibus temporibus reprehenderit
+        totam quasi?
+    </p>
+</section>
+
+<form class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 my-5 gap-5 md:mx-28">
     <div class="md:flex w-full gap-5">
         <div class="flex flex-col gap-3 md:w-1/2">
             <label class="label space-y-2">
-                <span class="md:h4 text-primary-500">Nome Completo:</span>
+                <span class="md:h4 text-primary-500 card-header">Nome Completo:</span>
                 <input
                     class="px-3 input"
                     type="text"
@@ -77,7 +89,7 @@
             </label>
 
             <label class="label space-y-2">
-                <span class="md:h4 text-primary-500">Telefone:</span>
+                <span class="md:h4 text-primary-500 card-header">Telefone:</span>
                 <input
                     class="px-3 input"
                     title="Input (tel)"
@@ -88,7 +100,7 @@
         </div>
         <div class="flex flex-col gap-3 md:w-1/2">
             <label class="label space-y-2">
-                <span class="md:h4 text-primary-500">Email:</span>
+                <span class="md:h4 text-primary-500 card-header">Email:</span>
                 <input
                     class="px-3 input"
                     type="email"
@@ -100,7 +112,7 @@
                 />
             </label>
             <label class="label space-y-2">
-                <span class="md:h4 text-primary-500">Vaga desejada:</span>
+                <span class="md:h4 text-primary-500 card-header">Vaga desejada:</span>
                 <input
                     class="px-3 input"
                     type="text"
@@ -113,7 +125,7 @@
         </div>
     </div>
     <label class="label space-y-2">
-        <span class="md:h4 text-primary-500">Mensagem/Corpo do E-mail:</span>
+        <span class="md:h4 text-primary-500 card-header">Mensagem/Corpo do E-mail:</span>
         <textarea
             class="textarea"
             rows="8"

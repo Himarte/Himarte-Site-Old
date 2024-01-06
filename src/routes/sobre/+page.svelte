@@ -1,39 +1,43 @@
 <script lang="ts">
-  import type { PageData } from "./$types";
+    import type { PageData } from "./$types";
+    import Filial_1 from "$lib/assets/components/Filiais/Filial-1.svelte";
+    import Filial_2 from "$lib/assets/components/Filiais/Filial-2.svelte";
+    import Filial_3 from "$lib/assets/components/Filiais/Filial-3.svelte";
+    import Filial_4 from "$lib/assets/components/Filiais/Filial-4.svelte";
 
-  export let data: PageData;
+    export let data: PageData;
 </script>
 
-<section class=" flex h-[30rem] px-10 lg:h-[55rem] lg:justify-around">
-  <enhanced:img
-    src="/src/lib/assets/img/extras/mini-astro.png"
-    alt="mini astro"
-    class="hidden lg:flex lg:w-[35rem]"
-  />
+<section class="px-10 pt-10 space-y-5">
+    <h1 class="h1 text-center font-bold gradient-heading fontSpace">Bem vindo!</h1>
+    <h3 class="h3">Um pouco sobre a nossa historia...</h3>
 
-  <div
-    class="flex w-[55rem] flex-col items-center justify-center gap-5 lg:gap-10"
-  >
-    <h1
-      class="variant-glass-surface fontSpace flex items-center justify-center rounded-xl px-5 pt-2 text-center text-2xl lg:text-4xl"
-    >
-      Matriz
-    </h1>
-	<p class="text-md p-5 text-justify lg:text-2xl">
-		<a href="https://www.google.com/maps/place/R.+Manoel+Ant%C3%B4nio+de+Barros,+290+-+Centro,+Santa+Cruz+do+Sul+-+RS,+96825-000">
-		  R. Manoel Antônio de Barros, 290 - Centro, Santa Cruz do Sul - RS, 96825-000
-		</a>
-	  </p>
-    <h1
-      class="variant-glass-surface fontSpace flex items-center justify-center rounded-xl px-5 pt-2 text-center text-2xl lg:text-4xl"
-    >
-      Filiais
-      <p class="text-md p-5 text-justify lg:text-2xl">
-        R. Cláudio Manoel, 34 - Centro, Vera Cruz - RS, 96880-000 R. Ramiro
-        Barcelos, 511 - Centro, Agudo - RS, 96540-000 R. Andrade Neves, 545 -
-        Centro, Rio Pardo - RS, 96640-000 Av. Pereira Rêgo, 1545 - Centro,
-        Candelária - RS, 96930-000
-      </p>
-    </h1>
-  </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quam dolorem
+        aspernatur? Ab, voluptatibus ratione? Facere omnis iusto pariatur recusandae dolor cumque
+        accusamus explicabo consectetur officiis magni! Cupiditate, dolor! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Earum tempora ut at, id repellat rem odio iste esse
+        nostrum inventore a, illum deserunt. Accusantium at necessitatibus temporibus reprehenderit
+        totam quasi?
+    </p>
+
+    <h3 class="h3">E foi assim que nos...</h3>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui quam dolorem
+        aspernatur? Ab, voluptatibus ratione? Facere omnis iusto pariatur recusandae dolor cumque
+        accusamus explicabo consectetur officiis magni! Cupiditate, dolor! Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Earum tempora ut at, id repellat rem odio iste esse
+        nostrum inventore a, illum deserunt. Accusantium at necessitatibus temporibus reprehenderit
+        totam quasi?
+    </p>
+</section>
+<section class="px-10 py-10 space-y-5">
+    <h2 class="h2 font-semibold gradient-heading">Nossas Filiais</h2>
+    <div class="flex flex-col gap-5">
+        <Filial_1 />
+        <Filial_2 />
+        <Filial_3 />
+        <Filial_4 />
+    </div>
 </section>
