@@ -30,6 +30,7 @@
     storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
     // tenho que testar isso:
+    import ChatPagina from "$lib/assets/components/ChatPagina.svelte";
 
     import type { ComponentEvents } from "svelte";
 
@@ -44,7 +45,10 @@
         <Header />
     </svelte:fragment>
     <!-- Page Route Content -->
-    <main><slot /></main>
+    <main class="relative">
+        <slot />
+        <ChatPagina />
+    </main>
     <svelte:fragment slot="pageFooter">
         <Footer />
     </svelte:fragment>
