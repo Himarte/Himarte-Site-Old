@@ -44,18 +44,6 @@
       "_ssr.js"
     ]
   },
-  "mini-astro.avif": {
-    "file": "_app/immutable/assets/mini-astro.nZYy76Sj.avif",
-    "src": "mini-astro.avif"
-  },
-  "mini-astro.png": {
-    "file": "_app/immutable/assets/mini-astro.RBkcoHok.png",
-    "src": "mini-astro.png"
-  },
-  "mini-astro.webp": {
-    "file": "_app/immutable/assets/mini-astro.1GXrvLCq.webp",
-    "src": "mini-astro.webp"
-  },
   "node_modules/.pnpm/@sveltejs+kit@2.0.6_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
     "imports": [
@@ -77,6 +65,10 @@
   "src/lib/assets/img/extras/hi-astronauta-main.png": {
     "file": "_app/immutable/assets/hi-astronauta-main.ffRGJgfk.png",
     "src": "src/lib/assets/img/extras/hi-astronauta-main.png"
+  },
+  "src/lib/assets/img/extras/mini-astro.png": {
+    "file": "_app/immutable/assets/mini-astro.BdMhEHk3.png",
+    "src": "src/lib/assets/img/extras/mini-astro.png"
   },
   "src/lib/assets/img/extras/wave1t 2.svg": {
     "file": "_app/immutable/assets/wave1t 2.1Jf7W9yH.svg",
@@ -136,7 +128,7 @@
       "_app/immutable/assets/Xspace.-675vurb.otf"
     ],
     "css": [
-      "_app/immutable/assets/_layout.IYMGZRZT.css"
+      "_app/immutable/assets/_layout.yItLf1Kf.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -167,13 +159,8 @@
       "_app/immutable/assets/logo-rbs.Qtt4jmQn.svg",
       "_app/immutable/assets/logo-unimed.ZYxfRq3N.svg",
       "_app/immutable/assets/hi-astronauta-main.ffRGJgfk.png",
-      "_app/immutable/assets/wave1t 2.1Jf7W9yH.svg",
-      "_app/immutable/assets/mini-astro.TnWc1Bm3.avif",
-      "_app/immutable/assets/mini-astro.nZYy76Sj.avif",
-      "_app/immutable/assets/mini-astro.0yXQWb_8.webp",
-      "_app/immutable/assets/mini-astro.1GXrvLCq.webp",
-      "_app/immutable/assets/mini-astro.FQugjCYB.png",
-      "_app/immutable/assets/mini-astro.RBkcoHok.png"
+      "_app/immutable/assets/mini-astro.BdMhEHk3.png",
+      "_app/immutable/assets/wave1t 2.1Jf7W9yH.svg"
     ],
     "file": "entries/pages/_page.svelte.js",
     "imports": [

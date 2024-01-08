@@ -245,8 +245,24 @@ const Linkedin = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   })}`;
 });
 const Linkedin$1 = Linkedin;
+const Message_circle_plus = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const iconNode = [
+    ["path", { "d": "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }],
+    ["path", { "d": "M8 12h8" }],
+    ["path", { "d": "M12 8v8" }]
+  ];
+  return `  ${validate_component(Icon, "Icon").$$render($$result, Object.assign({}, { name: "message-circle-plus" }, $$props, { iconNode }), {}, {
+    default: () => {
+      return `${slots.default ? slots.default({}) : ``}`;
+    }
+  })}`;
+});
+const MessageCirclePlus = Message_circle_plus;
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<footer class="flex flex-col justify-between md:h-36"><div class="flex flex-col md:flex-row md:px-10"><div class="flex flex-col items-center md:items-start md:w-1/3" data-svelte-h="svelte-r3tylk"><img${add_attribute("src", LogoRodape, 0)} alt="Logo Himarte" class="w-32 md:w-36 h-8 md:h-10 mb-2"> <p class="px-5 md:px-0 text-sm fontSpace">O futuro é aqui</p></div> <ul class="flex items-center p-8 md:p-0 gap-10 md:w-1/3 justify-center"><li><a href="https://www.facebook.com/himarte.net/">${validate_component(Facebook$1, "Facebook").$$render($$result, { size: 34 }, {}, {})}</a></li> <li><a href="https://www.instagram.com/himarte_net/">${validate_component(Instagram$1, "Instagram").$$render($$result, { size: 34 }, {}, {})}</a></li> <li><a href="https://www.linkedin.com/company/himarte-net/">${validate_component(Linkedin$1, "Linkedin").$$render($$result, { size: 34 }, {}, {})}</a></li></ul> <ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end" data-svelte-h="svelte-18sqkdw"><li><a href="/sobre" class="text-primary-500 hover:text-primary-600">Sobre</a></li> <li><a href="/trabalhe-conosco" class="text-primary-500 hover:text-primary-600">Trabalhe conosco</a></li> <li><a href="/sobre" class="text-primary-500 hover:text-primary-600">Filiais</a></li></ul></div> <p class="text-center text-sm" data-svelte-h="svelte-1kzppgw">©2024 Quiliao</p></footer>`;
+});
+const ChatPagina = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<button class="sticky btn-icon-base rounded-full variant-filled-surface bottom-16 ml-[87%] md:ml-[94%] md:bottom-10">${validate_component(MessageCirclePlus, "MessageCirclePlus").$$render($$result, { size: 44 }, {}, {})}</button>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   hljs.registerLanguage("xml", xml);
@@ -270,7 +286,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})} `;
     },
     default: () => {
-      return ` <main>${slots.default ? slots.default({}) : ``}</main>`;
+      return ` <main class="relative">${slots.default ? slots.default({}) : ``} ${validate_component(ChatPagina, "ChatPagina").$$render($$result, {}, {}, {})}</main>`;
     }
   })}`;
 });
