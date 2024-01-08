@@ -22,7 +22,7 @@
         <ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end">
             <li><a href="/sobre" class="text-primary-500 hover:text-primary-600">Sobre</a></li>
             <li>
-                <a href="/contato" class="text-primary-500 hover:text-primary-600"
+                <a href="/trabalhe-conosco" class="text-primary-500 hover:text-primary-600"
                     >Trabalhe conosco</a
                 >
             </li>

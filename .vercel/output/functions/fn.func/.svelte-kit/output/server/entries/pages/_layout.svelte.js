@@ -1,6 +1,8 @@
-import { g as get_store_value, c as create_ssr_component, e as escape, a as add_attribute, b as compute_slots, d as add_styles, f as subscribe, v as validate_component } from "../../chunks/ssr.js";
-import { w as writable, r as readable } from "../../chunks/index.js";
+import { c as create_ssr_component, e as escape, a as add_attribute, b as compute_slots, d as add_styles, f as subscribe, v as validate_component } from "../../chunks/ssr.js";
+import { w as writable } from "../../chunks/index.js";
+import "../../chunks/ProgressBar.svelte_svelte_type_style_lang.js";
 import { p as page } from "../../chunks/stores.js";
+import { I as Icon } from "../../chunks/Icon.js";
 import hljs from "highlight.js/lib/core";
 import xml from "highlight.js/lib/languages/xml";
 import css$1 from "highlight.js/lib/languages/css";
@@ -9,35 +11,6 @@ import typescript from "highlight.js/lib/languages/typescript";
 import { computePosition, autoUpdate, flip, shift, offset, arrow } from "@floating-ui/dom";
 const storeHighlightJs = writable(void 0);
 const storePopup = writable(void 0);
-const stores = {};
-function localStorageStore(key, initialValue, options) {
-  options?.serializer ?? JSON;
-  options?.storage ?? "local";
-  if (!stores[key]) {
-    const store = writable(initialValue, (set2) => {
-    });
-    const { subscribe: subscribe2, set } = store;
-    stores[key] = {
-      set(value) {
-        set(value);
-      },
-      update(updater) {
-        const value = updater(get_store_value(store));
-        set(value);
-      },
-      subscribe: subscribe2
-    };
-  }
-  return stores[key];
-}
-localStorageStore("modeOsPrefers", false);
-localStorageStore("modeUserPrefers", void 0);
-localStorageStore("modeCurrent", false);
-function prefersReducedMotion() {
-  return false;
-}
-readable(prefersReducedMotion(), (set) => {
-});
 const cBase = "flex flex-col";
 const cRowMain = "grid items-center";
 const cRowHeadline = "";
@@ -154,7 +127,7 @@ const AppShell = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   classesFooter = `${slotFooter}`;
   return `<div id="appShell"${add_attribute("class", classesBase, 0)} data-testid="app-shell"> ${$$slots.header ? `<header id="shell-header" class="${"flex-none " + escape(classesHeader, true)}">${slots.header ? slots.header({}) : ``}</header>` : ``}  <div class="${"flex-auto " + escape(cContentArea, true)}"> ${$$slots.sidebarLeft ? `<aside id="sidebar-left"${add_attribute("class", classesSidebarLeft, 0)}>${slots.sidebarLeft ? slots.sidebarLeft({}) : ``}</aside>` : ``}  <div id="page" class="${escape(regionPage, true) + " " + escape(cPage, true)}"${add_styles({ "scrollbar-gutter": scrollbarGutter })}> ${$$slots.pageHeader ? `<header id="page-header" class="${"flex-none " + escape(classesPageHeader, true)}">${slots.pageHeader ? slots.pageHeader({}) : `(slot:header)`}</header>` : ``}  <main id="page-content" class="${"flex-auto " + escape(classesPageContent, true)}">${slots.default ? slots.default({}) : ``}</main>  ${$$slots.pageFooter ? `<footer id="page-footer" class="${"flex-none " + escape(classesPageFooter, true)}">${slots.pageFooter ? slots.pageFooter({}) : `(slot:footer)`}</footer>` : ``}</div>  ${$$slots.sidebarRight ? `<aside id="sidebar-right"${add_attribute("class", classesSidebarRight, 0)}>${slots.sidebarRight ? slots.sidebarRight({}) : ``}</aside>` : ``}</div>  ${$$slots.footer ? `<footer id="shell-footer" class="${"flex-none " + escape(classesFooter, true)}">${slots.footer ? slots.footer({}) : ``}</footer>` : ``}</div>`;
 });
-const LogoPrincipal = "/_app/immutable/assets/logo-nome.9TKz916y.png";
+const LogoRodape = "/_app/immutable/assets/logo-nome.9TKz916y.png";
 const css = {
   code: ".active.svelte-1cr2s5t{font-weight:600;color:rgb(var(--color-primary-500))}.active.svelte-1cr2s5t:hover{color:rgb(var(--color-primary-600))}",
   map: null
@@ -174,22 +147,106 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       trail: () => {
-        return `<button class="btn variant-ghost-primary font-semibold" data-svelte-h="svelte-vgltwk">Area do Cliente</button> `;
+        return `<a href="https://portal.himarte.com.br/person_users/login" class="flex btn-sm rounded-full md:btn variant-ghost-primary font-semibold" data-svelte-h="svelte-wr0glr">Area do Cliente</a> `;
       },
       default: () => {
-        return `<a class="${["md:text-2xl svelte-1cr2s5t", $page.url.pathname === "/" ? "active" : ""].join(" ").trim()}" href="/" data-svelte-h="svelte-bddyap">Home</a> <a class="${[
-          "md:text-2xl svelte-1cr2s5t",
+        return `<ul class="hidden md:flex"><a class="${[
+          "btn md:text-xl hover:variant-soft-primary svelte-1cr2s5t",
+          $page.url.pathname === "/" ? "active" : ""
+        ].join(" ").trim()}" href="/" data-svelte-h="svelte-10p4bx4">Home</a> <a class="${[
+          "btn md:text-xl hover:variant-soft-primary svelte-1cr2s5t",
           $page.url.pathname === "/sobre" ? "active" : ""
-        ].join(" ").trim()}" href="/sobre" data-svelte-h="svelte-dojwfp">Sobre</a> <a class="${[
-          "md:text-2xl svelte-1cr2s5t",
+        ].join(" ").trim()}" href="/sobre" data-svelte-h="svelte-3vhmmh">Sobre</a> <a class="${[
+          "btn md:text-xl hover:variant-soft-primary svelte-1cr2s5t",
           $page.url.pathname === "/trabalhe-conosco" ? "active" : ""
-        ].join(" ").trim()}" href="/trabalhe-conosco" data-svelte-h="svelte-g3juwq">Trabalhe Conosco</a> `;
+        ].join(" ").trim()}" href="/trabalhe-conosco" data-svelte-h="svelte-niljvz">Trabalhe Conosco</a></ul> `;
       },
       lead: () => {
-        return `<a href="/" data-svelte-h="svelte-1m56128"><img${add_attribute("src", LogoPrincipal, 0)} class="h-8 sm:h-10" alt="Himarte Logo"></a>`;
+        return `<a href="/" data-svelte-h="svelte-1m56128"><img${add_attribute("src", LogoRodape, 0)} class="h-8 sm:h-10" alt="Himarte Logo"></a>`;
       }
     }
   )}`;
+});
+const Facebook = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const iconNode = [
+    [
+      "path",
+      {
+        "d": "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+      }
+    ]
+  ];
+  return `  ${validate_component(Icon, "Icon").$$render($$result, Object.assign({}, { name: "facebook" }, $$props, { iconNode }), {}, {
+    default: () => {
+      return `${slots.default ? slots.default({}) : ``}`;
+    }
+  })}`;
+});
+const Facebook$1 = Facebook;
+const Instagram = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const iconNode = [
+    [
+      "rect",
+      {
+        "width": "20",
+        "height": "20",
+        "x": "2",
+        "y": "2",
+        "rx": "5",
+        "ry": "5"
+      }
+    ],
+    [
+      "path",
+      {
+        "d": "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+      }
+    ],
+    [
+      "line",
+      {
+        "x1": "17.5",
+        "x2": "17.51",
+        "y1": "6.5",
+        "y2": "6.5"
+      }
+    ]
+  ];
+  return `  ${validate_component(Icon, "Icon").$$render($$result, Object.assign({}, { name: "instagram" }, $$props, { iconNode }), {}, {
+    default: () => {
+      return `${slots.default ? slots.default({}) : ``}`;
+    }
+  })}`;
+});
+const Instagram$1 = Instagram;
+const Linkedin = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const iconNode = [
+    [
+      "path",
+      {
+        "d": "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+      }
+    ],
+    [
+      "rect",
+      {
+        "width": "4",
+        "height": "12",
+        "x": "2",
+        "y": "9"
+      }
+    ],
+    ["circle", { "cx": "4", "cy": "4", "r": "2" }]
+  ];
+  return `  ${validate_component(Icon, "Icon").$$render($$result, Object.assign({}, { name: "linkedin" }, $$props, { iconNode }), {}, {
+    default: () => {
+      return `${slots.default ? slots.default({}) : ``}`;
+    }
+  })}`;
+});
+const Linkedin$1 = Linkedin;
+const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<footer class="flex flex-col justify-between md:h-36"><div class="flex flex-col md:flex-row md:px-10"><div class="flex flex-col items-center md:items-start md:w-1/3" data-svelte-h="svelte-r3tylk"><img${add_attribute("src", LogoRodape, 0)} alt="Logo Himarte" class="w-32 md:w-36 h-8 md:h-10 mb-2"> <p class="px-5 md:px-0 text-sm fontSpace">O futuro é aqui</p></div> <ul class="flex items-center p-8 md:p-0 gap-10 md:w-1/3 justify-center"><li><a href="https://www.facebook.com/himarte.net/">${validate_component(Facebook$1, "Facebook").$$render($$result, { size: 34 }, {}, {})}</a></li> <li><a href="https://www.instagram.com/himarte_net/">${validate_component(Instagram$1, "Instagram").$$render($$result, { size: 34 }, {}, {})}</a></li> <li><a href="https://www.linkedin.com/company/himarte-net/">${validate_component(Linkedin$1, "Linkedin").$$render($$result, { size: 34 }, {}, {})}</a></li></ul> <ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end" data-svelte-h="svelte-18sqkdw"><li><a href="/sobre" class="text-primary-500 hover:text-primary-600">Sobre</a></li> <li><a href="/trabalhe-conosco" class="text-primary-500 hover:text-primary-600">Trabalhe conosco</a></li> <li><a href="/sobre" class="text-primary-500 hover:text-primary-600">Filiais</a></li></ul></div> <p class="text-center text-sm" data-svelte-h="svelte-1kzppgw">©2024 Quiliao</p></footer>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   hljs.registerLanguage("xml", xml);
@@ -206,11 +263,14 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     arrow
   });
   return ` ${validate_component(AppShell, "AppShell").$$render($$result, {}, {}, {
+    pageFooter: () => {
+      return ` ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})} `;
+    },
     header: () => {
-      return ` ${validate_component(Header, "Header").$$render($$result, {}, {}, {})} `;
+      return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})} `;
     },
     default: () => {
-      return ` ${slots.default ? slots.default({}) : ``}`;
+      return ` <main>${slots.default ? slots.default({}) : ``}</main>`;
     }
   })}`;
 });
