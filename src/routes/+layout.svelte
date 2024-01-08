@@ -3,7 +3,6 @@
     import { AppShell } from "@skeletonlabs/skeleton";
     import Header from "$lib/assets/components/Header.svelte";
     import Footer from "$lib/assets/components/Footer.svelte";
-    import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
     // Highlight JS
     import hljs from "highlight.js/lib/core";
     import "highlight.js/styles/github-dark.css";
@@ -12,8 +11,12 @@
     import css from "highlight.js/lib/languages/css";
     import javascript from "highlight.js/lib/languages/javascript";
     import typescript from "highlight.js/lib/languages/typescript";
-
+    // Speed Insights da vercel
+    import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
     injectSpeedInsights();
+    // Skeleton Stores
+    // import { initializeStores } from "@skeletonlabs/skeleton";
+    // initializeStores();
 
     hljs.registerLanguage("xml", xml); // for HTML
     hljs.registerLanguage("css", css);

@@ -50,7 +50,6 @@
 
 <section class="px-10 pt-10 space-y-5">
     <h1 class="h1 text-center font-bold gradient-heading fontSpace">Trabalhe Conosco</h1>
-
 </section>
 
 <form class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 my-5 gap-5 md:mx-28">
@@ -129,10 +128,12 @@
     </FileDropzone>
     <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center">
         <button
+            type="reset"
             class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center"
             >Limpar campos</button
         >
         <button
+            type="submit"
             class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center"
             on:click={enviarEmail}>Enviar Currículo</button
         >

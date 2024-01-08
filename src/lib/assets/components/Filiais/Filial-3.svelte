@@ -1,5 +1,5 @@
 <a
-    class="card md:flex card-hover overflow-hidden"
+    class="card md:flex md:w-1/2 card-hover overflow-hidden border border-gray-200"
     href="https://www.google.com/maps/place/HIMARTE+NET/@-29.7400007,-52.4340621,15z/data=!4m10!1m2!2m1!1shimarte+net!3m6!1s0x951ca36c00bd5853:0x616fb46dea836058!8m2!3d-29.7253271!4d-52.4303232!15sCgtoaW1hcnRlIG5ldJIBGWludGVybmV0X3NlcnZpY2VfcHJvdmlkZXLgAQA!16s%2Fg%2F11bw5_81yj?entry=ttu"
 >
     <header>
@@ -9,23 +9,14 @@
             height="300"
             style="border:0;"
             allowfullscreen={true}
-            loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             title="HIMARTE NET Location"
         >
         </iframe>
     </header>
-    <div class="p-4 space-y-4">
+    <div class="flex flex-col w-full py-20 md:py-0 justify-center items-center space-y-2">
         <h3 class="h3">Santa Cruz do Sul</h3>
         <h6 class="h6">Segunda a sexta</h6>
         <h6 class="h6">08:30 – 12:00 | 13:30 – 18:00</h6>
-
-        <article>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aspernatur
-                provident eveniet eligendi cumque consequatur tempore sint nisi sapiente. Iste
-                beatae laboriosam iure molestias cum expedita architecto itaque quae rem.
-            </p>
-        </article>
     </div>
 </a>
