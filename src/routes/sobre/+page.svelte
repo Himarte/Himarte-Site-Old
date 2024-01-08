@@ -31,7 +31,7 @@
     </p>
 </section>
 <section class="px-10 py-10 space-y-5">
-    <h2 class="h4 md:m2 font-semibold gradient-heading">Encontre a filial mais proxima de você!</h2>
+    <h2 class="h4 md:h2 font-semibold gradient-heading">Encontre a filial mais proxima de você!</h2>
     <div class="flex flex-col gap-5 items-center w-full">
         <div class="flex flex-col md:flex-row w-full md:justify-center gap-5">
             <Filial_1 />

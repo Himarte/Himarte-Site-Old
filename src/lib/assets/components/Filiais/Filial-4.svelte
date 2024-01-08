@@ -15,8 +15,12 @@
         </iframe>
     </header>
     <div class="flex flex-col w-full py-20 md:py-0 justify-center items-center space-y-2">
-        <h3 class="h3">Santa Cruz do Sul</h3>
+        <h3 class="h3 text-primary-500">Santa Cruz do Sul</h3>
         <h6 class="h6">Segunda a sexta</h6>
-        <h6 class="h6">08:30 – 12:00 | 13:30 – 18:00</h6>
+        <h6 class="h6">
+            08:30 <span class="text-primary-500">-</span> 12:00
+            <span class="text-primary-500">|</span>13:30
+            <span class="text-primary-500">-</span> 18:00
+        </h6>
     </div>
 </a>
