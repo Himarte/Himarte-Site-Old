@@ -1,4 +1,4 @@
-import { c as create_ssr_component, h as compute_rest_props, e as escape, i as spread, j as escape_attribute_value, k as escape_object, b as compute_slots, v as validate_component, a as add_attribute } from "../../../chunks/ssr.js";
+import { c as create_ssr_component, h as compute_rest_props, e as escape, i as spread, j as escape_attribute_value, k as escape_object, b as compute_slots, v as validate_component } from "../../../chunks/ssr.js";
 import "../../../chunks/ProgressBar.svelte_svelte_type_style_lang.js";
 import { I as Icon } from "../../../chunks/Icon.js";
 const cBase = "textarea relative flex justify-center items-center";
@@ -97,16 +97,17 @@ const File_up = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const FileUp = File_up;
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let nome = "";
-  let emailRemetente = "";
-  let vagaDesejada = "";
-  return `<section class="px-10 pt-10 space-y-5" data-svelte-h="svelte-1vdw09t"><h1 class="h1 text-center font-bold gradient-heading fontSpace">Trabalhe Conosco</h1></section> <form class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 my-5 gap-5 md:mx-28"><div class="md:flex w-full gap-5"><div class="flex flex-col gap-3 md:w-1/2"><label class="label space-y-2"><span class="md:h4 text-primary-500 card-header" data-svelte-h="svelte-1fa9avi">Nome Completo:</span> <input class="px-3 input" type="text" id="nome" name="nome" placeholder="ex. John da Silva"${add_attribute("value", nome, 0)}></label> <label class="label space-y-2" data-svelte-h="svelte-uowrv5"><span class="md:h4 text-primary-500 card-header">Telefone:</span> <input class="px-3 input" title="Input (tel)" type="tel" placeholder="ex. (51) 1234-5678"></label></div> <div class="flex flex-col gap-3 md:w-1/2"><label class="label space-y-2"><span class="md:h4 text-primary-500 card-header" data-svelte-h="svelte-gixcec">Email:</span> <input class="px-3 input" type="email" placeholder="john@himarte.com.br" autocomplete="email" id="emailRemetente" name="emailRemetente"${add_attribute("value", emailRemetente, 0)}></label> <label class="label space-y-2"><span class="md:h4 text-primary-500 card-header" data-svelte-h="svelte-t2q9em">Vaga desejada:</span> <input class="px-3 input" type="text" id="vagaDesejada" name="vagaDesejada" placeholder="ex. Suporte Técnico"${add_attribute("value", vagaDesejada, 0)}></label></div></div> <label class="label space-y-2" data-svelte-h="svelte-wp7t4x"><span class="md:h4 text-primary-500 card-header">Mensagem/Corpo do E-mail:</span> <textarea class="textarea" rows="8" placeholder="Conte-nos um pouco sobre você, suas experiências e por que essa vaga seria perfeita para você!"></textarea></label> ${validate_component(FileDropzone, "FileDropzone").$$render(
+  let { data } = $$props;
+  if ($$props.data === void 0 && $$bindings.data && data !== void 0)
+    $$bindings.data(data);
+  return `<section class="px-10 pt-10 space-y-5" data-svelte-h="svelte-1vdw09t"><h1 class="h1 text-center font-bold gradient-heading fontSpace">Trabalhe Conosco</h1></section> <form action="?/enviarEmail" method="post" class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 my-5 gap-5 md:mx-28"><div class="md:flex w-full gap-5" data-svelte-h="svelte-1iypefs"><div class="flex flex-col gap-3 md:w-1/2"><label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Nome Completo:</span> <input class="px-3 input" type="text" name="nome" placeholder="ex. John da Silva"></label> <label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Telefone:</span> <input class="px-3 input" title="Input (tel)" type="tel" name="telefone" placeholder="ex. (51) 1234-5678"></label></div> <div class="flex flex-col gap-3 md:w-1/2"><label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Email:</span> <input class="px-3 input" type="email" placeholder="john@himarte.com.br" autocomplete="email" name="emailRemetente"></label> <label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Vaga desejada:</span> <input class="px-3 input" type="text" name="vagaDesejada" placeholder="ex. Suporte Técnico"></label></div></div> <label class="label space-y-2" data-svelte-h="svelte-1ai78cq"><span class="md:h4 text-primary-500 card-header">Mensagem/Corpo do E-mail:</span> <textarea class="textarea" rows="8" name="mensagem" placeholder="Conte-nos um pouco sobre você, suas experiências e por que essa vaga seria perfeita para você!"></textarea></label> ${validate_component(FileDropzone, "FileDropzone").$$render(
     $$result,
     {
       name: "files",
       class: "input md:h-36",
       type: "file",
-      id: "anexos"
+      enctype: "multipart/form-data",
+      accept: "application/pdf"
     },
     {},
     {
@@ -120,7 +121,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         return `<span class="flex justify-center">${validate_component(FileUp, "FileUp").$$render($$result, { size: 40 }, {}, {})}</span>`;
       }
     }
-  )} <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center"><button type="reset" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center" data-svelte-h="svelte-wy53pk">Limpar campos</button> <button type="submit" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center" data-svelte-h="svelte-myzak5">Enviar Currículo</button></div></form>   `;
+  )} <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center" data-svelte-h="svelte-o98rqf"><button type="reset" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Limpar campos</button> <button type="submit" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Enviar Currículo</button></div></form>`;
 });
 export {
   Page as default
