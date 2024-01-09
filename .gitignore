@@ -1,1 +1,8 @@
+# faz um git ignore para um projeto svelte/sveltkit usando tailwindcss nodemailer arquivo .env e hospedado na vercel
+
+
 node_modules
+.env
+.vercel
+package-lock.json
+pnpm-lock.yaml

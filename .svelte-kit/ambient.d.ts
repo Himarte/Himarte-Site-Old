@@ -26,6 +26,9 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const HOST_SERVER: string;
+	export const SENDER_EMAIL: string;
+	export const SENDER_PASSWORD: string;
 	export const npm_package_devDependencies__types_node: string;
 	export const npm_package_devDependencies__sveltejs_adapter_vercel: string;
 	export const SNAP_COMMON: string;
@@ -49,6 +52,7 @@ declare module '$env/static/private' {
 	export const LOCPATH_VSCODE_SNAP_ORIG: string;
 	export const OLDPWD: string;
 	export const SNAP_LIBRARY_PATH: string;
+	export const npm_package_devDependencies__types_sanitize_html: string;
 	export const npm_package_devDependencies__typescript_eslint_parser: string;
 	export const npm_package_dependencies__vercel_speed_insights: string;
 	export const DESKTOP_SESSION: string;
@@ -68,6 +72,7 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies_svelte_check: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const npm_package_scripts_check: string;
+	export const npm_package_devDependencies__types_nodemailer: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const DBUS_STARTER_BUS_TYPE: string;
 	export const P9K_TTY: string;
@@ -97,6 +102,7 @@ declare module '$env/static/private' {
 	export const XDG_SESSION_CLASS: string;
 	export const npm_package_scripts_lint: string;
 	export const npm_package_devDependencies__typescript_eslint_eslint_plugin: string;
+	export const npm_package_dependencies_sanitize_html: string;
 	export const npm_config_registry: string;
 	export const TERM: string;
 	export const USERNAME: string;
@@ -111,6 +117,7 @@ declare module '$env/static/private' {
 	export const GTK_EXE_PREFIX: string;
 	export const SESSION_MANAGER: string;
 	export const npm_package_name: string;
+	export const npm_package_dependencies_nodemailer: string;
 	export const NODE: string;
 	export const GDK_BACKEND: string;
 	export const GNOME_TERMINAL_SCREEN: string;
@@ -147,6 +154,7 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_event: string;
 	export const NODE_PATH: string;
 	export const GDMSESSION: string;
+	export const NO_AT_BRIDGE: string;
 	export const QT_ACCESSIBILITY: string;
 	export const SNAP_REEXEC: string;
 	export const npm_package_scripts_build: string;
@@ -219,6 +227,9 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		HOST_SERVER: string;
+		SENDER_EMAIL: string;
+		SENDER_PASSWORD: string;
 		npm_package_devDependencies__types_node: string;
 		npm_package_devDependencies__sveltejs_adapter_vercel: string;
 		SNAP_COMMON: string;
@@ -242,6 +253,7 @@ declare module '$env/dynamic/private' {
 		LOCPATH_VSCODE_SNAP_ORIG: string;
 		OLDPWD: string;
 		SNAP_LIBRARY_PATH: string;
+		npm_package_devDependencies__types_sanitize_html: string;
 		npm_package_devDependencies__typescript_eslint_parser: string;
 		npm_package_dependencies__vercel_speed_insights: string;
 		DESKTOP_SESSION: string;
@@ -261,6 +273,7 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies_svelte_check: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		npm_package_scripts_check: string;
+		npm_package_devDependencies__types_nodemailer: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		DBUS_STARTER_BUS_TYPE: string;
 		P9K_TTY: string;
@@ -290,6 +303,7 @@ declare module '$env/dynamic/private' {
 		XDG_SESSION_CLASS: string;
 		npm_package_scripts_lint: string;
 		npm_package_devDependencies__typescript_eslint_eslint_plugin: string;
+		npm_package_dependencies_sanitize_html: string;
 		npm_config_registry: string;
 		TERM: string;
 		USERNAME: string;
@@ -304,6 +318,7 @@ declare module '$env/dynamic/private' {
 		GTK_EXE_PREFIX: string;
 		SESSION_MANAGER: string;
 		npm_package_name: string;
+		npm_package_dependencies_nodemailer: string;
 		NODE: string;
 		GDK_BACKEND: string;
 		GNOME_TERMINAL_SCREEN: string;
@@ -340,6 +355,7 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_event: string;
 		NODE_PATH: string;
 		GDMSESSION: string;
+		NO_AT_BRIDGE: string;
 		QT_ACCESSIBILITY: string;
 		SNAP_REEXEC: string;
 		npm_package_scripts_build: string;

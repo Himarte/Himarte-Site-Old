@@ -8,6 +8,7 @@
 		"src/routes/+layout.ts"
 	],
 	"/trabalhe-conosco": [
+		"src/routes/trabalhe-conosco/+page.server.ts",
 		"src/routes/+layout.ts"
 	]
 }
