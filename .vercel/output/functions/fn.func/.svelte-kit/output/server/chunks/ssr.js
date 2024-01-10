@@ -42,6 +42,14 @@ function compute_slots(slots) {
   }
   return result;
 }
+function split_css_unit(value) {
+  const split = typeof value === "string" && value.match(/^\s*(-?[\d.]+)([^\s]*)\s*$/);
+  return split ? [parseFloat(split[1]), split[2] || "px"] : [
+    /** @type {number} */
+    value,
+    "px"
+  ];
+}
 let current_component;
 function set_current_component(component) {
   current_component = component;
@@ -250,22 +258,23 @@ function add_styles(style_object) {
   return styles ? ` style="${styles}"` : "";
 }
 export {
-  add_attribute as a,
-  compute_slots as b,
+  split_css_unit as a,
+  add_attribute as b,
   create_ssr_component as c,
-  add_styles as d,
+  compute_slots as d,
   escape as e,
-  subscribe as f,
-  getContext as g,
-  compute_rest_props as h,
-  spread as i,
-  escape_attribute_value as j,
-  escape_object as k,
-  get_store_value as l,
+  add_styles as f,
+  subscribe as g,
+  each as h,
+  getContext as i,
+  compute_rest_props as j,
+  spread as k,
+  escape_attribute_value as l,
   missing_component as m,
-  noop as n,
-  safe_not_equal as o,
-  each as p,
+  escape_object as n,
+  get_store_value as o,
+  noop as p,
+  safe_not_equal as q,
   setContext as s,
   validate_component as v
 };

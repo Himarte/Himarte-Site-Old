@@ -1,6 +1,6 @@
-import { c as create_ssr_component, e as escape, a as add_attribute, b as compute_slots, d as add_styles, f as subscribe, v as validate_component } from "../../chunks/ssr.js";
+import { s as setContext, a as split_css_unit, c as create_ssr_component, e as escape, b as add_attribute, d as compute_slots, f as add_styles, g as subscribe, h as each, v as validate_component } from "../../chunks/ssr.js";
 import { w as writable } from "../../chunks/index.js";
-import "../../chunks/ProgressBar.svelte_svelte_type_style_lang.js";
+import { i as initializeToastStore, p as prefersReducedMotionStore, g as getToastStore } from "../../chunks/ProgressBar.svelte_svelte_type_style_lang.js";
 import { p as page } from "../../chunks/stores.js";
 import { I as Icon } from "../../chunks/Icon.js";
 import hljs from "highlight.js/lib/core";
@@ -8,9 +8,83 @@ import xml from "highlight.js/lib/languages/xml";
 import css$1 from "highlight.js/lib/languages/css";
 import javascript from "highlight.js/lib/languages/javascript";
 import typescript from "highlight.js/lib/languages/typescript";
+import "../../chunks/client.js";
 import { computePosition, autoUpdate, flip, shift, offset, arrow } from "@floating-ui/dom";
 const storeHighlightJs = writable(void 0);
 const storePopup = writable(void 0);
+const DRAWER_STORE_KEY = "drawerStore";
+function initializeDrawerStore() {
+  const drawerStore = drawerService();
+  return setContext(DRAWER_STORE_KEY, drawerStore);
+}
+function drawerService() {
+  const { subscribe: subscribe2, set, update } = writable({});
+  return {
+    subscribe: subscribe2,
+    set,
+    update,
+    /** Open the drawer. */
+    open: (newSettings) => update(() => {
+      return { open: true, ...newSettings };
+    }),
+    /** Close the drawer. */
+    close: () => update((d) => {
+      d.open = false;
+      return d;
+    })
+  };
+}
+const MODAL_STORE_KEY = "modalStore";
+function initializeModalStore() {
+  const modalStore = modalService();
+  return setContext(MODAL_STORE_KEY, modalStore);
+}
+function modalService() {
+  const { subscribe: subscribe2, set, update } = writable([]);
+  return {
+    subscribe: subscribe2,
+    set,
+    update,
+    /** Append to end of queue. */
+    trigger: (modal) => update((mStore) => {
+      mStore.push(modal);
+      return mStore;
+    }),
+    /**  Remove first item in queue. */
+    close: () => update((mStore) => {
+      if (mStore.length > 0)
+        mStore.shift();
+      return mStore;
+    }),
+    /** Remove all items from queue. */
+    clear: () => set([])
+  };
+}
+function initializeStores() {
+  initializeModalStore();
+  initializeToastStore();
+  initializeDrawerStore();
+}
+function cubicOut(t) {
+  const f = t - 1;
+  return f * f * f + 1;
+}
+function fly(node, { delay = 0, duration = 400, easing = cubicOut, x = 0, y = 0, opacity = 0 } = {}) {
+  const style = getComputedStyle(node);
+  const target_opacity = +style.opacity;
+  const transform = style.transform === "none" ? "" : style.transform;
+  const od = target_opacity * (1 - opacity);
+  const [xValue, xUnit] = split_css_unit(x);
+  const [yValue, yUnit] = split_css_unit(y);
+  return {
+    delay,
+    duration,
+    easing,
+    css: (t, u) => `
+			transform: ${transform} translate(${(1 - t) * xValue}${xUnit}, ${(1 - t) * yValue}${yUnit});
+			opacity: ${target_opacity - od * u}`
+  };
+}
 const cBase = "flex flex-col";
 const cRowMain = "grid items-center";
 const cRowHeadline = "";
@@ -126,6 +200,120 @@ const AppShell = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   classesPageFooter = `${slotPageFooter}`;
   classesFooter = `${slotFooter}`;
   return `<div id="appShell"${add_attribute("class", classesBase, 0)} data-testid="app-shell"> ${$$slots.header ? `<header id="shell-header" class="${"flex-none " + escape(classesHeader, true)}">${slots.header ? slots.header({}) : ``}</header>` : ``}  <div class="${"flex-auto " + escape(cContentArea, true)}"> ${$$slots.sidebarLeft ? `<aside id="sidebar-left"${add_attribute("class", classesSidebarLeft, 0)}>${slots.sidebarLeft ? slots.sidebarLeft({}) : ``}</aside>` : ``}  <div id="page" class="${escape(regionPage, true) + " " + escape(cPage, true)}"${add_styles({ "scrollbar-gutter": scrollbarGutter })}> ${$$slots.pageHeader ? `<header id="page-header" class="${"flex-none " + escape(classesPageHeader, true)}">${slots.pageHeader ? slots.pageHeader({}) : `(slot:header)`}</header>` : ``}  <main id="page-content" class="${"flex-auto " + escape(classesPageContent, true)}">${slots.default ? slots.default({}) : ``}</main>  ${$$slots.pageFooter ? `<footer id="page-footer" class="${"flex-none " + escape(classesPageFooter, true)}">${slots.pageFooter ? slots.pageFooter({}) : `(slot:footer)`}</footer>` : ``}</div>  ${$$slots.sidebarRight ? `<aside id="sidebar-right"${add_attribute("class", classesSidebarRight, 0)}>${slots.sidebarRight ? slots.sidebarRight({}) : ``}</aside>` : ``}</div>  ${$$slots.footer ? `<footer id="shell-footer" class="${"flex-none " + escape(classesFooter, true)}">${slots.footer ? slots.footer({}) : ``}</footer>` : ``}</div>`;
+});
+const cWrapper = "flex fixed top-0 left-0 right-0 bottom-0 pointer-events-none";
+const cSnackbar = "flex flex-col gap-y-2";
+const cToast = "flex justify-between items-center pointer-events-auto";
+const cToastActions = "flex items-center space-x-2";
+const Toast = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let classesWrapper;
+  let classesSnackbar;
+  let classesToast;
+  let filteredToasts;
+  let $toastStore, $$unsubscribe_toastStore;
+  let $prefersReducedMotionStore, $$unsubscribe_prefersReducedMotionStore;
+  $$unsubscribe_prefersReducedMotionStore = subscribe(prefersReducedMotionStore, (value) => $prefersReducedMotionStore = value);
+  const toastStore = getToastStore();
+  $$unsubscribe_toastStore = subscribe(toastStore, (value) => $toastStore = value);
+  let { position = "b" } = $$props;
+  let { max = 3 } = $$props;
+  let { background = "variant-filled-secondary" } = $$props;
+  let { width = "max-w-[640px]" } = $$props;
+  let { color = "" } = $$props;
+  let { padding = "p-4" } = $$props;
+  let { spacing = "space-x-4" } = $$props;
+  let { rounded = "rounded-container-token" } = $$props;
+  let { shadow = "shadow-lg" } = $$props;
+  let { zIndex = "z-[888]" } = $$props;
+  let { buttonAction = "btn variant-filled" } = $$props;
+  let { buttonDismiss = "btn-icon btn-icon-sm variant-filled" } = $$props;
+  let { buttonDismissLabel = "✕" } = $$props;
+  let { transitions = !$prefersReducedMotionStore } = $$props;
+  let { transitionIn = fly } = $$props;
+  let { transitionInParams = { duration: 250 } } = $$props;
+  let { transitionOut = fly } = $$props;
+  let { transitionOutParams = { duration: 250 } } = $$props;
+  let cPosition;
+  let cAlign;
+  switch (position) {
+    case "t":
+      cPosition = "justify-center items-start";
+      cAlign = "items-center";
+      break;
+    case "b":
+      cPosition = "justify-center items-end";
+      cAlign = "items-center";
+      break;
+    case "l":
+      cPosition = "justify-start items-center";
+      cAlign = "items-start";
+      break;
+    case "r":
+      cPosition = "justify-end items-center";
+      cAlign = "items-end";
+      break;
+    case "tl":
+      cPosition = "justify-start items-start";
+      cAlign = "items-start";
+      break;
+    case "tr":
+      cPosition = "justify-end items-start";
+      cAlign = "items-end";
+      break;
+    case "bl":
+      cPosition = "justify-start items-end";
+      cAlign = "items-start";
+      break;
+    case "br":
+      cPosition = "justify-end items-end";
+      cAlign = "items-end";
+      break;
+  }
+  if ($$props.position === void 0 && $$bindings.position && position !== void 0)
+    $$bindings.position(position);
+  if ($$props.max === void 0 && $$bindings.max && max !== void 0)
+    $$bindings.max(max);
+  if ($$props.background === void 0 && $$bindings.background && background !== void 0)
+    $$bindings.background(background);
+  if ($$props.width === void 0 && $$bindings.width && width !== void 0)
+    $$bindings.width(width);
+  if ($$props.color === void 0 && $$bindings.color && color !== void 0)
+    $$bindings.color(color);
+  if ($$props.padding === void 0 && $$bindings.padding && padding !== void 0)
+    $$bindings.padding(padding);
+  if ($$props.spacing === void 0 && $$bindings.spacing && spacing !== void 0)
+    $$bindings.spacing(spacing);
+  if ($$props.rounded === void 0 && $$bindings.rounded && rounded !== void 0)
+    $$bindings.rounded(rounded);
+  if ($$props.shadow === void 0 && $$bindings.shadow && shadow !== void 0)
+    $$bindings.shadow(shadow);
+  if ($$props.zIndex === void 0 && $$bindings.zIndex && zIndex !== void 0)
+    $$bindings.zIndex(zIndex);
+  if ($$props.buttonAction === void 0 && $$bindings.buttonAction && buttonAction !== void 0)
+    $$bindings.buttonAction(buttonAction);
+  if ($$props.buttonDismiss === void 0 && $$bindings.buttonDismiss && buttonDismiss !== void 0)
+    $$bindings.buttonDismiss(buttonDismiss);
+  if ($$props.buttonDismissLabel === void 0 && $$bindings.buttonDismissLabel && buttonDismissLabel !== void 0)
+    $$bindings.buttonDismissLabel(buttonDismissLabel);
+  if ($$props.transitions === void 0 && $$bindings.transitions && transitions !== void 0)
+    $$bindings.transitions(transitions);
+  if ($$props.transitionIn === void 0 && $$bindings.transitionIn && transitionIn !== void 0)
+    $$bindings.transitionIn(transitionIn);
+  if ($$props.transitionInParams === void 0 && $$bindings.transitionInParams && transitionInParams !== void 0)
+    $$bindings.transitionInParams(transitionInParams);
+  if ($$props.transitionOut === void 0 && $$bindings.transitionOut && transitionOut !== void 0)
+    $$bindings.transitionOut(transitionOut);
+  if ($$props.transitionOutParams === void 0 && $$bindings.transitionOutParams && transitionOutParams !== void 0)
+    $$bindings.transitionOutParams(transitionOutParams);
+  classesWrapper = `${cWrapper} ${cPosition} ${zIndex} ${$$props.class || ""}`;
+  classesSnackbar = `${cSnackbar} ${cAlign} ${padding}`;
+  classesToast = `${cToast} ${width} ${color} ${padding} ${spacing} ${rounded} ${shadow}`;
+  filteredToasts = Array.from($toastStore).slice(0, max);
+  $$unsubscribe_toastStore();
+  $$unsubscribe_prefersReducedMotionStore();
+  return `${$toastStore.length ? ` <div class="${"snackbar-wrapper " + escape(classesWrapper, true)}" data-testid="snackbar-wrapper"> <div class="${"snackbar " + escape(classesSnackbar, true)}">${each(filteredToasts, (t, i) => {
+    return `<div${add_attribute("role", t.hideDismiss ? "alert" : "alertdialog", 0)} aria-live="polite"> <div class="${"toast " + escape(classesToast, true) + " " + escape(t.background ?? background, true) + " " + escape(t.classes ?? "", true)}" data-testid="toast"><div class="text-base"><!-- HTML_TAG_START -->${t.message}<!-- HTML_TAG_END --></div> ${t.action || !t.hideDismiss ? `<div class="${"toast-actions " + escape(cToastActions, true)}">${t.action ? `<button${add_attribute("class", buttonAction, 0)}><!-- HTML_TAG_START -->${t.action.label}<!-- HTML_TAG_END --></button>` : ``} ${!t.hideDismiss ? `<button${add_attribute("class", buttonDismiss, 0)} aria-label="Dismiss toast">${escape(buttonDismissLabel)}</button>` : ``} </div>` : ``}</div> </div>`;
+  })}</div></div>` : ``}`;
 });
 const LogoRodape = "/_app/immutable/assets/logo-nome.9TKz916y.png";
 const css = {
@@ -265,6 +453,7 @@ const ChatPagina = create_ssr_component(($$result, $$props, $$bindings, slots) =
   return `<button class="sticky btn-icon-base rounded-full variant-filled-surface bottom-16 ml-[87%] md:ml-[94%] md:bottom-10">${validate_component(MessageCirclePlus, "MessageCirclePlus").$$render($$result, { size: 44 }, {}, {})}</button>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  initializeStores();
   hljs.registerLanguage("xml", xml);
   hljs.registerLanguage("css", css$1);
   hljs.registerLanguage("javascript", javascript);
@@ -278,7 +467,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     offset,
     arrow
   });
-  return ` ${validate_component(AppShell, "AppShell").$$render($$result, {}, {}, {
+  return `${validate_component(Toast, "Toast").$$render($$result, {}, {}, {})}  ${validate_component(AppShell, "AppShell").$$render($$result, {}, {}, {
     pageFooter: () => {
       return ` ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})} `;
     },

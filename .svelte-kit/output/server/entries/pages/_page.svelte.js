@@ -1,4 +1,4 @@
-import { c as create_ssr_component, v as validate_component, a as add_attribute, e as escape } from "../../chunks/ssr.js";
+import { c as create_ssr_component, v as validate_component, b as add_attribute, e as escape } from "../../chunks/ssr.js";
 import { I as Icon } from "../../chunks/Icon.js";
 const Plus = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const iconNode = [["path", { "d": "M5 12h14" }], ["path", { "d": "M12 5v14" }]];

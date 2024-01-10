@@ -1,5 +1,6 @@
-import { c as create_ssr_component, h as compute_rest_props, e as escape, i as spread, j as escape_attribute_value, k as escape_object, b as compute_slots, v as validate_component } from "../../../chunks/ssr.js";
-import "../../../chunks/ProgressBar.svelte_svelte_type_style_lang.js";
+import { c as create_ssr_component, j as compute_rest_props, e as escape, k as spread, l as escape_attribute_value, n as escape_object, d as compute_slots, v as validate_component } from "../../../chunks/ssr.js";
+import { g as getToastStore } from "../../../chunks/ProgressBar.svelte_svelte_type_style_lang.js";
+import "../../../chunks/client.js";
 import { I as Icon } from "../../../chunks/Icon.js";
 const cBase = "textarea relative flex justify-center items-center";
 const cInput = "w-full absolute top-0 left-0 right-0 bottom-0 z-[1] opacity-0 disabled:!opacity-0 cursor-pointer";
@@ -98,16 +99,19 @@ const File_up = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const FileUp = File_up;
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
+  let { form } = $$props;
+  getToastStore();
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
-  return `<section class="px-10 pt-10 space-y-5" data-svelte-h="svelte-1vdw09t"><h1 class="h1 text-center font-bold gradient-heading fontSpace">Trabalhe Conosco</h1></section> <form action="?/enviarEmail" method="post" class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 my-5 gap-5 md:mx-28"><div class="md:flex w-full gap-5" data-svelte-h="svelte-1iypefs"><div class="flex flex-col gap-3 md:w-1/2"><label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Nome Completo:</span> <input class="px-3 input" type="text" name="nome" placeholder="ex. John da Silva"></label> <label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Telefone:</span> <input class="px-3 input" title="Input (tel)" type="tel" name="telefone" placeholder="ex. (51) 1234-5678"></label></div> <div class="flex flex-col gap-3 md:w-1/2"><label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Email:</span> <input class="px-3 input" type="email" placeholder="john@himarte.com.br" autocomplete="email" name="emailRemetente"></label> <label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Vaga desejada:</span> <input class="px-3 input" type="text" name="vagaDesejada" placeholder="ex. Suporte Técnico"></label></div></div> <label class="label space-y-2" data-svelte-h="svelte-1ai78cq"><span class="md:h4 text-primary-500 card-header">Mensagem/Corpo do E-mail:</span> <textarea class="textarea" rows="8" name="mensagem" placeholder="Conte-nos um pouco sobre você, suas experiências e por que essa vaga seria perfeita para você!"></textarea></label> ${validate_component(FileDropzone, "FileDropzone").$$render(
+  if ($$props.form === void 0 && $$bindings.form && form !== void 0)
+    $$bindings.form(form);
+  return `<section class="px-10 pt-10 space-y-5" data-svelte-h="svelte-1vdw09t"><h1 class="h1 text-center font-bold gradient-heading fontSpace">Trabalhe Conosco</h1></section> <form action="?/enviarEmail" method="POST" enctype="multipart/form-data" class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 my-5 gap-5 md:mx-28"><div class="md:flex w-full gap-5" data-svelte-h="svelte-1g451pu"><div class="flex flex-col gap-3 md:w-1/2"><label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Nome Completo:</span> <input required class="px-3 input" type="text" name="nome" placeholder="ex. John da Silva"></label> <label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Telefone:</span> <input required class="px-3 input" title="Input (tel)" type="tel" name="telefone" placeholder="ex. (51) 1234-5678"></label></div> <div class="flex flex-col gap-3 md:w-1/2"><label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Email:</span> <input required class="px-3 input" type="Email" placeholder="john@himarte.com.br" autocomplete="email" name="emailRemetente"></label> <label class="label space-y-2"><span class="md:h4 text-primary-500 card-header">Vaga desejada:</span> <input required class="px-3 input" type="text" name="vagaDesejada" placeholder="ex. Suporte Técnico"></label></div></div> <label class="label space-y-2" data-svelte-h="svelte-1nbe9nt"><span class="md:h4 text-primary-500 card-header">Mensagem/Corpo do E-mail:</span> <textarea required class="textarea" rows="8" name="mensagem" placeholder="Conte-nos um pouco sobre você, suas experiências e por que essa vaga seria perfeita para você!"></textarea></label> ${validate_component(FileDropzone, "FileDropzone").$$render(
     $$result,
     {
-      name: "files",
-      class: "input md:h-36",
-      type: "file",
-      enctype: "multipart/form-data",
-      accept: "application/pdf"
+      name: "curriculo",
+      class: "input md:h-32",
+      accept: "application/pdf",
+      required: true
     },
     {},
     {
@@ -121,7 +125,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         return `<span class="flex justify-center">${validate_component(FileUp, "FileUp").$$render($$result, { size: 40 }, {}, {})}</span>`;
       }
     }
-  )} <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center" data-svelte-h="svelte-o98rqf"><button type="reset" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Limpar campos</button> <button type="submit" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Enviar Currículo</button></div></form>`;
+  )} <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center" data-svelte-h="svelte-o98rqf"><button type="reset" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Limpar campos</button> <button type="submit" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Enviar Currículo</button></div></form> <div>${form ? `${escape(JSON.stringify(form))}` : ``}</div>`;
 });
 export {
   Page as default

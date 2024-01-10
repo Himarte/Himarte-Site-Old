@@ -1,6 +1,6 @@
 <script lang="ts">
     import "../app.postcss";
-    import { AppShell } from "@skeletonlabs/skeleton";
+    import { AppShell, Toast } from "@skeletonlabs/skeleton";
     import Header from "$lib/assets/components/Header.svelte";
     import Footer from "$lib/assets/components/Footer.svelte";
     // Highlight JS
@@ -15,8 +15,8 @@
     import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
     injectSpeedInsights();
     // Skeleton Stores
-    // import { initializeStores } from "@skeletonlabs/skeleton";
-    // initializeStores();
+    import { initializeStores } from "@skeletonlabs/skeleton";
+    initializeStores();
 
     hljs.registerLanguage("xml", xml); // for HTML
     hljs.registerLanguage("css", css);
@@ -31,16 +31,12 @@
 
     // tenho que testar isso:
     import ChatPagina from "$lib/assets/components/ChatPagina.svelte";
-
-    import type { ComponentEvents } from "svelte";
-
-    function scrollHandler(event: ComponentEvents<AppShell>["scroll"]) {
-        console.log(event.currentTarget.scrollTop);
-    }
 </script>
 
+<Toast />
+
 <!-- App Shell -->
-<AppShell on:scroll={scrollHandler}>
+<AppShell>
     <svelte:fragment slot="header">
         <Header />
     </svelte:fragment>

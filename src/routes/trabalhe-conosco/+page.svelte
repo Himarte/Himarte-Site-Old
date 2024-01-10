@@ -1,9 +1,26 @@
 <script lang="ts">
-    import { FileDropzone } from "@skeletonlabs/skeleton";
+    import { FileDropzone, focusTrap, getToastStore } from "@skeletonlabs/skeleton";
     import { FileUp } from "lucide-svelte";
-    import type { PageData } from "./$types";
+    import type { ActionData, PageData } from "./$types";
+    import { enhance } from "$app/forms";
 
     export let data: PageData;
+    export let form: ActionData;
+    let requiredFields: string[] = [
+        "nome",
+        "telefone",
+        "emailRemetente",
+        "vagaDesejada",
+        "mensagem",
+    ];
+    const errorMessages: any = {
+        nome: "Nome inválido",
+        telefone: "Telefone inválido",
+        Email: "E-mail inválido",
+        vagaDesejada: "Vaga desejada inválida",
+        mensagem: "Mensagem inválida",
+    };
+    const toastStore = getToastStore();
 </script>
 
 <section class="px-10 pt-10 space-y-5">
@@ -11,20 +28,43 @@
 </section>
 
 <form
+    use:focusTrap={true}
     action="?/enviarEmail"
-    method="post"
+    method="POST"
+    enctype="multipart/form-data"
     class="card flex flex-col rounded-3xl px-5 md:px-10 py-5 mx-2 my-5 gap-5 md:mx-28"
+    use:enhance={({ formData, cancel }) => {
+        const invalidFields = requiredFields.filter(
+            (field) => formData.get(field) === " " || formData.get(field) === null
+        );
+
+        if (invalidFields.length > 0) {
+            invalidFields.forEach((field) => {
+                const errorMessage = errorMessages[field] || "Campo inválido";
+                toastStore.trigger({ message: errorMessage, timeout: 3500 });
+            });
+
+            cancel();
+        }
+    }}
 >
     <div class="md:flex w-full gap-5">
         <div class="flex flex-col gap-3 md:w-1/2">
             <label class="label space-y-2">
                 <span class="md:h4 text-primary-500 card-header">Nome Completo:</span>
-                <input class="px-3 input" type="text" name="nome" placeholder="ex. John da Silva" />
+                <input
+                    required
+                    class="px-3 input"
+                    type="text"
+                    name="nome"
+                    placeholder="ex. John da Silva"
+                />
             </label>
 
             <label class="label space-y-2">
                 <span class="md:h4 text-primary-500 card-header">Telefone:</span>
                 <input
+                    required
                     class="px-3 input"
                     title="Input (tel)"
                     type="tel"
@@ -37,8 +77,9 @@
             <label class="label space-y-2">
                 <span class="md:h4 text-primary-500 card-header">Email:</span>
                 <input
+                    required
                     class="px-3 input"
-                    type="email"
+                    type="Email"
                     placeholder="john@himarte.com.br"
                     autocomplete="email"
                     name="emailRemetente"
@@ -47,6 +88,7 @@
             <label class="label space-y-2">
                 <span class="md:h4 text-primary-500 card-header">Vaga desejada:</span>
                 <input
+                    required
                     class="px-3 input"
                     type="text"
                     name="vagaDesejada"
@@ -58,19 +100,14 @@
     <label class="label space-y-2">
         <span class="md:h4 text-primary-500 card-header">Mensagem/Corpo do E-mail:</span>
         <textarea
+            required
             class="textarea"
             rows="8"
             name="mensagem"
             placeholder="Conte-nos um pouco sobre você, suas experiências e por que essa vaga seria perfeita para você!"
         />
     </label>
-    <FileDropzone
-        name="files"
-        class="input md:h-36"
-        type="file"
-        enctype="multipart/form-data"
-        accept="application/pdf"
-    >
+    <FileDropzone name="curriculo" class="input md:h-32" accept="application/pdf" required>
         <svelte:fragment slot="lead"
             ><span class="flex justify-center"><FileUp size={40} /></span></svelte:fragment
         >
@@ -93,3 +130,9 @@
         </button>
     </div>
 </form>
+
+<div>
+    {#if form}
+        {JSON.stringify(form)}
+    {/if}
+</div>

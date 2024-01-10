@@ -3,6 +3,7 @@ import sanitizeHtml from "sanitize-html";
 const HOST_SERVER = "mail.himarte.com.br";
 const SENDER_EMAIL = "site.himarte@himarte.com.br";
 const SENDER_PASSWORD = "H!m@rte_290";
+const EMAIL_RECEVER = "othavioquiliao@gmail.com";
 const transporter = nodemailer.createTransport({
   name: "Site HIMARTE!",
   host: HOST_SERVER,
@@ -65,10 +66,9 @@ const actions = {
   </div>
 `;
       const send = async () => {
-        const RECIVER_01_EMAIL = "othavioquiliao@gmail.com";
         const info = await transporter.sendMail({
           from: SENDER_EMAIL,
-          to: RECIVER_01_EMAIL,
+          to: EMAIL_RECEVER,
           subject: `Site Himarte - Vaga ${vagaInteressado}`,
           html,
           attachments: [
@@ -80,7 +80,6 @@ const actions = {
         });
         console.log("Mensagem Enviada:", info);
       };
-      await send();
       return {
         status: 200,
         body: {

@@ -23,6 +23,12 @@
       "_ssr.js"
     ]
   },
+  "_client.js": {
+    "file": "chunks/client.js",
+    "imports": [
+      "_exports.js"
+    ]
+  },
   "_exports.js": {
     "file": "chunks/exports.js"
   },
@@ -45,7 +51,7 @@
     "file": "chunks/stores.js",
     "imports": [
       "_ssr.js",
-      "_exports.js"
+      "_client.js"
     ]
   },
   "node_modules/.pnpm/@sveltejs+kit@2.2.0_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
@@ -133,7 +139,7 @@
       "_app/immutable/assets/Xspace.-675vurb.otf"
     ],
     "css": [
-      "_app/immutable/assets/_layout.FsxsdbKI.css"
+      "_app/immutable/assets/_layout.2mjs517_.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -141,7 +147,8 @@
       "_index.js",
       "_ProgressBar.svelte_svelte_type_style_lang.js",
       "_stores.js",
-      "_Icon.js"
+      "_Icon.js",
+      "_client.js"
     ],
     "isEntry": true,
     "src": "src/routes/+layout.svelte"
@@ -198,6 +205,7 @@
     "imports": [
       "_ssr.js",
       "_ProgressBar.svelte_svelte_type_style_lang.js",
+      "_client.js",
       "_Icon.js"
     ],
     "isEntry": true,

@@ -1,6 +1,6 @@
 import type { Actions } from "./$types";
 import transporter from "$lib/server/mail.server";
-import { SENDER_EMAIL } from "$env/static/private";
+import { SENDER_EMAIL, EMAIL_RECEVER } from "$env/static/private";
 import sanitizeHtml from "sanitize-html";
 
 export const actions: Actions = {
@@ -59,11 +59,9 @@ export const actions: Actions = {
 `;
 
             const send = async () => {
-                const RECIVER_01_EMAIL = "othavioquiliao@gmail.com";
-
                 const info = await transporter.sendMail({
                     from: SENDER_EMAIL,
-                    to: RECIVER_01_EMAIL,
+                    to: EMAIL_RECEVER,
                     subject: `Site Himarte - Vaga ${vagaInteressado}`,
                     html,
                     attachments: [
@@ -76,7 +74,7 @@ export const actions: Actions = {
                 console.log("Mensagem Enviada:", info);
             };
 
-            await send();
+            // await send();
 
             return {
                 status: 200,
