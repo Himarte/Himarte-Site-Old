@@ -154,7 +154,6 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_event: string;
 	export const NODE_PATH: string;
 	export const GDMSESSION: string;
-	export const NO_AT_BRIDGE: string;
 	export const QT_ACCESSIBILITY: string;
 	export const SNAP_REEXEC: string;
 	export const npm_package_scripts_build: string;
@@ -355,7 +354,6 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_event: string;
 		NODE_PATH: string;
 		GDMSESSION: string;
-		NO_AT_BRIDGE: string;
 		QT_ACCESSIBILITY: string;
 		SNAP_REEXEC: string;
 		npm_package_scripts_build: string;

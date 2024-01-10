@@ -7,7 +7,7 @@
       ".svelte-kit/generated/client-optimized/nodes/3.js",
       ".svelte-kit/generated/client-optimized/nodes/4.js"
     ],
-    "file": "_app/immutable/entry/app.GJM_ifAt.js",
+    "file": "_app/immutable/entry/app.nmNvvSXi.js",
     "imports": [
       "_scheduler.6d0vwbdN.js",
       "_index.Ds49Gw-U.js"
@@ -23,13 +23,13 @@
     "css": [
       "_app/immutable/assets/0.Y9QArMX1.css"
     ],
-    "file": "_app/immutable/nodes/0.ayJ1LqeD.js",
+    "file": "_app/immutable/nodes/0.qKVSsmey.js",
     "imports": [
       "_scheduler.6d0vwbdN.js",
       "_index.Ds49Gw-U.js",
       "_index.ksOrT-sj.js",
       "_ProgressBar.svelte_svelte_type_style_lang.wYCh_8hT.js",
-      "_stores.LnwskSgN.js",
+      "_stores.PKv2kfUV.js",
       "_Icon.VxlBh0fW.js"
     ],
     "isDynamicEntry": true,
@@ -37,11 +37,11 @@
     "src": ".svelte-kit/generated/client-optimized/nodes/0.js"
   },
   ".svelte-kit/generated/client-optimized/nodes/1.js": {
-    "file": "_app/immutable/nodes/1.QRsmIb-L.js",
+    "file": "_app/immutable/nodes/1.yD8oL1XL.js",
     "imports": [
       "_scheduler.6d0vwbdN.js",
       "_index.Ds49Gw-U.js",
-      "_stores.LnwskSgN.js"
+      "_stores.PKv2kfUV.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
@@ -116,8 +116,8 @@
       "_scheduler.6d0vwbdN.js"
     ]
   },
-  "_entry.EDmgOGPf.js": {
-    "file": "_app/immutable/chunks/entry.EDmgOGPf.js",
+  "_entry.iDLwFUJA.js": {
+    "file": "_app/immutable/chunks/entry.iDLwFUJA.js",
     "imports": [
       "_scheduler.6d0vwbdN.js",
       "_index.ksOrT-sj.js"
@@ -138,19 +138,19 @@
   "_scheduler.6d0vwbdN.js": {
     "file": "_app/immutable/chunks/scheduler.6d0vwbdN.js"
   },
-  "_stores.LnwskSgN.js": {
-    "file": "_app/immutable/chunks/stores.LnwskSgN.js",
+  "_stores.PKv2kfUV.js": {
+    "file": "_app/immutable/chunks/stores.PKv2kfUV.js",
     "imports": [
-      "_entry.EDmgOGPf.js"
+      "_entry.iDLwFUJA.js"
     ]
   },
-  "node_modules/.pnpm/@sveltejs+kit@2.1.2_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
-    "file": "_app/immutable/entry/start.X7cRspO_.js",
+  "node_modules/.pnpm/@sveltejs+kit@2.2.0_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
+    "file": "_app/immutable/entry/start.v8uBwLnY.js",
     "imports": [
-      "_entry.EDmgOGPf.js"
+      "_entry.iDLwFUJA.js"
     ],
     "isEntry": true,
-    "src": "node_modules/.pnpm/@sveltejs+kit@2.1.2_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/client/entry.js"
+    "src": "node_modules/.pnpm/@sveltejs+kit@2.2.0_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/client/entry.js"
   },
   "src/lib/assets/img/extras/hi-astronauta-main.png": {
     "file": "_app/immutable/assets/hi-astronauta-main.ffRGJgfk.png",
