@@ -1509,6 +1509,7 @@ class BaseProvider {
   /** @param {string} content */
   add_style(content) {
     if (this.#style_needs_csp) {
+      const empty_comment_hash = "9OlNO0DNEeaVzHL4RZwCLsBHA8WBQ8toBp/4F5XV2nc=";
       const d = this.#directives;
       if (this.#use_hashes) {
         const hash2 = sha256(content);
@@ -1517,16 +1518,22 @@ class BaseProvider {
           this.#style_src_attr.push(`sha256-${hash2}`);
         }
         if (d["style-src-elem"]?.length) {
+          if (hash2 !== empty_comment_hash && !d["style-src-elem"].includes(`sha256-${empty_comment_hash}`)) {
+            this.#style_src_elem.push(`sha256-${empty_comment_hash}`);
+          }
           this.#style_src_elem.push(`sha256-${hash2}`);
         }
       } else {
-        if (this.#style_src.length === 0) {
+        if (this.#style_src.length === 0 && !d["style-src"]?.includes("unsafe-inline")) {
           this.#style_src.push(`nonce-${this.#nonce}`);
         }
         if (d["style-src-attr"]?.length) {
           this.#style_src_attr.push(`nonce-${this.#nonce}`);
         }
         if (d["style-src-elem"]?.length) {
+          if (!d["style-src-elem"].includes(`sha256-${empty_comment_hash}`)) {
+            this.#style_src_elem.push(`sha256-${empty_comment_hash}`);
+          }
           this.#style_src_elem.push(`nonce-${this.#nonce}`);
         }
       }
@@ -3225,9 +3232,17 @@ async function respond(request, options2, manifest, state) {
       return text(csrf_error.body.message, { status: csrf_error.status });
     }
   }
+  let rerouted_path;
+  try {
+    rerouted_path = options2.hooks.reroute({ url: new URL(url) }) ?? url.pathname;
+  } catch (e) {
+    return text("Internal Server Error", {
+      status: 500
+    });
+  }
   let decoded;
   try {
-    decoded = decode_pathname(url.pathname);
+    decoded = decode_pathname(rerouted_path);
   } catch {
     return text("Malformed URI", { status: 400 });
   }
@@ -3609,7 +3624,9 @@ class Server {
         this.#options.hooks = {
           handle: module.handle || (({ event, resolve: resolve2 }) => resolve2(event)),
           handleError: module.handleError || (({ error }) => console.error(error)),
-          handleFetch: module.handleFetch || (({ request, fetch: fetch2 }) => fetch2(request))
+          handleFetch: module.handleFetch || (({ request, fetch: fetch2 }) => fetch2(request)),
+          reroute: module.reroute || (() => {
+          })
         };
       } catch (error) {
         {
