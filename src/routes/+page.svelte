@@ -53,14 +53,12 @@
 <section class="flex flex-col items-center justify-center gap-10 p-10 md:pt-20">
     <div class="flex flex-col gap-10 md:flex-row">
         <PrecoSaturno />
-
         <PrecoJupiter />
         <PrecoMarte />
     </div>
     <div class="flex flex-col gap-10 md:flex-row">
         <PrecoUrano />
         <PrecoVenus />
-
         <PrecoPlutao />
     </div>
 </section>
