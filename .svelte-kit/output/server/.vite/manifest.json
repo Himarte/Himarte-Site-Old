@@ -139,7 +139,7 @@
       "_app/immutable/assets/Xspace.-675vurb.otf"
     ],
     "css": [
-      "_app/immutable/assets/_layout.2mjs517_.css"
+      "_app/immutable/assets/_layout.EdjeNx_G.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -181,11 +181,6 @@
     ],
     "isEntry": true,
     "src": "src/routes/+page.svelte"
-  },
-  "src/routes/+page.ts": {
-    "file": "entries/pages/_page.ts.js",
-    "isEntry": true,
-    "src": "src/routes/+page.ts"
   },
   "src/routes/sobre/+page.svelte": {
     "file": "entries/pages/sobre/_page.svelte.js",

@@ -1,9 +1,11 @@
 <script lang="ts">
     import type { PageData } from "./$types";
-    import Filial_1 from "$lib/assets/components/Filiais/Filial-1.svelte";
-    import Filial_2 from "$lib/assets/components/Filiais/Filial-2.svelte";
-    import Filial_3 from "$lib/assets/components/Filiais/Filial-3.svelte";
-    import Filial_4 from "$lib/assets/components/Filiais/Filial-4.svelte";
+    import Matriz_Santa_Cruz from "$lib/assets/components/Filiais/MatrizSantaCruzDoSul.svelte";
+    import Filial_Encruzilhada from "$lib/assets/components/Filiais/FilialEncruzilhada.svelte";
+    import Filial_Agudo from "$lib/assets/components/Filiais/FilialAgudo.svelte";
+    import Filial_VeraCruz from "$lib/assets/components/Filiais/FilialVeraCruz.svelte";
+    import Filial_Candelaria from "$lib/assets/components/Filiais/FilialCandelaria.svelte";
+    import Filial_Rio_Pardo from "$lib/assets/components/Filiais/FilialRioPardo.svelte";
 
     export let data: PageData;
 </script>
@@ -31,15 +33,21 @@
     </p>
 </section>
 <section class="px-10 py-10 space-y-5">
-    <h2 class="h4 md:h2 font-semibold gradient-heading">Encontre a filial mais proxima de você!</h2>
+    <h2 class="h4 md:h2 font-semibold gradient-heading">
+        Encontre a HIMARTE mais proxima de você!
+    </h2>
     <div class="flex flex-col gap-5 items-center w-full">
         <div class="flex flex-col md:flex-row w-full md:justify-center gap-5">
-            <Filial_1 />
-            <Filial_2 />
+            <Matriz_Santa_Cruz />
+            <Filial_VeraCruz />
         </div>
         <div class="flex flex-col md:flex-row w-full md:justify-center gap-5">
-            <Filial_3 />
-            <Filial_4 />
+            <Filial_Rio_Pardo />
+            <Filial_Candelaria />
+        </div>
+        <div class="flex flex-col md:flex-row w-full md:justify-center gap-5">
+            <Filial_Agudo />
+            <Filial_Encruzilhada />
         </div>
     </div>
 </section>
