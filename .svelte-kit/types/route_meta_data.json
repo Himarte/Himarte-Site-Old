@@ -1,13 +1,7 @@
 {
-	"/": [
-		"src/routes/+layout.ts",
-		"src/routes/+layout.ts"
-	],
-	"/sobre": [
-		"src/routes/+layout.ts"
-	],
+	"/": [],
+	"/sobre": [],
 	"/trabalhe-conosco": [
-		"src/routes/trabalhe-conosco/+page.server.ts",
-		"src/routes/+layout.ts"
+		"src/routes/trabalhe-conosco/+page.server.ts"
 	]
 }

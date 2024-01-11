@@ -153,11 +153,6 @@
     "isEntry": true,
     "src": "src/routes/+layout.svelte"
   },
-  "src/routes/+layout.ts": {
-    "file": "entries/pages/_layout.ts.js",
-    "isEntry": true,
-    "src": "src/routes/+layout.ts"
-  },
   "src/routes/+page.svelte": {
     "assets": [
       "_app/immutable/assets/venus.LgamJeNX.svg",

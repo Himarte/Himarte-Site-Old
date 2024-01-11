@@ -157,7 +157,6 @@ declare module '$env/static/private' {
 	export const npm_package_devDependencies__skeletonlabs_tw_plugin: string;
 	export const npm_package_devDependencies__sveltejs_adapter_auto: string;
 	export const npm_package_devDependencies__sveltejs_adapter_vercel: string;
-	export const npm_package_devDependencies__sveltejs_enhanced_img: string;
 	export const npm_package_devDependencies__sveltejs_kit: string;
 	export const npm_package_devDependencies__sveltejs_vite_plugin_svelte: string;
 	export const npm_package_devDependencies__tailwindcss_forms: string;
@@ -194,7 +193,6 @@ declare module '$env/static/private' {
 	export const npm_package_type: string;
 	export const npm_package_version: string;
 	export const NODE_ENV: string;
-	export const VIPSHOME: string;
 }
 
 /**
@@ -357,7 +355,6 @@ declare module '$env/dynamic/private' {
 		npm_package_devDependencies__skeletonlabs_tw_plugin: string;
 		npm_package_devDependencies__sveltejs_adapter_auto: string;
 		npm_package_devDependencies__sveltejs_adapter_vercel: string;
-		npm_package_devDependencies__sveltejs_enhanced_img: string;
 		npm_package_devDependencies__sveltejs_kit: string;
 		npm_package_devDependencies__sveltejs_vite_plugin_svelte: string;
 		npm_package_devDependencies__tailwindcss_forms: string;
@@ -394,7 +391,6 @@ declare module '$env/dynamic/private' {
 		npm_package_type: string;
 		npm_package_version: string;
 		NODE_ENV: string;
-		VIPSHOME: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
