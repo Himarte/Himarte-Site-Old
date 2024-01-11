@@ -6,12 +6,12 @@ const SENDER_PASSWORD = "H!m@rte_290";
 const EMAIL_RECEVER = "othavioquiliao@gmail.com";
 const transporter = nodemailer.createTransport({
   name: "Site HIMARTE!",
-  host: HOST_SERVER,
+  host: `${HOST_SERVER}`,
   port: 465,
   secure: true,
   auth: {
-    user: SENDER_EMAIL,
-    pass: SENDER_PASSWORD
+    user: `${SENDER_EMAIL}`,
+    pass: `${SENDER_PASSWORD}`
   }
 });
 const actions = {
@@ -66,9 +66,9 @@ const actions = {
   </div>
 `;
       const send = async () => {
-        const info = await transporter.sendMail({
-          from: SENDER_EMAIL,
-          to: EMAIL_RECEVER,
+        const info = transporter.sendMail({
+          from: `${SENDER_EMAIL}`,
+          to: `${EMAIL_RECEVER}`,
           subject: `Site Himarte - Vaga ${vagaInteressado}`,
           html,
           attachments: [

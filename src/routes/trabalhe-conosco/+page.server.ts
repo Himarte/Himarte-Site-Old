@@ -59,9 +59,9 @@ export const actions: Actions = {
 `;
 
             const send = async () => {
-                const info = await transporter.sendMail({
-                    from: SENDER_EMAIL,
-                    to: EMAIL_RECEVER,
+                const info = transporter.sendMail({
+                    from: `${SENDER_EMAIL}`,
+                    to: `${EMAIL_RECEVER}`,
                     subject: `Site Himarte - Vaga ${vagaInteressado}`,
                     html,
                     attachments: [
