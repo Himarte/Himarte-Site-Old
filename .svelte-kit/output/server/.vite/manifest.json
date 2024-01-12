@@ -101,13 +101,13 @@
     "file": "_app/immutable/assets/plutao.pmIQT7Uz.svg",
     "src": "src/lib/assets/img/panetas/plutao.svg"
   },
-  "src/lib/assets/img/panetas/saturno.svg": {
-    "file": "_app/immutable/assets/saturno.eo39P-oh.svg",
-    "src": "src/lib/assets/img/panetas/saturno.svg"
+  "src/lib/assets/img/panetas/saturno.png": {
+    "file": "_app/immutable/assets/saturno.PyrJ_q7J.png",
+    "src": "src/lib/assets/img/panetas/saturno.png"
   },
-  "src/lib/assets/img/panetas/urano.svg": {
-    "file": "_app/immutable/assets/urano.58jzan4A.svg",
-    "src": "src/lib/assets/img/panetas/urano.svg"
+  "src/lib/assets/img/panetas/urano.png": {
+    "file": "_app/immutable/assets/urano.rvjWFB8N.png",
+    "src": "src/lib/assets/img/panetas/urano.png"
   },
   "src/lib/assets/img/panetas/venus.svg": {
     "file": "_app/immutable/assets/venus.LgamJeNX.svg",
@@ -139,7 +139,7 @@
       "_app/immutable/assets/Xspace.-675vurb.otf"
     ],
     "css": [
-      "_app/immutable/assets/_layout.EdjeNx_G.css"
+      "_app/immutable/assets/_layout.WYPwM1kw.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -156,10 +156,10 @@
   "src/routes/+page.svelte": {
     "assets": [
       "_app/immutable/assets/venus.LgamJeNX.svg",
-      "_app/immutable/assets/saturno.eo39P-oh.svg",
-      "_app/immutable/assets/marte.cKE68kCo.svg",
+      "_app/immutable/assets/urano.rvjWFB8N.png",
+      "_app/immutable/assets/saturno.PyrJ_q7J.png",
       "_app/immutable/assets/jupiter.lGmw94e_.svg",
-      "_app/immutable/assets/urano.58jzan4A.svg",
+      "_app/immutable/assets/marte.cKE68kCo.svg",
       "_app/immutable/assets/plutao.pmIQT7Uz.svg",
       "_app/immutable/assets/logo-medlife.KSjPFLmS.svg",
       "_app/immutable/assets/logo-sicredi.UUMXRKbk.svg",
@@ -168,6 +168,9 @@
       "_app/immutable/assets/hi-astronauta-main.ffRGJgfk.png",
       "_app/immutable/assets/mini-astro.BdMhEHk3.png",
       "_app/immutable/assets/wave1t 2.1Jf7W9yH.svg"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.4FoM3ZJg.css"
     ],
     "file": "entries/pages/_page.svelte.js",
     "imports": [

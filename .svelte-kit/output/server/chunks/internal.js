@@ -118,7 +118,7 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en" class="dark">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/icon2.ico" />\n		<title>HIMARTE</title>\n		<meta name="viewport" content="width=device-width" />\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover" data-theme="theme_hi_marte">\n		<div style="display: contents" class="h-full overflow-hidden ">' + body + "</div>\n	</body>\n</html>\n",
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="pt-br" class="dark">\n	<head>\n		<meta charset="utf-8" />\n		<meta name="description" content="Conectando você ao futuro com velocidade, confiabilidade e inovação - HIMARTE NET, onde acreditamos que o futuro é feito bem aqui.">\n		<meta name="keywords" content="provedor de internet, conexão de alta velocidade, serviços de banda larga, HIMARTE NET, internet confiável, himarte">\n		<link rel="icon" href="' + assets2 + '/icon2.ico" />\n		<link rel="icon" type="image/png" sizes="32x32" href="' + assets2 + '/icon32.png">\n        <link rel="icon" type="image/png" sizes="16x16" href="' + assets2 + '/icon16.png">\n        <title>HIMARTE</title>\n		<meta name="viewport" content="width=device-width" />\n		' + head + '\n	</head>\n	<body data-sveltekit-preload-data="hover" data-theme="theme_hi_marte">\n		<div style="display: contents" class="h-full overflow-hidden ">' + body + "</div>\n	</body>\n</html>\n",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -190,7 +190,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1v5c4wi"
+  version_hash: "sxz08u"
 };
 async function get_hooks() {
   return {};

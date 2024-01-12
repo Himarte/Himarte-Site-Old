@@ -11,9 +11,11 @@
     import css from "highlight.js/lib/languages/css";
     import javascript from "highlight.js/lib/languages/javascript";
     import typescript from "highlight.js/lib/languages/typescript";
+
     // Speed Insights da vercel
     import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
     injectSpeedInsights();
+
     // Skeleton Stores
     import { initializeStores } from "@skeletonlabs/skeleton";
     initializeStores();
@@ -29,8 +31,8 @@
     import { storePopup } from "@skeletonlabs/skeleton";
     storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
-    // tenho que testar isso:
-    import ChatPagina from "$lib/assets/components/ChatPagina.svelte";
+    // Componente do Blip Chat
+    import BlipChat from "$lib/assets/components/BlipChat.svelte";
 </script>
 
 <Toast />
@@ -43,7 +45,7 @@
     <!-- Page Route Content -->
     <main class="relative">
         <slot />
-        <ChatPagina />
+        <BlipChat />
     </main>
     <svelte:fragment slot="pageFooter">
         <Footer />

@@ -30,6 +30,8 @@ declare module '$env/static/private' {
 	export const SENDER_EMAIL: string;
 	export const SENDER_PASSWORD: string;
 	export const EMAIL_RECEVER: string;
+	export const VITE_CHAVE_API_BLIP_CHAT: string;
+	export const VITE_LINK_BLIP_CHAT: string;
 	export const CHROME_DESKTOP: string;
 	export const COLORTERM: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
@@ -149,6 +151,7 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const npm_package_dependencies__floating_ui_dom: string;
 	export const npm_package_dependencies__vercel_speed_insights: string;
+	export const npm_package_dependencies_blip_chat_widget: string;
 	export const npm_package_dependencies_highlight_js: string;
 	export const npm_package_dependencies_lucide_svelte: string;
 	export const npm_package_dependencies_nodemailer: string;
@@ -228,6 +231,8 @@ declare module '$env/dynamic/private' {
 		SENDER_EMAIL: string;
 		SENDER_PASSWORD: string;
 		EMAIL_RECEVER: string;
+		VITE_CHAVE_API_BLIP_CHAT: string;
+		VITE_LINK_BLIP_CHAT: string;
 		CHROME_DESKTOP: string;
 		COLORTERM: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
@@ -347,6 +352,7 @@ declare module '$env/dynamic/private' {
 		npm_node_execpath: string;
 		npm_package_dependencies__floating_ui_dom: string;
 		npm_package_dependencies__vercel_speed_insights: string;
+		npm_package_dependencies_blip_chat_widget: string;
 		npm_package_dependencies_highlight_js: string;
 		npm_package_dependencies_lucide_svelte: string;
 		npm_package_dependencies_nodemailer: string;

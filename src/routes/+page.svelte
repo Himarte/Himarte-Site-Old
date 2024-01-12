@@ -1,23 +1,38 @@
 <script lang="ts">
-    // imagens planetas
-    import PrecoVenus from "$lib/assets/components/CardPrecos/PrecoVenus.svelte";
-    import PrecoSaturno from "$lib/assets/components/CardPrecos/PrecoSaturno.svelte";
-    import PrecoMarte from "$lib/assets/components/CardPrecos/PrecoMarte.svelte";
-    import PrecoJupiter from "$lib/assets/components/CardPrecos/PrecoJupiter.svelte";
-    import PrecoUrano from "$lib/assets/components/CardPrecos/PrecoUrano.svelte";
-    import PrecoPlutao from "$lib/assets/components/CardPrecos/PrecoPlutao.svelte";
+    import { onMount } from "svelte";
+
+    // imagens dos planetas
+    import planetaVenus from "$lib/assets/img/panetas/venus.svg";
+    import planetaUrano from "$lib/assets/img/panetas/urano.png";
+    import planetaSaturno from "$lib/assets/img/panetas/saturno.png";
+    import planetaJupiter from "$lib/assets/img/panetas/jupiter.svg";
+    import planetaMarte from "$lib/assets/img/panetas/marte.svg";
+    import PlanetaCard from "$lib/assets/components/PlanetaCard.svelte";
+    import planetaPlutao from "$lib/assets/img/panetas/plutao.svg";
+
     // imagens parceiros
     import imgMedlife from "$lib/assets/img/parceiros/logo-medlife.svg";
     import imgSicredi from "$lib/assets/img/parceiros/logo-sicredi.svg";
     import imgRbs from "$lib/assets/img/parceiros/logo-rbs.svg";
     import imgUnimed from "$lib/assets/img/parceiros/logo-unimed.svg";
 
+    // images extras
     import MainImg from "$lib/assets/img/extras/hi-astronauta-main.png";
     import MiniAstro from "$lib/assets/img/extras/mini-astro.png";
     import Wave1t from "$lib/assets/img/extras/wave1t 2.svg";
+    import seta from "$lib/assets/img/extras/seta2.png";
 
-    export let y: number;
+    // Listas de clientes
+    import ClienteList from "$lib/assets/components/Clientes/ClienteList.svelte";
+    let clientes = [
+        { img: imgMedlife, alt: "Logo Medlife" },
+        { img: imgSicredi, alt: "Logo Sicredi" },
+        { img: imgRbs, alt: "Logo RBS" },
+        { img: imgUnimed, alt: "Logo unimed" },
+        // É so adicionar aqui os novos clientes obs: não esquecer de importar a imagem +
+    ];
 
+    // Interaçao do texto DIGITANDO...
     let frase = "O FUTURO É AQUI";
     let fraseDigitada = "";
     let i = 0;
@@ -31,92 +46,54 @@
             clearInterval(typewriter);
         }
     };
-
     const digitando = () => (typewriter = setInterval(typeChar, 130));
-
-    digitando();
+    onMount(digitando);
 </script>
-
-<svelte:window bind:scrollY={y} />
 
 <picture
     class="flex h-screen items-end justify-center bg-cover bg-center bg-no-repeat pb-40"
-    style="background-image: url({MainImg}) "
+    style="background-image: url({MainImg})"
 >
     <p class="fontSpace text-center text-2xl font-bold md:text-6xl">
         {fraseDigitada}
     </p>
 </picture>
 
-<img src={Wave1t} alt="Wave1" class="flex w-full" />
+<img src={Wave1t} alt="Wave1" class="flex w-full opacity-30" />
 
 <section class="flex flex-col items-center justify-center gap-10 p-10 md:pt-20">
     <div class="flex flex-col gap-10 md:flex-row">
-        <PrecoSaturno />
-        <PrecoJupiter />
-        <PrecoMarte />
+        <!-- =========================================================== -->
+        <div class="relative">
+            <figure
+                class="absolute -left-[5.5rem] -top-[3.5rem] hidden w-52 -rotate-[20deg] sm:flex vibate"
+            >
+                <img src={seta} alt="Seta indicando o melhor preço" class="w-16 -rotate-6" />
+                <figcaption
+                    class="absolute right-[1.3rem] bg-primary-800/40 -top-[0.9rem] rounded-xl border-2 px-2 text-xl font-bold text-white shadow-[0_0px_2rem_0.1rem] shadow-primary-700 hover:border-2 hover:border-white vibrate"
+                >
+                    Melhor Preço
+                </figcaption>
+            </figure>
+            <PlanetaCard imagem={planetaSaturno} nome="Saturno" megas="400" preco="99" />
+        </div>
+        <PlanetaCard imagem={planetaJupiter} nome="Jupiter" megas="700" preco="149" />
+        <PlanetaCard imagem={planetaMarte} nome="Marte" megas="1" preco="199" />
     </div>
     <div class="flex flex-col gap-10 md:flex-row">
-        <PrecoUrano />
-        <PrecoVenus />
-        <PrecoPlutao />
+        <PlanetaCard imagem={planetaVenus} nome="Venus" megas="90" preco="79" />
+        <PlanetaCard imagem={planetaUrano} nome="Urano" megas="120" preco="89" />
+        <PlanetaCard imagem={planetaPlutao} nome="Plutão" megas="60" preco="59" />
     </div>
 </section>
 
-<section class="flex flex-col gap-10 py-16">
-    <h3 class="fontSpace flex items-center justify-center text-center text-2xl md:text-4xl">
-        Nossos clientes
-    </h3>
-    <div class="flex flex-wrap items-center justify-center gap-4">
-        <img
-            src={imgMedlife}
-            alt="Logo Medlife"
-            class=" card flex w-40 items-center justify-center rounded-3xl"
-        />
-        <img
-            src={imgSicredi}
-            alt="Logo Sicredi"
-            class="  card flex w-40 items-center justify-center rounded-3xl"
-        />
-        <img
-            src={imgRbs}
-            alt="Logo RBS"
-            class="  card flex w-40 items-center justify-center rounded-3xl p-3"
-        />
-        <img
-            src={imgUnimed}
-            alt="Logo unimed"
-            class=" card flex w-40 items-center justify-center rounded-3xl"
-        />
-    </div>
-    <div class="flex flex-wrap items-center justify-center gap-4">
-        <img
-            src={imgMedlife}
-            alt="Logo Medlife"
-            class=" card flex w-40 items-center justify-center rounded-3xl"
-        />
-        <img
-            src={imgSicredi}
-            alt="Logo Sicredi"
-            class="  card flex w-40 items-center justify-center rounded-3xl"
-        />
-        <img
-            src={imgRbs}
-            alt="Logo RBS"
-            class="  card flex w-40 items-center justify-center rounded-3xl p-3"
-        />
-        <img
-            src={imgUnimed}
-            alt="Logo unimed"
-            class=" card flex w-40 items-center justify-center rounded-3xl"
-        />
-    </div>
-</section>
-<section class=" flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-around">
+<ClienteList {clientes} />
+
+<section class="flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-around">
     <img src={MiniAstro} alt="mini astro" class="hidden md:flex md:w-[35rem]" />
 
-    <div class="flex w-[55rem] flex-col items-center justify-center gap-5 md:gap-10">
-        <h1 class=" fontSpace flex items-center justify-center text-center text-2xl md:text-4xl">
+    <article class="flex w-[55rem] flex-col items-center justify-center gap-5 md:gap-10">
+        <h1 class="fontSpace flex items-center justify-center text-center text-2xl md:text-4xl">
             Quem somos?
         </h1>
         <p class="text-md p-5 text-justify md:text-2xl">
@@ -131,5 +108,30 @@
                 o futuro é aqui</span
             >!
         </p>
-    </div>
+    </article>
 </section>
+
+<style>
+    @keyframes vibate {
+        0% {
+            box-shadow: 0 0px 2rem 0.1rem #eb4f27/50;
+        }
+        25% {
+            box-shadow: 0 0px 2rem 0.1rem #eb4f27;
+        }
+
+        50% {
+            box-shadow: 0 0px 2rem 0.1rem #eb4f27/80;
+        }
+        75% {
+            box-shadow: 0 0px 2rem 0.1rem #eb4f27;
+        }
+        100% {
+            box-shadow: 0 0px 2rem 0.1rem #eb4f27/50;
+        }
+    }
+
+    .vibrate {
+        animation: vibate 3s ease-in-out infinite;
+    }
+</style>
