@@ -36,11 +36,11 @@
 
 <style>
     .active {
-        font-weight: 600; /* Equivalente a font-semibold no Tailwind */
-        color: rgb(var(--color-primary-500)); /* Utilizando a cor primary-500 */
+        font-weight: 600;
+        color: rgb(var(--color-primary-500));
     }
 
     .active:hover {
-        color: rgb(var(--color-primary-600)); /* Mudança de cor no hover para primary-600 */
+        color: rgb(var(--color-primary-600));
     }
 </style>
