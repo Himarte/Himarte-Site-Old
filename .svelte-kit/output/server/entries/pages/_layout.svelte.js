@@ -317,7 +317,7 @@ const Toast = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const LogoRodape = "/_app/immutable/assets/logo-nome.9TKz916y.png";
 const css = {
-  code: ".active.svelte-1vx0n7{font-weight:600;color:rgb(var(--color-primary-500))}.active.svelte-1vx0n7:hover{color:rgb(var(--color-primary-600))}",
+  code: ".active.svelte-1svc5m3{font-weight:600;color:rgb(var(--color-primary-500))}.active.svelte-1svc5m3:hover{color:rgb(var(--color-primary-600))}",
   map: null
 };
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -348,7 +348,7 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       default: () => {
         return `<ul class="hidden md:flex" role="navigation">${each(links, (link) => {
           return `<a class="${[
-            "btn md:text-xl hover:variant-soft-primary svelte-1vx0n7",
+            "btn md:text-xl hover:variant-soft-primary svelte-1svc5m3",
             $page.url.pathname === link.href ? "active" : ""
           ].join(" ").trim()}"${add_attribute("href", link.href, 0)}>${escape(link.text)}</a>`;
         })}</ul> `;
