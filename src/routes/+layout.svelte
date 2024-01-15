@@ -32,7 +32,7 @@
     storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
     // Componente do Blip Chat
-    import BlipChat from "$lib/assets/components/BlipChat.svelte";
+    // import BlipChat from "$lib/assets/components/BlipChat.svelte";
 </script>
 
 <Toast />
@@ -45,7 +45,6 @@
     <!-- Page Route Content -->
     <main class="relative">
         <slot />
-        <BlipChat />
     </main>
     <svelte:fragment slot="pageFooter">
         <Footer />

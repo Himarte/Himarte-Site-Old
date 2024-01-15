@@ -48,6 +48,21 @@
     };
     const digitando = () => (typewriter = setInterval(typeChar, 130));
     onMount(digitando);
+    // ---------------------------------------------
+
+    let BlipChat: any;
+    let blipClient: any;
+
+    onMount(async () => {
+        const module = await import("blip-chat-widget");
+        BlipChat = module.BlipChat;
+
+        blipClient = new BlipChat()
+            .withAppKey(import.meta.env.VITE_CHAVE_API_BLIP_CHAT)
+            .withButton({ color: "#EB4F27", icon: "" })
+            .withCustomCommonUrl(import.meta.env.VITE_LINK_BLIP_CHAT);
+        blipClient.build();
+    });
 </script>
 
 <picture
@@ -75,15 +90,21 @@
                     Melhor Preço
                 </figcaption>
             </figure>
-            <PlanetaCard imagem={planetaSaturno} nome="Saturno" megas="400" preco="99" />
+            <PlanetaCard
+                {blipClient}
+                imagem={planetaSaturno}
+                nome="Saturno"
+                megas="400"
+                preco="99"
+            />
         </div>
-        <PlanetaCard imagem={planetaJupiter} nome="Jupiter" megas="700" preco="149" />
-        <PlanetaCard imagem={planetaMarte} nome="Marte" megas="1" preco="199" />
+        <PlanetaCard {blipClient} imagem={planetaJupiter} nome="Jupiter" megas="700" preco="149" />
+        <PlanetaCard {blipClient} imagem={planetaMarte} nome="Marte" megas="1" preco="199" />
     </div>
     <div class="flex flex-col gap-10 md:flex-row">
-        <PlanetaCard imagem={planetaVenus} nome="Venus" megas="90" preco="79" />
-        <PlanetaCard imagem={planetaUrano} nome="Urano" megas="120" preco="89" />
-        <PlanetaCard imagem={planetaPlutao} nome="Plutão" megas="60" preco="59" />
+        <PlanetaCard {blipClient} imagem={planetaVenus} nome="Venus" megas="90" preco="79" />
+        <PlanetaCard {blipClient} imagem={planetaUrano} nome="Urano" megas="120" preco="89" />
+        <PlanetaCard {blipClient} imagem={planetaPlutao} nome="Plutão" megas="60" preco="59" />
     </div>
 </section>
 

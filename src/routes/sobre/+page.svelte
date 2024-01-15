@@ -1,13 +1,6 @@
 <script lang="ts">
-    import type { PageData } from "./$types";
-    import Matriz_Santa_Cruz from "$lib/assets/components/Filiais/MatrizSantaCruzDoSul.svelte";
-    import Filial_Encruzilhada from "$lib/assets/components/Filiais/FilialEncruzilhada.svelte";
-    import Filial_Agudo from "$lib/assets/components/Filiais/FilialAgudo.svelte";
-    import Filial_VeraCruz from "$lib/assets/components/Filiais/FilialVeraCruz.svelte";
-    import Filial_Candelaria from "$lib/assets/components/Filiais/FilialCandelaria.svelte";
-    import Filial_Rio_Pardo from "$lib/assets/components/Filiais/FilialRioPardo.svelte";
-
-    export let data: PageData;
+    import LocationCard from "$lib/assets/components/Filiais/LocationCard.svelte";
+    import { listaFiliais } from "$lib/assets/components/Filiais/listaFiliais";
 </script>
 
 <section class="px-10 pt-10 space-y-5">
@@ -33,21 +26,16 @@
     </p>
 </section>
 <section class="px-10 py-10 space-y-5">
-    <h2 class="h4 md:h2 font-semibold gradient-heading">
+    <h2 class="h5 md:h2 font-semibold gradient-heading">
         Encontre a HIMARTE mais proxima de você!
     </h2>
     <div class="flex flex-col gap-5 items-center w-full">
-        <div class="flex flex-col md:flex-row w-full md:justify-center gap-5">
-            <Matriz_Santa_Cruz />
-            <Filial_VeraCruz />
+        <div class="flex flex-col md:flex-row md:flex-wrap w-full gap-5 md:gap-0">
+            {#each listaFiliais as location}
+                <LocationCard {location} />
+            {/each}
         </div>
-        <div class="flex flex-col md:flex-row w-full md:justify-center gap-5">
-            <Filial_Rio_Pardo />
-            <Filial_Candelaria />
-        </div>
-        <div class="flex flex-col md:flex-row w-full md:justify-center gap-5">
-            <Filial_Agudo />
-            <Filial_Encruzilhada />
-        </div>
+
+        <div class="flex flex-col md:flex-row w-full md:justify-center gap-5"></div>
     </div>
 </section>

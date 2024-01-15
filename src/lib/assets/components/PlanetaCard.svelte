@@ -5,6 +5,17 @@
     export let imagem: any;
     export let megas: string;
     export let preco: string;
+    export let blipClient: any;
+
+    const openChat = () => {
+        blipClient.sendMessage({
+            type: "text/plain",
+            content:
+                "Olá, gostaria de saber mais sobre o plano do planeta <strong>" +
+                nome +
+                "</strong>.",
+        });
+    };
 </script>
 
 <div
@@ -35,6 +46,7 @@
             <span class="ms-1 text-xl font-normal text-gray-400">/Mes</span>
         </span>
         <button
+            on:click={openChat}
             class="btn variant-outline-primary mt-1 w-full font-semibold uppercase hover:variant-filled-primary"
         >
             Saber mais

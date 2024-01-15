@@ -15,6 +15,59 @@ const config = {
         adapter: adapter({
             // see below for options that can be set here
         }),
+        csp: {
+            directives: {
+                "script-src": [
+                    "'self'",
+                    "'unsafe-inline'",
+                    "'unsafe-eval'",
+                    "https://maps.googleapis.com/",
+                    "https://va.vercel-scripts.com/",
+                    "https://chat.blip.ai/",
+                    "https://infotec-telecom.chat.blip.ai",
+                    "https://stats.g.doubleclick.net/",
+                    "https://analytics.google.com/",
+                    "https://infotec-telecom.com.br/",
+                ],
+                "frame-src": [
+                    "self",
+                    "https://maps.googleapis.com/",
+                    "https://www.google.com/",
+                    "https://chat.blip.ai/",
+                    " https://infotec-telecom.chat.blip.ai/",
+                    "https://stats.g.doubleclick.net/",
+                    "https://analytics.google.com/",
+                    "https://infotec-telecom.com.br/",
+                ],
+                "connect-src": [
+                    "self",
+                    "https://maps.googleapis.com/" /* for google maps */,
+                    "https://va.vercel-scripts.com/" /* for vercel */,
+                    "https://chat.blip.ai/",
+                    "https://stats.g.doubleclick.net/",
+                    "https://analytics.google.com/",
+                    "https://infotec-telecom.com.br/",
+                ],
+                "object-src": [
+                    "self",
+                    "https://maps.googleapis.com/",
+                    "https://chat.blip.ai/",
+                    "https://infotec-telecom.chat.blip.ai",
+                    "https://infotec-telecom.com.br/",
+                ],
+                "prefetch-src": [
+                    "self",
+                    "'unsafe-inline'",
+                    "https://maps.googleapis.com/",
+                    "https://chat.blip.ai/",
+                    "https://infotec-telecom.chat.blip.ai",
+                    "https://stats.g.doubleclick.net/",
+                    "https://analytics.google.com/",
+                    "https://infotec-telecom.com.br/",
+                ],
+            },
+        },
     },
 };
+
 export default config;
