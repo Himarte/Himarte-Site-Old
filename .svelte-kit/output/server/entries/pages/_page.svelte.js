@@ -23,6 +23,7 @@ const PlanetaCard = create_ssr_component(($$result, $$props, $$bindings, slots) 
   let { imagem } = $$props;
   let { megas } = $$props;
   let { preco } = $$props;
+  let { blipClient } = $$props;
   if ($$props.nome === void 0 && $$bindings.nome && nome !== void 0)
     $$bindings.nome(nome);
   if ($$props.imagem === void 0 && $$bindings.imagem && imagem !== void 0)
@@ -31,8 +32,10 @@ const PlanetaCard = create_ssr_component(($$result, $$props, $$bindings, slots) 
     $$bindings.megas(megas);
   if ($$props.preco === void 0 && $$bindings.preco && preco !== void 0)
     $$bindings.preco(preco);
+  if ($$props.blipClient === void 0 && $$bindings.blipClient && blipClient !== void 0)
+    $$bindings.blipClient(blipClient);
   $$result.css.add(css$1);
-  return `<div class="relative flex w-[18rem] flex-col justify-between gap-4 rounded-3xl border border-primary-500/60 bg-transparent p-6 hover:border-primary-600"><img${add_attribute("src", imagem, 0)}${add_attribute("alt", `Planeta ${nome}`, 0)} class="absolute bottom-[73%] left-[75%] w-28 rotate-12 rotate svelte-1ubpan1"> <div><h5 class="text-4xl font-bold text-primary-600">${escape(nome)}</h5> <div class="flex flex-col items-baseline text-white"><span class="text-5xl font-extrabold tracking-tight">${escape(megas)} <span class="text-3xl font-extrabold tracking-tight" data-svelte-h="svelte-1xf5qbq">MEGAS</span></span> <span class="flex">${validate_component(Plus$1, "Plus").$$render($$result, { color: "#EF562F" }, {}, {})} ROTEADOR</span></div></div> <div class="flex flex-col"><span class="flex items-baseline justify-center text-white"><span class="text-2xl font-semibold text-primary-600" data-svelte-h="svelte-oijhfr">R$</span> <span class="text-4xl font-extrabold tracking-tight">${escape(preco)}</span> <span class="text-2xl font-extrabold tracking-tight text-primary-600" data-svelte-h="svelte-1ui1613">,</span> <span class="text-2xl font-extrabold tracking-tight" data-svelte-h="svelte-11r6zgv">90</span> <span class="ms-1 text-xl font-normal text-gray-400" data-svelte-h="svelte-1lk4ouo">/Mes</span></span> <button class="btn variant-outline-primary mt-1 w-full font-semibold uppercase hover:variant-filled-primary" data-svelte-h="svelte-z0e1e7">Saber mais</button></div> </div>`;
+  return `<div class="relative flex w-[18rem] flex-col justify-between gap-4 rounded-3xl border border-primary-500/60 bg-transparent p-6 hover:border-primary-600"><img${add_attribute("src", imagem, 0)}${add_attribute("alt", `Planeta ${nome}`, 0)} class="absolute bottom-[73%] left-[75%] w-28 rotate-12 rotate svelte-1ubpan1"> <div><h5 class="text-4xl font-bold text-primary-600">${escape(nome)}</h5> <div class="flex flex-col items-baseline text-white"><span class="text-5xl font-extrabold tracking-tight">${escape(megas)} <span class="text-3xl font-extrabold tracking-tight" data-svelte-h="svelte-1xf5qbq">MEGAS</span></span> <span class="flex">${validate_component(Plus$1, "Plus").$$render($$result, { color: "#EF562F" }, {}, {})} ROTEADOR</span></div></div> <div class="flex flex-col"><span class="flex items-baseline justify-center text-white"><span class="text-2xl font-semibold text-primary-600" data-svelte-h="svelte-oijhfr">R$</span> <span class="text-4xl font-extrabold tracking-tight">${escape(preco)}</span> <span class="text-2xl font-extrabold tracking-tight text-primary-600" data-svelte-h="svelte-1ui1613">,</span> <span class="text-2xl font-extrabold tracking-tight" data-svelte-h="svelte-11r6zgv">90</span> <span class="ms-1 text-xl font-normal text-gray-400" data-svelte-h="svelte-1lk4ouo">/Mes</span></span> <button class="btn variant-outline-primary mt-1 w-full font-semibold uppercase hover:variant-filled-primary" data-svelte-h="svelte-grdolt">Saber mais</button></div> </div>`;
 });
 const planetaPlutao = "/_app/immutable/assets/plutao.pmIQT7Uz.svg";
 const imgMedlife = "/_app/immutable/assets/logo-medlife.KSjPFLmS.svg";
@@ -72,10 +75,12 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     { img: imgUnimed, alt: "Logo unimed" }
   ];
   let fraseDigitada = "";
+  let blipClient;
   $$result.css.add(css);
   return `<picture class="flex h-screen items-end justify-center bg-cover bg-center bg-no-repeat pb-40" style="${"background-image: url(" + escape(MainImg, true) + ")"}"><p class="fontSpace text-center text-2xl font-bold md:text-6xl">${escape(fraseDigitada)}</p></picture> <img${add_attribute("src", Wave1t, 0)} alt="Wave1" class="flex w-full opacity-30"> <section class="flex flex-col items-center justify-center gap-10 p-10 md:pt-20"><div class="flex flex-col gap-10 md:flex-row"> <div class="relative"><figure class="absolute -left-[5.5rem] -top-[3.5rem] hidden w-52 -rotate-[20deg] sm:flex vibate" data-svelte-h="svelte-qssyzi"><img${add_attribute("src", seta, 0)} alt="Seta indicando o melhor preço" class="w-16 -rotate-6"> <figcaption class="absolute right-[1.3rem] bg-primary-800/40 -top-[0.9rem] rounded-xl border-2 px-2 text-xl font-bold text-white shadow-[0_0px_2rem_0.1rem] shadow-primary-700 hover:border-2 hover:border-white vibrate svelte-qyg7r9">Melhor Preço</figcaption></figure> ${validate_component(PlanetaCard, "PlanetaCard").$$render(
     $$result,
     {
+      blipClient,
       imagem: planetaSaturno,
       nome: "Saturno",
       megas: "400",
@@ -86,6 +91,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )}</div> ${validate_component(PlanetaCard, "PlanetaCard").$$render(
     $$result,
     {
+      blipClient,
       imagem: planetaJupiter,
       nome: "Jupiter",
       megas: "700",
@@ -96,6 +102,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )} ${validate_component(PlanetaCard, "PlanetaCard").$$render(
     $$result,
     {
+      blipClient,
       imagem: planetaMarte,
       nome: "Marte",
       megas: "1",
@@ -106,6 +113,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )}</div> <div class="flex flex-col gap-10 md:flex-row">${validate_component(PlanetaCard, "PlanetaCard").$$render(
     $$result,
     {
+      blipClient,
       imagem: planetaVenus,
       nome: "Venus",
       megas: "90",
@@ -116,6 +124,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )} ${validate_component(PlanetaCard, "PlanetaCard").$$render(
     $$result,
     {
+      blipClient,
       imagem: planetaUrano,
       nome: "Urano",
       megas: "120",
@@ -126,6 +135,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )} ${validate_component(PlanetaCard, "PlanetaCard").$$render(
     $$result,
     {
+      blipClient,
       imagem: planetaPlutao,
       nome: "Plutão",
       megas: "60",

@@ -440,9 +440,6 @@ const Linkedin$1 = Linkedin;
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<footer class="flex flex-col justify-between md:h-36"><div class="flex flex-col md:flex-row md:px-32"><div class="flex flex-col items-center md:items-start md:w-1/3" data-svelte-h="svelte-sek51n"><img${add_attribute("src", LogoRodape, 0)} alt="Logo Himarte" class="w-32 md:w-36 h-8 md:h-10 mb-3"> <p class="px-5 md:px-0 text-sm md:text-lg fontSpace">O futuro é aqui</p></div> <ul class="flex items-center p-8 md:p-0 gap-10 md:w-1/3 justify-center"> <a href="https://www.facebook.com/himarte.net/">${validate_component(Facebook$1, "Facebook").$$render($$result, { size: 34 }, {}, {})}</a> <a href="https://www.instagram.com/himarte_net/">${validate_component(Instagram$1, "Instagram").$$render($$result, { size: 34 }, {}, {})}</a> <a href="https://www.linkedin.com/company/himarte-net/">${validate_component(Linkedin$1, "Linkedin").$$render($$result, { size: 34 }, {}, {})}</a></ul> <ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end" data-svelte-h="svelte-1adx1yp"> <a href="/sobre" class="text-primary-500 hover:text-primary-600">Sobre</a> <a href="/trabalhe-conosco" class="text-primary-500 hover:text-primary-600">Trabalhe conosco</a> <a href="/sobre" class="text-primary-500 hover:text-primary-600">Filiais</a></ul></div> <p class="text-center text-sm" data-svelte-h="svelte-1kzppgw">©2024 Quiliao</p></footer>`;
 });
-const BlipChat_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return ``;
-});
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   initializeStores();
   hljs.registerLanguage("xml", xml);
@@ -466,7 +463,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})} `;
     },
     default: () => {
-      return ` <main class="relative">${slots.default ? slots.default({}) : ``} ${validate_component(BlipChat_1, "BlipChat").$$render($$result, {}, {}, {})}</main>`;
+      return ` <main class="relative">${slots.default ? slots.default({}) : ``}</main>`;
     }
   })}`;
 });
