@@ -90,15 +90,15 @@
     "src": "src/lib/assets/img/logos/logo-nome.png"
   },
   "src/lib/assets/img/panetas/jupiter.webp": {
-    "file": "_app/immutable/assets/jupiter.ecQZ25l_.webp",
+    "file": "_app/immutable/assets/jupiter.MSapDBuy.webp",
     "src": "src/lib/assets/img/panetas/jupiter.webp"
   },
   "src/lib/assets/img/panetas/marte.webp": {
-    "file": "_app/immutable/assets/marte.J5EMB-VC.webp",
+    "file": "_app/immutable/assets/marte.UhScxkCI.webp",
     "src": "src/lib/assets/img/panetas/marte.webp"
   },
   "src/lib/assets/img/panetas/plutao.webp": {
-    "file": "_app/immutable/assets/plutao.IzYnAptR.webp",
+    "file": "_app/immutable/assets/plutao.70u1YNuB.webp",
     "src": "src/lib/assets/img/panetas/plutao.webp"
   },
   "src/lib/assets/img/panetas/saturno.webp": {
@@ -110,23 +110,23 @@
     "src": "src/lib/assets/img/panetas/urano.webp"
   },
   "src/lib/assets/img/panetas/venus.webp": {
-    "file": "_app/immutable/assets/venus.M3oPdvzH.webp",
+    "file": "_app/immutable/assets/venus.YSm7jU5J.webp",
     "src": "src/lib/assets/img/panetas/venus.webp"
   },
   "src/lib/assets/img/parceiros/logo-medlife.webp": {
-    "file": "_app/immutable/assets/logo-medlife.yHNNMYSQ.webp",
+    "file": "_app/immutable/assets/logo-medlife.EAd5OEuj.webp",
     "src": "src/lib/assets/img/parceiros/logo-medlife.webp"
   },
   "src/lib/assets/img/parceiros/logo-rbs.webp": {
-    "file": "_app/immutable/assets/logo-rbs.zVL1hrqU.webp",
+    "file": "_app/immutable/assets/logo-rbs.qDB4tZQp.webp",
     "src": "src/lib/assets/img/parceiros/logo-rbs.webp"
   },
   "src/lib/assets/img/parceiros/logo-sicredi.webp": {
-    "file": "_app/immutable/assets/logo-sicredi.z4Dj-aJ2.webp",
+    "file": "_app/immutable/assets/logo-sicredi.Se4CN5XP.webp",
     "src": "src/lib/assets/img/parceiros/logo-sicredi.webp"
   },
   "src/lib/assets/img/parceiros/logo-unimed.webp": {
-    "file": "_app/immutable/assets/logo-unimed.K_TIR__7.webp",
+    "file": "_app/immutable/assets/logo-unimed.3x3OrIjc.webp",
     "src": "src/lib/assets/img/parceiros/logo-unimed.webp"
   },
   "src/lib/fonts/Xspace.otf": {
@@ -155,16 +155,16 @@
   },
   "src/routes/+page.svelte": {
     "assets": [
-      "_app/immutable/assets/venus.M3oPdvzH.webp",
+      "_app/immutable/assets/venus.YSm7jU5J.webp",
       "_app/immutable/assets/urano.uVCGZCPk.webp",
       "_app/immutable/assets/saturno.fpPY7Wu4.webp",
-      "_app/immutable/assets/jupiter.ecQZ25l_.webp",
-      "_app/immutable/assets/marte.J5EMB-VC.webp",
-      "_app/immutable/assets/plutao.IzYnAptR.webp",
-      "_app/immutable/assets/logo-medlife.yHNNMYSQ.webp",
-      "_app/immutable/assets/logo-sicredi.z4Dj-aJ2.webp",
-      "_app/immutable/assets/logo-rbs.zVL1hrqU.webp",
-      "_app/immutable/assets/logo-unimed.K_TIR__7.webp",
+      "_app/immutable/assets/jupiter.MSapDBuy.webp",
+      "_app/immutable/assets/marte.UhScxkCI.webp",
+      "_app/immutable/assets/plutao.70u1YNuB.webp",
+      "_app/immutable/assets/logo-medlife.EAd5OEuj.webp",
+      "_app/immutable/assets/logo-sicredi.Se4CN5XP.webp",
+      "_app/immutable/assets/logo-rbs.qDB4tZQp.webp",
+      "_app/immutable/assets/logo-unimed.3x3OrIjc.webp",
       "_app/immutable/assets/mini-astro.o2lmnD74.webp",
       "_app/immutable/assets/wave1t 2.eqr7QNcz.webp",
       "_app/immutable/assets/hi-astronauta-main.kJ4k9XxY.webp"
