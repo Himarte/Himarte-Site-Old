@@ -1,5 +1,5 @@
 <script lang="ts">
-    import LogoPrincipal from "$lib/assets/img/logos/logo-nome.png";
+    import LogoPrincipal from "$lib/assets/img/logos/logo-nome.webp";
     import { page } from "$app/stores";
     import { AppBar } from "@skeletonlabs/skeleton";
 

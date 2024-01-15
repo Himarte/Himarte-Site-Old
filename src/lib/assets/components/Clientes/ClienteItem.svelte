@@ -3,4 +3,9 @@
     export let alt: string;
 </script>
 
-<img src={img} {alt} class="card flex w-40 items-center justify-center rounded-3xl" />
+<img
+    src={img}
+    loading="lazy"
+    {alt}
+    class="card flex w-40 items-center justify-center rounded-3xl"
+/>

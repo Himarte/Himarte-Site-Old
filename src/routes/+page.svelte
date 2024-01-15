@@ -2,25 +2,25 @@
     import { onMount } from "svelte";
 
     // imagens dos planetas
-    import planetaVenus from "$lib/assets/img/panetas/venus.svg";
-    import planetaUrano from "$lib/assets/img/panetas/urano.png";
-    import planetaSaturno from "$lib/assets/img/panetas/saturno.png";
-    import planetaJupiter from "$lib/assets/img/panetas/jupiter.svg";
-    import planetaMarte from "$lib/assets/img/panetas/marte.svg";
+    import planetaVenus from "$lib/assets/img/panetas/venus.webp";
+    import planetaUrano from "$lib/assets/img/panetas/urano.webp";
+    import planetaSaturno from "$lib/assets/img/panetas/saturno.webp";
+    import planetaJupiter from "$lib/assets/img/panetas/jupiter.webp";
+    import planetaMarte from "$lib/assets/img/panetas/marte.webp";
     import PlanetaCard from "$lib/assets/components/PlanetaCard.svelte";
-    import planetaPlutao from "$lib/assets/img/panetas/plutao.svg";
+    import planetaPlutao from "$lib/assets/img/panetas/plutao.webp";
 
     // imagens parceiros
-    import imgMedlife from "$lib/assets/img/parceiros/logo-medlife.svg";
-    import imgSicredi from "$lib/assets/img/parceiros/logo-sicredi.svg";
-    import imgRbs from "$lib/assets/img/parceiros/logo-rbs.svg";
-    import imgUnimed from "$lib/assets/img/parceiros/logo-unimed.svg";
+    import imgMedlife from "$lib/assets/img/parceiros/logo-medlife.webp";
+    import imgSicredi from "$lib/assets/img/parceiros/logo-sicredi.webp";
+    import imgRbs from "$lib/assets/img/parceiros/logo-rbs.webp";
+    import imgUnimed from "$lib/assets/img/parceiros/logo-unimed.webp";
 
     // images extras
-    import MainImg from "$lib/assets/img/extras/hi-astronauta-main.png";
-    import MiniAstro from "$lib/assets/img/extras/mini-astro.png";
-    import Wave1t from "$lib/assets/img/extras/wave1t 2.svg";
-    import seta from "$lib/assets/img/extras/seta2.png";
+    import MainImg from "$lib/assets/img/extras/hi-astronauta-main.webp";
+    import MiniAstro from "$lib/assets/img/extras/mini-astro.webp";
+    import Wave1t from "$lib/assets/img/extras/wave1t 2.webp";
+    import seta from "$lib/assets/img/extras/seta2.webp";
 
     // Listas de clientes
     import ClienteList from "$lib/assets/components/Clientes/ClienteList.svelte";
@@ -66,15 +66,14 @@
 </script>
 
 <picture
-    class="flex h-screen items-end justify-center bg-cover bg-center bg-no-repeat pb-40"
-    style="background-image: url({MainImg})"
+    class="flex h-screen items-end justify-center bg-cover bg-center bg-no-repeat pb-40 mainImgBg"
 >
     <p class="fontSpace text-center text-2xl font-bold md:text-6xl">
         {fraseDigitada}
     </p>
 </picture>
 
-<img src={Wave1t} alt="Wave1" class="flex w-full opacity-30" />
+<img src={Wave1t} loading="lazy" alt="Wave1" class="flex w-full opacity-30" />
 
 <section class="flex flex-col items-center justify-center gap-10 p-10 md:pt-20">
     <div class="flex flex-col gap-10 md:flex-row">
@@ -154,5 +153,8 @@
 
     .vibrate {
         animation: vibate 3s ease-in-out infinite;
+    }
+    .mainImgBg {
+        background-image: url("$lib/assets/img/extras/hi-astronauta-main.webp");
     }
 </style>

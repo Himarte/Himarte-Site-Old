@@ -7,7 +7,7 @@
       ".svelte-kit/generated/client-optimized/nodes/3.js",
       ".svelte-kit/generated/client-optimized/nodes/4.js"
     ],
-    "file": "_app/immutable/entry/app.gNe8H62q.js",
+    "file": "_app/immutable/entry/app.U-DXJwqj.js",
     "imports": [
       "_preload-helper.0HuHagjb.js",
       "_scheduler.qsg2qU0_.js",
@@ -24,14 +24,14 @@
     "css": [
       "_app/immutable/assets/0.-j2Z4CjY.css"
     ],
-    "file": "_app/immutable/nodes/0.7mYouzPI.js",
+    "file": "_app/immutable/nodes/0.tT_PvGwa.js",
     "imports": [
       "_scheduler.qsg2qU0_.js",
       "_index.pQbJqlm8.js",
-      "_entry.nGu7UDIN.js",
-      "_ProgressBar.svelte_svelte_type_style_lang.w3030SwJ.js",
+      "_entry.vOJZQTZd.js",
+      "_ProgressBar.svelte_svelte_type_style_lang.SSjGf3Zb.js",
       "_each.rMjQtr9c.js",
-      "_stores.XSsQISu1.js",
+      "_stores.yZTdcyrh.js",
       "_Icon.QqS9T5X9.js",
       "__commonjsHelpers.5-cIlDoe.js"
     ],
@@ -40,11 +40,11 @@
     "src": ".svelte-kit/generated/client-optimized/nodes/0.js"
   },
   ".svelte-kit/generated/client-optimized/nodes/1.js": {
-    "file": "_app/immutable/nodes/1.cKNqLcfI.js",
+    "file": "_app/immutable/nodes/1.0QrImPF-.js",
     "imports": [
       "_scheduler.qsg2qU0_.js",
       "_index.pQbJqlm8.js",
-      "_stores.XSsQISu1.js"
+      "_stores.yZTdcyrh.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
@@ -52,27 +52,27 @@
   },
   ".svelte-kit/generated/client-optimized/nodes/2.js": {
     "assets": [
-      "_app/immutable/assets/venus.LgamJeNX.svg",
-      "_app/immutable/assets/urano.rvjWFB8N.png",
-      "_app/immutable/assets/saturno.PyrJ_q7J.png",
-      "_app/immutable/assets/jupiter.lGmw94e_.svg",
-      "_app/immutable/assets/marte.cKE68kCo.svg",
-      "_app/immutable/assets/plutao.pmIQT7Uz.svg",
-      "_app/immutable/assets/logo-medlife.KSjPFLmS.svg",
-      "_app/immutable/assets/logo-sicredi.UUMXRKbk.svg",
-      "_app/immutable/assets/logo-rbs.Qtt4jmQn.svg",
-      "_app/immutable/assets/logo-unimed.ZYxfRq3N.svg",
-      "_app/immutable/assets/hi-astronauta-main.ffRGJgfk.png",
-      "_app/immutable/assets/mini-astro.BdMhEHk3.png",
-      "_app/immutable/assets/wave1t 2.1Jf7W9yH.svg"
+      "_app/immutable/assets/venus.M3oPdvzH.webp",
+      "_app/immutable/assets/urano.uVCGZCPk.webp",
+      "_app/immutable/assets/saturno.fpPY7Wu4.webp",
+      "_app/immutable/assets/jupiter.ecQZ25l_.webp",
+      "_app/immutable/assets/marte.J5EMB-VC.webp",
+      "_app/immutable/assets/plutao.IzYnAptR.webp",
+      "_app/immutable/assets/logo-medlife.yHNNMYSQ.webp",
+      "_app/immutable/assets/logo-sicredi.z4Dj-aJ2.webp",
+      "_app/immutable/assets/logo-rbs.zVL1hrqU.webp",
+      "_app/immutable/assets/logo-unimed.K_TIR__7.webp",
+      "_app/immutable/assets/mini-astro.o2lmnD74.webp",
+      "_app/immutable/assets/wave1t 2.eqr7QNcz.webp",
+      "_app/immutable/assets/hi-astronauta-main.kJ4k9XxY.webp"
     ],
     "css": [
-      "_app/immutable/assets/2.4FoM3ZJg.css"
+      "_app/immutable/assets/2.novgq4e2.css"
     ],
     "dynamicImports": [
       "_blip-chat.nO6vqxKG.js"
     ],
-    "file": "_app/immutable/nodes/2.TU_WtVQa.js",
+    "file": "_app/immutable/nodes/2.mkuNTqEE.js",
     "imports": [
       "_preload-helper.0HuHagjb.js",
       "_scheduler.qsg2qU0_.js",
@@ -99,13 +99,13 @@
     "src": ".svelte-kit/generated/client-optimized/nodes/3.js"
   },
   ".svelte-kit/generated/client-optimized/nodes/4.js": {
-    "file": "_app/immutable/nodes/4.Vs2BIHWr.js",
+    "file": "_app/immutable/nodes/4.ApHhuhxS.js",
     "imports": [
       "_scheduler.qsg2qU0_.js",
       "_index.pQbJqlm8.js",
-      "_ProgressBar.svelte_svelte_type_style_lang.w3030SwJ.js",
+      "_ProgressBar.svelte_svelte_type_style_lang.SSjGf3Zb.js",
       "_Icon.QqS9T5X9.js",
-      "_entry.nGu7UDIN.js"
+      "_entry.vOJZQTZd.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
@@ -123,13 +123,13 @@
     "file": "_app/immutable/assets/ProgressBar.oq5aOWfL.css",
     "src": "_ProgressBar.svelte_svelte_type_style_lang.!~{00h}~.js"
   },
-  "_ProgressBar.svelte_svelte_type_style_lang.w3030SwJ.js": {
+  "_ProgressBar.svelte_svelte_type_style_lang.SSjGf3Zb.js": {
     "css": [
       "_app/immutable/assets/ProgressBar.oq5aOWfL.css"
     ],
-    "file": "_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.w3030SwJ.js",
+    "file": "_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.SSjGf3Zb.js",
     "imports": [
-      "_entry.nGu7UDIN.js",
+      "_entry.vOJZQTZd.js",
       "_scheduler.qsg2qU0_.js"
     ]
   },
@@ -150,8 +150,8 @@
       "_scheduler.qsg2qU0_.js"
     ]
   },
-  "_entry.nGu7UDIN.js": {
-    "file": "_app/immutable/chunks/entry.nGu7UDIN.js",
+  "_entry.vOJZQTZd.js": {
+    "file": "_app/immutable/chunks/entry.vOJZQTZd.js",
     "imports": [
       "_scheduler.qsg2qU0_.js"
     ]
@@ -168,75 +168,75 @@
   "_scheduler.qsg2qU0_.js": {
     "file": "_app/immutable/chunks/scheduler.qsg2qU0_.js"
   },
-  "_stores.XSsQISu1.js": {
-    "file": "_app/immutable/chunks/stores.XSsQISu1.js",
+  "_stores.yZTdcyrh.js": {
+    "file": "_app/immutable/chunks/stores.yZTdcyrh.js",
     "imports": [
-      "_entry.nGu7UDIN.js"
+      "_entry.vOJZQTZd.js"
     ]
   },
   "node_modules/.pnpm/@sveltejs+kit@2.3.0_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
-    "file": "_app/immutable/entry/start.1s2TnyfA.js",
+    "file": "_app/immutable/entry/start.Wd2rtHAY.js",
     "imports": [
-      "_entry.nGu7UDIN.js"
+      "_entry.vOJZQTZd.js"
     ],
     "isEntry": true,
     "src": "node_modules/.pnpm/@sveltejs+kit@2.3.0_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/client/entry.js"
   },
-  "src/lib/assets/img/extras/hi-astronauta-main.png": {
-    "file": "_app/immutable/assets/hi-astronauta-main.ffRGJgfk.png",
-    "src": "src/lib/assets/img/extras/hi-astronauta-main.png"
+  "src/lib/assets/img/extras/hi-astronauta-main.webp": {
+    "file": "_app/immutable/assets/hi-astronauta-main.kJ4k9XxY.webp",
+    "src": "src/lib/assets/img/extras/hi-astronauta-main.webp"
   },
-  "src/lib/assets/img/extras/mini-astro.png": {
-    "file": "_app/immutable/assets/mini-astro.BdMhEHk3.png",
-    "src": "src/lib/assets/img/extras/mini-astro.png"
+  "src/lib/assets/img/extras/mini-astro.webp": {
+    "file": "_app/immutable/assets/mini-astro.o2lmnD74.webp",
+    "src": "src/lib/assets/img/extras/mini-astro.webp"
   },
-  "src/lib/assets/img/extras/wave1t 2.svg": {
-    "file": "_app/immutable/assets/wave1t 2.1Jf7W9yH.svg",
-    "src": "src/lib/assets/img/extras/wave1t 2.svg"
+  "src/lib/assets/img/extras/wave1t 2.webp": {
+    "file": "_app/immutable/assets/wave1t 2.eqr7QNcz.webp",
+    "src": "src/lib/assets/img/extras/wave1t 2.webp"
   },
   "src/lib/assets/img/logos/logo-nome.png": {
     "file": "_app/immutable/assets/logo-nome.9TKz916y.png",
     "src": "src/lib/assets/img/logos/logo-nome.png"
   },
-  "src/lib/assets/img/panetas/jupiter.svg": {
-    "file": "_app/immutable/assets/jupiter.lGmw94e_.svg",
-    "src": "src/lib/assets/img/panetas/jupiter.svg"
+  "src/lib/assets/img/panetas/jupiter.webp": {
+    "file": "_app/immutable/assets/jupiter.ecQZ25l_.webp",
+    "src": "src/lib/assets/img/panetas/jupiter.webp"
   },
-  "src/lib/assets/img/panetas/marte.svg": {
-    "file": "_app/immutable/assets/marte.cKE68kCo.svg",
-    "src": "src/lib/assets/img/panetas/marte.svg"
+  "src/lib/assets/img/panetas/marte.webp": {
+    "file": "_app/immutable/assets/marte.J5EMB-VC.webp",
+    "src": "src/lib/assets/img/panetas/marte.webp"
   },
-  "src/lib/assets/img/panetas/plutao.svg": {
-    "file": "_app/immutable/assets/plutao.pmIQT7Uz.svg",
-    "src": "src/lib/assets/img/panetas/plutao.svg"
+  "src/lib/assets/img/panetas/plutao.webp": {
+    "file": "_app/immutable/assets/plutao.IzYnAptR.webp",
+    "src": "src/lib/assets/img/panetas/plutao.webp"
   },
-  "src/lib/assets/img/panetas/saturno.png": {
-    "file": "_app/immutable/assets/saturno.PyrJ_q7J.png",
-    "src": "src/lib/assets/img/panetas/saturno.png"
+  "src/lib/assets/img/panetas/saturno.webp": {
+    "file": "_app/immutable/assets/saturno.fpPY7Wu4.webp",
+    "src": "src/lib/assets/img/panetas/saturno.webp"
   },
-  "src/lib/assets/img/panetas/urano.png": {
-    "file": "_app/immutable/assets/urano.rvjWFB8N.png",
-    "src": "src/lib/assets/img/panetas/urano.png"
+  "src/lib/assets/img/panetas/urano.webp": {
+    "file": "_app/immutable/assets/urano.uVCGZCPk.webp",
+    "src": "src/lib/assets/img/panetas/urano.webp"
   },
-  "src/lib/assets/img/panetas/venus.svg": {
-    "file": "_app/immutable/assets/venus.LgamJeNX.svg",
-    "src": "src/lib/assets/img/panetas/venus.svg"
+  "src/lib/assets/img/panetas/venus.webp": {
+    "file": "_app/immutable/assets/venus.M3oPdvzH.webp",
+    "src": "src/lib/assets/img/panetas/venus.webp"
   },
-  "src/lib/assets/img/parceiros/logo-medlife.svg": {
-    "file": "_app/immutable/assets/logo-medlife.KSjPFLmS.svg",
-    "src": "src/lib/assets/img/parceiros/logo-medlife.svg"
+  "src/lib/assets/img/parceiros/logo-medlife.webp": {
+    "file": "_app/immutable/assets/logo-medlife.yHNNMYSQ.webp",
+    "src": "src/lib/assets/img/parceiros/logo-medlife.webp"
   },
-  "src/lib/assets/img/parceiros/logo-rbs.svg": {
-    "file": "_app/immutable/assets/logo-rbs.Qtt4jmQn.svg",
-    "src": "src/lib/assets/img/parceiros/logo-rbs.svg"
+  "src/lib/assets/img/parceiros/logo-rbs.webp": {
+    "file": "_app/immutable/assets/logo-rbs.zVL1hrqU.webp",
+    "src": "src/lib/assets/img/parceiros/logo-rbs.webp"
   },
-  "src/lib/assets/img/parceiros/logo-sicredi.svg": {
-    "file": "_app/immutable/assets/logo-sicredi.UUMXRKbk.svg",
-    "src": "src/lib/assets/img/parceiros/logo-sicredi.svg"
+  "src/lib/assets/img/parceiros/logo-sicredi.webp": {
+    "file": "_app/immutable/assets/logo-sicredi.z4Dj-aJ2.webp",
+    "src": "src/lib/assets/img/parceiros/logo-sicredi.webp"
   },
-  "src/lib/assets/img/parceiros/logo-unimed.svg": {
-    "file": "_app/immutable/assets/logo-unimed.ZYxfRq3N.svg",
-    "src": "src/lib/assets/img/parceiros/logo-unimed.svg"
+  "src/lib/assets/img/parceiros/logo-unimed.webp": {
+    "file": "_app/immutable/assets/logo-unimed.K_TIR__7.webp",
+    "src": "src/lib/assets/img/parceiros/logo-unimed.webp"
   },
   "src/lib/fonts/Xspace.otf": {
     "file": "_app/immutable/assets/Xspace.-675vurb.otf",
