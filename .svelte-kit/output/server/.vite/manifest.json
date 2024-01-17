@@ -19,7 +19,7 @@
     ],
     "file": "chunks/ProgressBar.svelte_svelte_type_style_lang.js",
     "imports": [
-      "_index.js",
+      "_index2.js",
       "_ssr.js"
     ]
   },
@@ -33,7 +33,10 @@
     "file": "chunks/exports.js"
   },
   "_index.js": {
-    "file": "chunks/index.js",
+    "file": "chunks/index.js"
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
     "imports": [
       "_ssr.js"
     ]
@@ -58,8 +61,9 @@
     "file": "index.js",
     "imports": [
       "_internal.js",
+      "_index.js",
       "_exports.js",
-      "_index.js"
+      "_index2.js"
     ],
     "isEntry": true,
     "src": "node_modules/.pnpm/@sveltejs+kit@2.3.3_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/server/index.js"
@@ -128,8 +132,8 @@
     "file": "entries/pages/_error.svelte.js",
     "imports": [
       "_ssr.js",
-      "_client.js",
-      "_stores.js"
+      "_stores.js",
+      "_index.js"
     ],
     "isEntry": true,
     "src": "src/routes/+error.svelte"
@@ -145,7 +149,7 @@
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
       "_ssr.js",
-      "_index.js",
+      "_index2.js",
       "_ProgressBar.svelte_svelte_type_style_lang.js",
       "_stores.js",
       "_Icon.js",

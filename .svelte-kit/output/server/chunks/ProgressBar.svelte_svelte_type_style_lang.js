@@ -1,4 +1,4 @@
-import { w as writable, r as readable } from "./index.js";
+import { w as writable, r as readable } from "./index2.js";
 import { i as getContext, s as setContext, o as get_store_value } from "./ssr.js";
 const toastDefaults = { message: "Missing Toast Message", autohide: true, timeout: 5e3 };
 const TOAST_STORE_KEY = "toastStore";
