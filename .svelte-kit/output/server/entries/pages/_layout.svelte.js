@@ -343,7 +343,7 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       trail: () => {
-        return `<a href="https://portal.himarte.com.br/person_users/login" class="flex btn-sm rounded-full md:btn variant-ghost-primary font-semibold" data-svelte-h="svelte-1v8z6tl">Area do Cliente</a> `;
+        return `<a href="https://portal.himarte.com.br/person_users/login" class="flex btn-sm rounded-full md:btn variant-ghost-primary hover:variant-filled-primary font-semibold" data-svelte-h="svelte-10ejjxq">Area do Cliente</a> `;
       },
       default: () => {
         return `<ul class="hidden md:flex" role="navigation">${each(links, (link) => {

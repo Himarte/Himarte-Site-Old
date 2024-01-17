@@ -139,7 +139,7 @@
       "_app/immutable/assets/Xspace.-675vurb.otf"
     ],
     "css": [
-      "_app/immutable/assets/_layout.J-fz7zme.css"
+      "_app/immutable/assets/_layout.W5-VEYej.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [
@@ -201,8 +201,7 @@
     "imports": [
       "_ssr.js",
       "_ProgressBar.svelte_svelte_type_style_lang.js",
-      "_client.js",
-      "_Icon.js"
+      "_client.js"
     ],
     "isEntry": true,
     "src": "src/routes/trabalhe-conosco/+page.svelte"

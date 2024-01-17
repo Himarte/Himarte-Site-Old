@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { FileDropzone, focusTrap, getToastStore } from "@skeletonlabs/skeleton";
+    import { FileButton, FileDropzone, focusTrap, getToastStore } from "@skeletonlabs/skeleton";
     import { FileUp } from "lucide-svelte";
     import type { ActionData, PageData } from "./$types";
     import { enhance } from "$app/forms";
@@ -21,6 +21,10 @@
         mensagem: "Mensagem inválida",
     };
     const toastStore = getToastStore();
+
+    function onChangeHandler(e: Event): void {
+        console.log("file data:", e);
+    }
 </script>
 
 <section class="px-10 pt-10 space-y-5">
@@ -41,10 +45,20 @@
         if (invalidFields.length > 0) {
             invalidFields.forEach((field) => {
                 const errorMessage = errorMessages[field] || "Campo inválido";
-                toastStore.trigger({ message: errorMessage, timeout: 3500 });
+                toastStore.trigger({
+                    message: errorMessage,
+                    timeout: 3500,
+                    background: "variant-filled-error",
+                });
             });
 
             cancel();
+        } else if (invalidFields.length === 0) {
+            toastStore.trigger({
+                message: "Enviado com sucesso!",
+                timeout: 3500,
+                background: "variant-filled-success",
+            });
         }
     }}
 >
@@ -107,16 +121,9 @@
             placeholder="Conte-nos um pouco sobre você, suas experiências e por que essa vaga seria perfeita para você!"
         />
     </label>
-    <FileDropzone name="curriculo" class="input md:h-32" accept="application/pdf" required>
-        <svelte:fragment slot="lead"
-            ><span class="flex justify-center"><FileUp size={40} /></span></svelte:fragment
-        >
-        <svelte:fragment slot="message"
-            ><span class="font-semibold">Carregue o arquivo</span> ou arraste e solte-o</svelte:fragment
-        >
-        <svelte:fragment slot="meta">Apenas PDF</svelte:fragment>
-    </FileDropzone>
-    <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center">
+    <input type="file" name="curriculo" class="input" accept="application/pdf" required />
+
+    <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center md:py-5">
         <button
             type="reset"
             class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center"

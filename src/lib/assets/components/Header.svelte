@@ -28,7 +28,7 @@
     <svelte:fragment slot="trail">
         <a
             href="https://portal.himarte.com.br/person_users/login"
-            class="flex btn-sm rounded-full md:btn variant-ghost-primary font-semibold"
+            class="flex btn-sm rounded-full md:btn variant-ghost-primary hover:variant-filled-primary font-semibold"
             >Area do Cliente</a
         >
     </svelte:fragment>
