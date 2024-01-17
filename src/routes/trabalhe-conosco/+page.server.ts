@@ -74,7 +74,7 @@ export const actions: Actions = {
                 console.log("Mensagem Enviada:", info);
             };
 
-            // await send();
+            await send();
 
             return {
                 status: 200,

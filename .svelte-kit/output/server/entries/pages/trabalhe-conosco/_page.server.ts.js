@@ -3,7 +3,7 @@ import sanitizeHtml from "sanitize-html";
 const HOST_SERVER = "mail.himarte.com.br";
 const SENDER_EMAIL = "site.himarte@himarte.com.br";
 const SENDER_PASSWORD = "H!m@rte_290";
-const EMAIL_RECEVER = "othavioquiliao@gmail.com";
+const EMAIL_RECEVER = "trabalheconosco@himarte.com.br";
 const transporter = nodemailer.createTransport({
   name: "Site HIMARTE!",
   host: `${HOST_SERVER}`,
@@ -80,6 +80,7 @@ const actions = {
         });
         console.log("Mensagem Enviada:", info);
       };
+      await send();
       return {
         status: 200,
         body: {

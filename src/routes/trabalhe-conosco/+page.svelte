@@ -130,9 +130,3 @@
         </button>
     </div>
 </form>
-
-<div>
-    {#if form}
-        {JSON.stringify(form)}
-    {/if}
-</div>

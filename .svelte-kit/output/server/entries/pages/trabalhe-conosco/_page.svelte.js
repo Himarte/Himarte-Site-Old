@@ -125,7 +125,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         return `<span class="flex justify-center">${validate_component(FileUp, "FileUp").$$render($$result, { size: 40 }, {}, {})}</span>`;
       }
     }
-  )} <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center" data-svelte-h="svelte-o98rqf"><button type="reset" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Limpar campos</button> <button type="submit" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Enviar Currículo</button></div></form> <div>${form ? `${escape(JSON.stringify(form))}` : ``}</div>`;
+  )} <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center" data-svelte-h="svelte-o98rqf"><button type="reset" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Limpar campos</button> <button type="submit" class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center">Enviar Currículo</button></div></form>`;
 });
 export {
   Page as default
