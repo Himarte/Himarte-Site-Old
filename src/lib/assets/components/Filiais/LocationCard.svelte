@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+    import Spinning from "./Spinning.svelte";
     interface Location {
         url: string;
         title: string;
@@ -8,15 +10,22 @@
     }
 
     export let location: Location;
+    let loading = true;
+
+    onMount(() => {
+        loading = true;
+    });
 </script>
 
-<!-- promise was fulfilled -->
 <div class="flex md:w-1/2 md:p-2">
     <a
         class="card md:flex card-hover md:w-full overflow-hidden border border-gray-200"
         href={location.url}
     >
-        <header>
+        <header class="relative">
+            {#if loading}
+                <Spinning />
+            {/if}
             <iframe
                 class="map-frame"
                 src={location.url}
@@ -24,6 +33,7 @@
                 loading="lazy"
                 referrerpolicy="no-referrer"
                 title={location.title}
+                on:load={() => (loading = false)}
             ></iframe>
         </header>
         <div

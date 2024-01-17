@@ -21,10 +21,6 @@
         mensagem: "Mensagem inválida",
     };
     const toastStore = getToastStore();
-
-    function onChangeHandler(e: Event): void {
-        console.log("file data:", e);
-    }
 </script>
 
 <section class="px-10 pt-10 space-y-5">

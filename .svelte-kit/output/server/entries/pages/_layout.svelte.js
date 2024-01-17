@@ -336,7 +336,7 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${validate_component(AppBar, "AppBar").$$render(
     $$result,
     {
-      class: "px-10",
+      class: "px-10 md:px-28",
       slotDefault: "flex justify-center gap-5",
       background: "bg-surface-700"
     },

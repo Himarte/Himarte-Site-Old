@@ -10,7 +10,7 @@
     ];
 </script>
 
-<AppBar class="px-10" slotDefault="flex justify-center gap-5" background="bg-surface-700">
+<AppBar class="px-10 md:px-28" slotDefault="flex justify-center gap-5" background="bg-surface-700">
     <svelte:fragment slot="lead">
         <a href="/"><img src={LogoPrincipal} class="h-8 sm:h-10" alt="Himarte Logo" /></a>
     </svelte:fragment>
