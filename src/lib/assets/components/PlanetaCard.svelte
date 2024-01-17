@@ -8,6 +8,7 @@
     export let blipClient: any;
 
     const openChat = () => {
+        blipClient.toogleChat();
         blipClient.sendMessage({
             type: "text/plain",
             content:

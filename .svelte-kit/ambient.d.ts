@@ -26,12 +26,12 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const VITE_LINK_BLIP_CHAT: string;
+	export const VITE_CHAVE_API_BLIP_CHAT: string;
 	export const HOST_SERVER: string;
 	export const SENDER_EMAIL: string;
 	export const SENDER_PASSWORD: string;
 	export const EMAIL_RECEVER: string;
-	export const VITE_CHAVE_API_BLIP_CHAT: string;
-	export const VITE_LINK_BLIP_CHAT: string;
 	export const CHROME_DESKTOP: string;
 	export const COLORTERM: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
@@ -73,8 +73,6 @@ declare module '$env/static/private' {
 	export const NODE_PATH: string;
 	export const OLDPWD: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
-	export const P9K_SSH: string;
-	export const P9K_TTY: string;
 	export const PAGER: string;
 	export const PATH: string;
 	export const PMSPEC: string;
@@ -103,6 +101,8 @@ declare module '$env/static/private' {
 	export const SNAP_USER_COMMON: string;
 	export const SNAP_USER_DATA: string;
 	export const SNAP_VERSION: string;
+	export const SPACESHIP_ROOT: string;
+	export const SPACESHIP_VERSION: string;
 	export const SSH_AGENT_LAUNCHER: string;
 	export const SSH_AUTH_SOCK: string;
 	export const SYSTEMD_EXEC_PID: string;
@@ -117,7 +117,6 @@ declare module '$env/static/private' {
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const VSCODE_INJECTION: string;
-	export const VSCODE_NONCE: string;
 	export const VTE_VERSION: string;
 	export const WINDOWPATH: string;
 	export const XAUTHORITY: string;
@@ -137,8 +136,6 @@ declare module '$env/static/private' {
 	export const ZSH: string;
 	export const ZSH_CACHE_DIR: string;
 	export const _: string;
-	export const _P9K_SSH_TTY: string;
-	export const _P9K_TTY: string;
 	export const npm_command: string;
 	export const npm_config_frozen_lockfile: string;
 	export const npm_config_node_gyp: string;
@@ -227,12 +224,12 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		VITE_LINK_BLIP_CHAT: string;
+		VITE_CHAVE_API_BLIP_CHAT: string;
 		HOST_SERVER: string;
 		SENDER_EMAIL: string;
 		SENDER_PASSWORD: string;
 		EMAIL_RECEVER: string;
-		VITE_CHAVE_API_BLIP_CHAT: string;
-		VITE_LINK_BLIP_CHAT: string;
 		CHROME_DESKTOP: string;
 		COLORTERM: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
@@ -274,8 +271,6 @@ declare module '$env/dynamic/private' {
 		NODE_PATH: string;
 		OLDPWD: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
-		P9K_SSH: string;
-		P9K_TTY: string;
 		PAGER: string;
 		PATH: string;
 		PMSPEC: string;
@@ -304,6 +299,8 @@ declare module '$env/dynamic/private' {
 		SNAP_USER_COMMON: string;
 		SNAP_USER_DATA: string;
 		SNAP_VERSION: string;
+		SPACESHIP_ROOT: string;
+		SPACESHIP_VERSION: string;
 		SSH_AGENT_LAUNCHER: string;
 		SSH_AUTH_SOCK: string;
 		SYSTEMD_EXEC_PID: string;
@@ -318,7 +315,6 @@ declare module '$env/dynamic/private' {
 		VSCODE_GIT_ASKPASS_NODE: string;
 		VSCODE_GIT_IPC_HANDLE: string;
 		VSCODE_INJECTION: string;
-		VSCODE_NONCE: string;
 		VTE_VERSION: string;
 		WINDOWPATH: string;
 		XAUTHORITY: string;
@@ -338,8 +334,6 @@ declare module '$env/dynamic/private' {
 		ZSH: string;
 		ZSH_CACHE_DIR: string;
 		_: string;
-		_P9K_SSH_TTY: string;
-		_P9K_TTY: string;
 		npm_command: string;
 		npm_config_frozen_lockfile: string;
 		npm_config_node_gyp: string;
