@@ -54,16 +54,16 @@
       "_client.js"
     ]
   },
-  "node_modules/.pnpm/@sveltejs+kit@2.3.0_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+  "node_modules/.pnpm/@sveltejs+kit@2.3.3_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
     "imports": [
       "_ssr.js",
       "_stores.js"
     ],
     "isEntry": true,
-    "src": "node_modules/.pnpm/@sveltejs+kit@2.3.0_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+    "src": "node_modules/.pnpm/@sveltejs+kit@2.3.3_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
   },
-  "node_modules/.pnpm/@sveltejs+kit@2.3.0_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+  "node_modules/.pnpm/@sveltejs+kit@2.3.3_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
     "imports": [
       "_internal.js",
@@ -71,7 +71,7 @@
       "_index.js"
     ],
     "isEntry": true,
-    "src": "node_modules/.pnpm/@sveltejs+kit@2.3.0_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.8_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/server/index.js"
+    "src": "node_modules/.pnpm/@sveltejs+kit@2.3.3_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/server/index.js"
   },
   "src/lib/assets/img/extras/hi-astronauta-main.webp": {
     "file": "_app/immutable/assets/hi-astronauta-main.kJ4k9XxY.webp",

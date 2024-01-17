@@ -1872,11 +1872,14 @@ async function render_response({
       }
     }
     const blocks = [];
-    const properties = [
-      assets && `assets: ${s(assets)}`,
-      `base: ${base_expression}`,
-      `env: ${!client.uses_env_dynamic_public || state.prerendering ? null : s(public_env)}`
-    ].filter(Boolean);
+    const load_env_eagerly = client.uses_env_dynamic_public && state.prerendering;
+    const properties = [`base: ${base_expression}`];
+    if (assets) {
+      properties.push(`assets: ${s(assets)}`);
+    }
+    if (client.uses_env_dynamic_public) {
+      properties.push(`env: ${load_env_eagerly ? "null" : s(public_env)}`);
+    }
     if (chunks) {
       blocks.push("const deferred = new Map();");
       properties.push(`defer: (id) => new Promise((fulfil, reject) => {
@@ -1920,16 +1923,31 @@ async function render_response({
       if (options2.embedded) {
         hydrate.push(`params: ${uneval(event.params)}`, `route: ${s(event.route)}`);
       }
+      const indent = "	".repeat(load_env_eagerly ? 7 : 6);
       args.push(`{
-							${hydrate.join(",\n							")}
-						}`);
+${indent}	${hydrate.join(`,
+${indent}	`)}
+${indent}}`);
     }
-    blocks.push(`Promise.all([
+    if (load_env_eagerly) {
+      blocks.push(`import(${s(`${base$1}/${options2.app_dir}/env.js`)}).then(({ env }) => {
+						${global}.env = env;
+
+						Promise.all([
+							import(${s(prefixed(client.start))}),
+							import(${s(prefixed(client.app))})
+						]).then(([kit, app]) => {
+							kit.start(${args.join(", ")});
+						});
+					});`);
+    } else {
+      blocks.push(`Promise.all([
 						import(${s(prefixed(client.start))}),
 						import(${s(prefixed(client.app))})
 					]).then(([kit, app]) => {
 						kit.start(${args.join(", ")});
 					});`);
+    }
     if (options2.service_worker) {
       const opts = "";
       blocks.push(`if ('serviceWorker' in navigator) {
@@ -3256,6 +3274,9 @@ async function respond(request, options2, manifest, state) {
   }
   if (decoded === `/${options2.app_dir}/env.js`) {
     return get_public_env(request);
+  }
+  if (decoded.startsWith(`/${options2.app_dir}`)) {
+    return text("Not found", { status: 404 });
   }
   const is_data_request = has_data_suffix(decoded);
   let invalidated_data_nodes;
