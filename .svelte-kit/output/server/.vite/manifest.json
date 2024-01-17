@@ -54,15 +54,6 @@
       "_client.js"
     ]
   },
-  "node_modules/.pnpm/@sveltejs+kit@2.3.3_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "entries/fallbacks/error.svelte.js",
-    "imports": [
-      "_ssr.js",
-      "_stores.js"
-    ],
-    "isEntry": true,
-    "src": "node_modules/.pnpm/@sveltejs+kit@2.3.3_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
-  },
   "node_modules/.pnpm/@sveltejs+kit@2.3.3_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
     "imports": [
@@ -132,6 +123,16 @@
   "src/lib/fonts/Xspace.otf": {
     "file": "_app/immutable/assets/Xspace.-675vurb.otf",
     "src": "src/lib/fonts/Xspace.otf"
+  },
+  "src/routes/+error.svelte": {
+    "file": "entries/pages/_error.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_client.js",
+      "_stores.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+error.svelte"
   },
   "src/routes/+layout.svelte": {
     "assets": [
