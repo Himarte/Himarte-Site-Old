@@ -2,22 +2,23 @@
     import { onMount } from "svelte";
 
     // imagens dos planetas
-    import planetaVenus from "$lib/assets/img/panetas/venus.webp";
-    import planetaUrano from "$lib/assets/img/panetas/urano.webp";
-    import planetaSaturno from "$lib/assets/img/panetas/saturno.webp";
-    import planetaJupiter from "$lib/assets/img/panetas/jupiter.webp";
-    import planetaMarte from "$lib/assets/img/panetas/marte.webp";
+    import planetaVenus from "$lib/assets/img/planetas/venus.webp";
+    import planetaUrano from "$lib/assets/img/planetas/urano.webp";
+    import planetaSaturno from "$lib/assets/img/planetas/saturno.webp";
+    import planetaJupiter from "$lib/assets/img/planetas/jupiter.webp";
+    import planetaMarte from "$lib/assets/img/planetas/marte.webp";
     import PlanetaCard from "$lib/assets/components/PlanetaCard.svelte";
-    import planetaPlutao from "$lib/assets/img/panetas/plutao.webp";
+    import planetaPlutao from "$lib/assets/img/planetas/plutao.webp";
 
     // imagens parceiros
     import imgMedlife from "$lib/assets/img/parceiros/logo-medlife.webp";
     import imgSicredi from "$lib/assets/img/parceiros/logo-sicredi.webp";
     import imgRbs from "$lib/assets/img/parceiros/logo-rbs.webp";
     import imgUnimed from "$lib/assets/img/parceiros/logo-unimed.webp";
+    import imgSaoJoao from "$lib/assets/img/parceiros/logo-sao-joao.webp";
+    import imgMagalu from "$lib/assets/img/parceiros/logo-magalu.webp";
 
     // images extras
-    import MainImg from "$lib/assets/img/extras/hi-astronauta-main.webp";
     import MiniAstro from "$lib/assets/img/extras/mini-astro.webp";
     import Wave1t from "$lib/assets/img/extras/wave1t 2.webp";
     import seta from "$lib/assets/img/extras/seta2.webp";
@@ -29,6 +30,9 @@
         { img: imgSicredi, alt: "Logo Sicredi" },
         { img: imgRbs, alt: "Logo RBS" },
         { img: imgUnimed, alt: "Logo unimed" },
+        { img: imgSaoJoao, alt: "Logo São João" },
+        { img: imgMagalu, alt: "Logo Magalu" },
+
         // É so adicionar aqui os novos clientes obs: não esquecer de importar a imagem +
     ];
 
@@ -73,7 +77,7 @@
     </p>
 </picture>
 
-<img src={Wave1t} loading="lazy" alt="Wave1" class="flex w-full opacity-30" />
+<img src={Wave1t} alt="Wave1" class="flex w-full opacity-30" />
 
 <section class="flex flex-col items-center justify-center gap-10 p-10 md:pt-20">
     <div class="flex flex-col gap-10 md:flex-row">

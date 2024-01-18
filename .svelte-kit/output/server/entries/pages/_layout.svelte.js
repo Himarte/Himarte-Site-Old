@@ -343,18 +343,18 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {},
     {
       trail: () => {
-        return `<a href="https://portal.himarte.com.br/person_users/login" class="flex btn-sm rounded-full md:btn variant-ghost-primary hover:variant-filled-primary font-semibold" data-svelte-h="svelte-10ejjxq">Area do Cliente</a> `;
+        return `<a href="https://portal.himarte.com.br/person_users/login" class="flex btn-sm rounded-full md:btn variant-ghost-primary hover:variant-filled-primary font-semibold" aria-label="Acessar a área do cliente" data-svelte-h="svelte-uxcdsq">Area do Cliente</a> `;
       },
       default: () => {
-        return `<ul class="hidden md:flex" role="navigation">${each(links, (link) => {
+        return `<nav aria-label="Menu principal"><ul class="hidden md:flex" role="navigation">${each(links, (link) => {
           return `<a class="${[
             "btn md:text-xl hover:variant-soft-primary svelte-1svc5m3",
             $page.url.pathname === link.href ? "active" : ""
           ].join(" ").trim()}"${add_attribute("href", link.href, 0)}>${escape(link.text)}</a>`;
-        })}</ul> `;
+        })}</ul></nav> `;
       },
       lead: () => {
-        return `<a href="/" data-svelte-h="svelte-1m56128"><img${add_attribute("src", LogoRodape, 0)} class="h-8 sm:h-10" alt="Himarte Logo"></a>`;
+        return `<a href="/" data-svelte-h="svelte-nxhkx1"><img${add_attribute("src", LogoRodape, 0)} class="h-8 sm:h-10" alt="Logo da Himarte"></a>`;
       }
     }
   )}`;
@@ -438,7 +438,27 @@ const Linkedin = create_ssr_component(($$result, $$props, $$bindings, slots) => 
 });
 const Linkedin$1 = Linkedin;
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<footer class="flex flex-col justify-between md:h-36"><div class="flex flex-col md:flex-row md:px-32"><div class="flex flex-col items-center md:items-start md:w-1/3" data-svelte-h="svelte-sek51n"><img${add_attribute("src", LogoRodape, 0)} alt="Logo Himarte" class="w-32 md:w-36 h-8 md:h-10 mb-3"> <p class="px-5 md:px-0 text-sm md:text-lg fontSpace">O futuro é aqui</p></div> <ul class="flex items-center p-8 md:p-0 gap-10 md:w-1/3 justify-center"> <a href="https://www.facebook.com/himarte.net/">${validate_component(Facebook$1, "Facebook").$$render($$result, { size: 34 }, {}, {})}</a> <a href="https://www.instagram.com/himarte_net/">${validate_component(Instagram$1, "Instagram").$$render($$result, { size: 34 }, {}, {})}</a> <a href="https://www.linkedin.com/company/himarte-net/">${validate_component(Linkedin$1, "Linkedin").$$render($$result, { size: 34 }, {}, {})}</a></ul> <ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end" data-svelte-h="svelte-3kmxzh"> <a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Sobre</a> <a href="/trabalhe-conosco" class="text-primary-500 hover:text-primary-600">Trabalhe conosco</a> <a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Filiais</a></ul></div> <p class="text-center text-sm" data-svelte-h="svelte-1kzppgw">©2024 Quiliao</p></footer>`;
+  const socialLinks = [
+    {
+      href: "https://www.facebook.com/himarte.net/",
+      component: Facebook$1,
+      label: "Facebook"
+    },
+    {
+      href: "https://www.instagram.com/himarte_net/",
+      component: Instagram$1,
+      label: "Instagram"
+    },
+    {
+      href: "https://www.linkedin.com/company/himarte-net/",
+      component: Linkedin$1,
+      label: "Linkedin"
+    }
+  ];
+  const currentYear = (/* @__PURE__ */ new Date()).getFullYear();
+  return `<footer class="flex flex-col justify-between md:h-36"><div class="flex flex-col md:flex-row md:px-32"><div class="flex flex-col items-center md:items-start md:w-1/3" data-svelte-h="svelte-sek51n"><img${add_attribute("src", LogoRodape, 0)} alt="Logo Himarte" class="w-32 md:w-36 h-8 md:h-10 mb-3"> <p class="px-5 md:px-0 text-sm md:text-lg fontSpace">O futuro é aqui</p></div> <ul class="flex items-center p-8 md:p-0 gap-10 md:w-1/3 justify-center">${each(socialLinks, ({ href, component: SocialIcon, label }) => {
+    return `<a${add_attribute("href", href, 0)}${add_attribute("aria-label", label, 0)}>${validate_component(SocialIcon, "SocialIcon").$$render($$result, { size: 34 }, {}, {})}</a>`;
+  })}</ul> <ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end" data-svelte-h="svelte-3kmxzh"> <a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Sobre</a> <a href="/trabalhe-conosco" class="text-primary-500 hover:text-primary-600">Trabalhe conosco</a> <a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Filiais</a></ul></div> <p class="text-center text-sm">©${escape(currentYear)} Quiliao</p></footer>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   initializeStores();

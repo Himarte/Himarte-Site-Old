@@ -12,24 +12,26 @@
 
 <AppBar class="px-10 md:px-28" slotDefault="flex justify-center gap-5" background="bg-surface-700">
     <svelte:fragment slot="lead">
-        <a href="/"><img src={LogoPrincipal} class="h-8 sm:h-10" alt="Himarte Logo" /></a>
+        <a href="/"><img src={LogoPrincipal} class="h-8 sm:h-10" alt="Logo da Himarte" /></a>
     </svelte:fragment>
     <svelte:fragment>
-        <ul class="hidden md:flex" role="navigation">
-            {#each links as link (link.href)}
-                <a
-                    class="btn md:text-xl hover:variant-soft-primary"
-                    href={link.href}
-                    class:active={$page.url.pathname === link.href}>{link.text}</a
-                >
-            {/each}
-        </ul>
+        <nav aria-label="Menu principal">
+            <ul class="hidden md:flex" role="navigation">
+                {#each links as link (link.href)}
+                    <a
+                        class="btn md:text-xl hover:variant-soft-primary"
+                        href={link.href}
+                        class:active={$page.url.pathname === link.href}>{link.text}</a
+                    >
+                {/each}
+            </ul>
+        </nav>
     </svelte:fragment>
     <svelte:fragment slot="trail">
         <a
             href="https://portal.himarte.com.br/person_users/login"
             class="flex btn-sm rounded-full md:btn variant-ghost-primary hover:variant-filled-primary font-semibold"
-            >Area do Cliente</a
+            aria-label="Acessar a área do cliente">Area do Cliente</a
         >
     </svelte:fragment>
 </AppBar>

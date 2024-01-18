@@ -26,6 +26,7 @@
         src={imagem}
         alt={`Planeta ${nome}`}
         class="absolute bottom-[73%] left-[75%] w-28 rotate-12 rotate"
+        loading="lazy"
     />
 
     <div>

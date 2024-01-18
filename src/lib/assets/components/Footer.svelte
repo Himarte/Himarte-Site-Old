@@ -2,6 +2,20 @@
     // Importações
     import LogoRodape from "$lib/assets/img/logos/logo-nome.webp";
     import { Facebook, Instagram, Linkedin } from "lucide-svelte";
+    const socialLinks = [
+        { href: "https://www.facebook.com/himarte.net/", component: Facebook, label: "Facebook" },
+        {
+            href: "https://www.instagram.com/himarte_net/",
+            component: Instagram,
+            label: "Instagram",
+        },
+        {
+            href: "https://www.linkedin.com/company/himarte-net/",
+            component: Linkedin,
+            label: "Linkedin",
+        },
+    ];
+    const currentYear = new Date().getFullYear();
 </script>
 
 <footer class="flex flex-col justify-between md:h-36">
@@ -12,10 +26,9 @@
         </div>
 
         <ul class="flex items-center p-8 md:p-0 gap-10 md:w-1/3 justify-center">
-            <!-- Links para redes sociais -->
-            <a href="https://www.facebook.com/himarte.net/"><Facebook size={34} /></a>
-            <a href="https://www.instagram.com/himarte_net/"><Instagram size={34} /></a>
-            <a href="https://www.linkedin.com/company/himarte-net/"><Linkedin size={34} /></a>
+            {#each socialLinks as { href, component: SocialIcon, label }}
+                <a {href} aria-label={label}><SocialIcon size={34} /></a>
+            {/each}
         </ul>
 
         <ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end">
@@ -27,5 +40,5 @@
             <a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Filiais</a>
         </ul>
     </div>
-    <p class="text-center text-sm">&copy;2024 Quiliao</p>
+    <p class="text-center text-sm">&copy;{currentYear} Quiliao</p>
 </footer>

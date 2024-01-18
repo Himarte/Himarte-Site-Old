@@ -1,10 +1,6 @@
 <script lang="ts">
-    import { FileDropzone, focusTrap, getToastStore } from "@skeletonlabs/skeleton";
-    import type { ActionData, PageData } from "./$types";
+    import { focusTrap, getToastStore } from "@skeletonlabs/skeleton";
     import { enhance } from "$app/forms";
-
-    export let data: PageData;
-    export let form: ActionData;
 
     let requiredFields: string[] = [
         "nome",

@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { onMount } from "svelte";
     import Spinning from "./Spinning.svelte";
     interface Location {
         url: string;
@@ -11,16 +10,13 @@
 
     export let location: Location;
     let loading = true;
-
-    onMount(() => {
-        loading = true;
-    });
 </script>
 
 <div class="flex md:w-1/2 md:p-2">
     <a
-        class="card md:flex card-hover md:w-full overflow-hidden border border-gray-200"
+        class="card md:flex card-hover md:w-full overflow-hidden border border-primary-800"
         href={location.url}
+        aria-label={location.title}
     >
         <header class="relative">
             {#if loading}
@@ -50,6 +46,5 @@
     .map-frame {
         width: 400px;
         height: 300px;
-        border: 0;
     }
 </style>

@@ -7,9 +7,9 @@ const module = await import("blip-chat-widget");
 BlipChat = module.BlipChat;
 
 new BlipChat()
-    .withAppKey(`${CHAVE_API_BLIP_CHAT}`)
-    .withButton({ color: "#EB4F27", icon: "" })
-    .withCustomCommonUrl(`${LINK_BLIP_CHAT}`)
-    .build();
+  .withAppKey(`${CHAVE_API_BLIP_CHAT}`)
+  .withButton({ color: "#EB4F27", icon: "" })
+  .withCustomCommonUrl(`${LINK_BLIP_CHAT}`)
+  .build();
 
 export default BlipChat;

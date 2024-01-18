@@ -6,21 +6,24 @@ import { skeleton } from "@skeletonlabs/tw-plugin";
 import { theme_hi_marte } from "./src/theme_hi_marte";
 
 export default {
-    darkMode: "class",
-    content: [
-        "./src/**/*.{html,js,svelte,ts}",
-        join(require.resolve("@skeletonlabs/skeleton"), "../**/*.{html,js,svelte,ts}"),
-    ],
-    theme: {
-        extend: {},
-    },
-    plugins: [
-        forms,
-        typography,
-        skeleton({
-            themes: {
-                custom: [theme_hi_marte],
-            },
-        }),
-    ],
+  darkMode: "class",
+  content: [
+    "./src/**/*.{html,js,svelte,ts}",
+    join(
+      require.resolve("@skeletonlabs/skeleton"),
+      "../**/*.{html,js,svelte,ts}",
+    ),
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    forms,
+    typography,
+    skeleton({
+      themes: {
+        custom: [theme_hi_marte],
+      },
+    }),
+  ],
 } satisfies Config;
