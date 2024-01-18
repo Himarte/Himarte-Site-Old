@@ -180,16 +180,16 @@
     "isEntry": true,
     "src": "src/routes/+page.svelte"
   },
-  "src/routes/sobre/+page.svelte": {
+  "src/routes/sobre-nos/+page.svelte": {
     "css": [
       "_app/immutable/assets/_page._Tpcl6EQ.css"
     ],
-    "file": "entries/pages/sobre/_page.svelte.js",
+    "file": "entries/pages/sobre-nos/_page.svelte.js",
     "imports": [
       "_ssr.js"
     ],
     "isEntry": true,
-    "src": "src/routes/sobre/+page.svelte"
+    "src": "src/routes/sobre-nos/+page.svelte"
   },
   "src/routes/trabalhe-conosco/+page.server.ts": {
     "file": "entries/pages/trabalhe-conosco/_page.server.ts.js",

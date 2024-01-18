@@ -35,7 +35,5 @@
                 <LocationCard {location} />
             {/each}
         </div>
-
-        <div class="flex flex-col md:flex-row w-full md:justify-center gap-5"></div>
     </div>
 </section>

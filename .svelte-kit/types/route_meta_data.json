@@ -1,6 +1,6 @@
 {
 	"/": [],
-	"/sobre": [],
+	"/sobre-nos": [],
 	"/trabalhe-conosco": [
 		"src/routes/trabalhe-conosco/+page.server.ts"
 	]

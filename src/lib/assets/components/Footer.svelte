@@ -20,11 +20,11 @@
 
         <ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end">
             <!-- Links adicionais -->
-            <a href="/sobre" class="text-primary-500 hover:text-primary-600">Sobre</a>
+            <a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Sobre</a>
             <a href="/trabalhe-conosco" class="text-primary-500 hover:text-primary-600"
                 >Trabalhe conosco</a
             >
-            <a href="/sobre" class="text-primary-500 hover:text-primary-600">Filiais</a>
+            <a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Filiais</a>
         </ul>
     </div>
     <p class="text-center text-sm">&copy;2024 Quiliao</p>

@@ -5,7 +5,7 @@
 
     const links = [
         { href: "/", text: "Home" },
-        { href: "/sobre", text: "Sobre" },
+        { href: "/sobre-nos", text: "Sobre" },
         { href: "/trabalhe-conosco", text: "Trabalhe Conosco" },
     ];
 </script>

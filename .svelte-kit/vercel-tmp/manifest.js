@@ -10,7 +10,7 @@ return {
 	assets: new Set(["icon16.png","icon2.ico","icon32.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.VRq8maty.js","app":"_app/immutable/entry/app.Di-zxlbk.js","imports":["_app/immutable/entry/start.VRq8maty.js","_app/immutable/chunks/entry.0QaXLwd9.js","_app/immutable/chunks/scheduler.a7-2wmif.js","_app/immutable/entry/app.Di-zxlbk.js","_app/immutable/chunks/preload-helper.0HuHagjb.js","_app/immutable/chunks/scheduler.a7-2wmif.js","_app/immutable/chunks/index.TKaeQzX4.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.PvJrsXK3.js","app":"_app/immutable/entry/app.EvrQ1yO4.js","imports":["_app/immutable/entry/start.PvJrsXK3.js","_app/immutable/chunks/entry.in3-DHBr.js","_app/immutable/chunks/scheduler.a7-2wmif.js","_app/immutable/entry/app.EvrQ1yO4.js","_app/immutable/chunks/preload-helper.0HuHagjb.js","_app/immutable/chunks/scheduler.a7-2wmif.js","_app/immutable/chunks/index.TKaeQzX4.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('../output/server/nodes/0.js')),
 			__memo(() => import('../output/server/nodes/1.js')),
@@ -27,8 +27,8 @@ return {
 				endpoint: null
 			},
 			{
-				id: "/sobre",
-				pattern: /^\/sobre\/?$/,
+				id: "/sobre-nos",
+				pattern: /^\/sobre-nos\/?$/,
 				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 3 },
 				endpoint: null
