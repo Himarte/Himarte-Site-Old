@@ -12,10 +12,6 @@
     import javascript from "highlight.js/lib/languages/javascript";
     import typescript from "highlight.js/lib/languages/typescript";
 
-    // Speed Insights da vercel
-    import { injectSpeedInsights } from "@vercel/speed-insights/sveltekit";
-    injectSpeedInsights();
-
     // Skeleton Stores
     import { initializeStores } from "@skeletonlabs/skeleton";
     initializeStores();

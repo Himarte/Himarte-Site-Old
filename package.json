@@ -44,7 +44,6 @@
   "type": "module",
   "dependencies": {
     "@floating-ui/dom": "1.5.3",
-    "@vercel/speed-insights": "^1.0.5",
     "blip-chat-widget": "^1.10.0",
     "highlight.js": "11.9.0",
     "lucide-svelte": "^0.303.0",

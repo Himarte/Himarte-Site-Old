@@ -147,7 +147,6 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_script: string;
 	export const npm_node_execpath: string;
 	export const npm_package_dependencies__floating_ui_dom: string;
-	export const npm_package_dependencies__vercel_speed_insights: string;
 	export const npm_package_dependencies_blip_chat_widget: string;
 	export const npm_package_dependencies_highlight_js: string;
 	export const npm_package_dependencies_lucide_svelte: string;
@@ -345,7 +344,6 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_script: string;
 		npm_node_execpath: string;
 		npm_package_dependencies__floating_ui_dom: string;
-		npm_package_dependencies__vercel_speed_insights: string;
 		npm_package_dependencies_blip_chat_widget: string;
 		npm_package_dependencies_highlight_js: string;
 		npm_package_dependencies_lucide_svelte: string;

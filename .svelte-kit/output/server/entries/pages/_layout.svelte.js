@@ -8,7 +8,6 @@ import xml from "highlight.js/lib/languages/xml";
 import css$1 from "highlight.js/lib/languages/css";
 import javascript from "highlight.js/lib/languages/javascript";
 import typescript from "highlight.js/lib/languages/typescript";
-import "../../chunks/client.js";
 import { computePosition, autoUpdate, flip, shift, offset, arrow } from "@floating-ui/dom";
 const storeHighlightJs = writable(void 0);
 const storePopup = writable(void 0);

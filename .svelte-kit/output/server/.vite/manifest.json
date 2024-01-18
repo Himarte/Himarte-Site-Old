@@ -155,8 +155,7 @@
       "_index2.js",
       "_ProgressBar.svelte_svelte_type_style_lang.js",
       "_stores.js",
-      "_Icon.js",
-      "_client.js"
+      "_Icon.js"
     ],
     "isEntry": true,
     "src": "src/routes/+layout.svelte"
