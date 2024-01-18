@@ -44,7 +44,7 @@
 
 <style>
     .map-frame {
-        width: 400px;
-        height: 300px;
+        width: 25rem;
+        height: 250px;
     }
 </style>

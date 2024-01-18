@@ -3,7 +3,7 @@ const Spinning = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   return `<div class="md:map-frame absolute flex justify-center h-full w-full items-center" data-svelte-h="svelte-mdm1mu"><div class="border-transparent h-36 w-36 animate-spin rounded-full border-8 border-t-primary-500/70"></div></div>`;
 });
 const css = {
-  code: ".map-frame.svelte-9wdf5f{width:400px;height:300px}",
+  code: ".map-frame.svelte-16r2yse{width:25rem;height:250px}",
   map: null
 };
 const LocationCard = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -11,7 +11,7 @@ const LocationCard = create_ssr_component(($$result, $$props, $$bindings, slots)
   if ($$props.location === void 0 && $$bindings.location && location !== void 0)
     $$bindings.location(location);
   $$result.css.add(css);
-  return `<div class="flex md:w-1/2 md:p-2"><a class="card md:flex card-hover md:w-full overflow-hidden border border-primary-800"${add_attribute("href", location.url, 0)}${add_attribute("aria-label", location.title, 0)}><header class="relative">${`${validate_component(Spinning, "Spinning").$$render($$result, {}, {}, {})}`} <iframe class="map-frame svelte-9wdf5f"${add_attribute("src", location.url, 0)} ${"allowfullscreen"} loading="lazy" referrerpolicy="no-referrer"${add_attribute("title", location.title, 0)}></iframe></header> <div class="flex flex-col w-full py-20 md:py-0 justify-center items-center space-y-2 whitespace-nowrap"><h3 class="h3 text-primary-500">${escape(location.city)}</h3> <h6 class="h6">${escape(location.days)}</h6> <h6 class="h6">${escape(location.schedule)}</h6></div></a> </div>`;
+  return `<div class="flex md:w-1/2 md:p-2"><a class="card md:flex card-hover md:w-full overflow-hidden border border-primary-800"${add_attribute("href", location.url, 0)}${add_attribute("aria-label", location.title, 0)}><header class="relative">${`${validate_component(Spinning, "Spinning").$$render($$result, {}, {}, {})}`} <iframe class="map-frame svelte-16r2yse"${add_attribute("src", location.url, 0)} ${"allowfullscreen"} loading="lazy" referrerpolicy="no-referrer"${add_attribute("title", location.title, 0)}></iframe></header> <div class="flex flex-col w-full py-20 md:py-0 justify-center items-center space-y-2 whitespace-nowrap"><h3 class="h3 text-primary-500">${escape(location.city)}</h3> <h6 class="h6">${escape(location.days)}</h6> <h6 class="h6">${escape(location.schedule)}</h6></div></a> </div>`;
 });
 const listaFiliais = [
   {
