@@ -1,6 +1,6 @@
 <script>
     // Importações
-    import LogoRodape from "$lib/assets/img/logos/logo-nome.png";
+    import LogoRodape from "$lib/assets/img/logos/logo-nome.webp";
     import { Facebook, Instagram, Linkedin } from "lucide-svelte";
 </script>
 

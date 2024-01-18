@@ -80,10 +80,6 @@
     "file": "_app/immutable/assets/wave1t 2.eqr7QNcz.webp",
     "src": "src/lib/assets/img/extras/wave1t 2.webp"
   },
-  "src/lib/assets/img/logos/logo-nome.png": {
-    "file": "_app/immutable/assets/logo-nome.9TKz916y.png",
-    "src": "src/lib/assets/img/logos/logo-nome.png"
-  },
   "src/lib/assets/img/panetas/jupiter.webp": {
     "file": "_app/immutable/assets/jupiter.MSapDBuy.webp",
     "src": "src/lib/assets/img/panetas/jupiter.webp"
@@ -140,11 +136,10 @@
   },
   "src/routes/+layout.svelte": {
     "assets": [
-      "_app/immutable/assets/logo-nome.9TKz916y.png",
       "_app/immutable/assets/Xspace.-675vurb.otf"
     ],
     "css": [
-      "_app/immutable/assets/_layout.gOc9xsp-.css"
+      "_app/immutable/assets/_layout.03Rb69gc.css"
     ],
     "file": "entries/pages/_layout.svelte.js",
     "imports": [

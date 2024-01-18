@@ -20,7 +20,11 @@ export const actions: Actions = {
             const vagaInteressado: any = formData.get("vagaDesejada");
             const telefoneInteressado: any = formData.get("telefone");
             const mensagemInteressado: any = formData.get("mensagem");
-            const curriculoInteressado: any = formData.get("curriculo");
+
+            // Conversao do curriculo para base64
+            const curriculoInteressado: File = formData.get("curriculo") as File;
+            const curriculoBuffer = await curriculoInteressado.arrayBuffer();
+            const curriculoBase64 = Buffer.from(curriculoBuffer).toString("base64");
 
             const nomeInteressadoSanitized = sanitizeHtml(nomeInteressado, {
                 allowedTags: sanitizeHtml.defaults.allowedTags,
@@ -49,25 +53,26 @@ export const actions: Actions = {
     <div style="background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: left;">
       <h1 style="color: #333; text-align: center;">Contato via site HIMARTE</h1>
       <hr style="border: 0.5px solid #EB4F27;">
-      <p><strong>Nome:</strong> ${nomeInteressadoSanitized}</p>
-      <p><strong>Vaga:</strong> ${vagaInteressadoSanitized}</p>
-      <p><strong>Email:</strong> ${emailInteressadoSanitized}</p>
-      <p><strong>Telefone:</strong> ${telefoneInteressadoSanitized}</p>
-      <p><strong>Mensagem:</strong> ${sanitizedMensagemInteressado}</p>
+    <p style="font-size: 16px;"><strong>Nome:</strong> ${nomeInteressadoSanitized}</p>
+    <p style="font-size: 16px;"><strong>Vaga:</strong> ${vagaInteressadoSanitized}</p>
+    <p style="font-size: 16px;"><strong>Email:</strong> ${emailInteressadoSanitized}</p>
+    <p style="font-size: 16px;"><strong>Telefone:</strong> ${telefoneInteressadoSanitized}</p>
+    <p style="font-size: 16px;"><strong>Mensagem:</strong> ${sanitizedMensagemInteressado}</p>
     </div>
   </div>
 `;
 
             const send = async () => {
-                const info = transporter.sendMail({
+                const info = await transporter.sendMail({
                     from: `${SENDER_EMAIL}`,
                     to: `${EMAIL_RECEVER}`,
                     subject: `Site Himarte - Vaga ${vagaInteressado}`,
-                    html,
+                    html: html,
                     attachments: [
                         {
-                            filename: "curriculo.pdf",
-                            content: curriculoInteressado,
+                            filename: `${curriculoInteressado.name}`,
+                            contentType: "application/pdf",
+                            path: `data:application/pdf;base64,${curriculoBase64}`, // path do curriculo
                         },
                     ],
                 });

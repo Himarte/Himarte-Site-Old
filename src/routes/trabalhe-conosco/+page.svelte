@@ -1,11 +1,11 @@
 <script lang="ts">
-    import { FileButton, FileDropzone, focusTrap, getToastStore } from "@skeletonlabs/skeleton";
-    import { FileUp } from "lucide-svelte";
+    import { FileDropzone, focusTrap, getToastStore } from "@skeletonlabs/skeleton";
     import type { ActionData, PageData } from "./$types";
     import { enhance } from "$app/forms";
 
     export let data: PageData;
     export let form: ActionData;
+
     let requiredFields: string[] = [
         "nome",
         "telefone",
@@ -47,7 +47,6 @@
                     background: "variant-filled-error",
                 });
             });
-
             cancel();
         } else if (invalidFields.length === 0) {
             toastStore.trigger({
@@ -119,7 +118,7 @@
     </label>
     <input type="file" name="curriculo" class="input" accept="application/pdf" required />
 
-    <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center md:py-5">
+    <div class="flex w-full flex-col md:flex-row gap-5 md:justify-center md:py-2">
         <button
             type="reset"
             class="btn variant-ghost-primary font-semibold uppercase hover:variant-filled-primary w-[95%] md:w-1/5 self-center"
