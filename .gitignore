@@ -1,6 +1,10 @@
-# faz um git ignore para um projeto svelte/sveltkit usando tailwindcss nodemailer arquivo .env e hospedado na vercel
-
-
+.DS_Store
 node_modules
+/build
+/.svelte-kit
+/package
 .env
-.vercel
+.env.*
+!.env.example
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

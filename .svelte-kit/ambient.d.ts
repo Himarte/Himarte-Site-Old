@@ -71,6 +71,7 @@ declare module '$env/static/private' {
 	export const LS_COLORS: string;
 	export const NODE: string;
 	export const NODE_PATH: string;
+	export const NO_AT_BRIDGE: string;
 	export const OLDPWD: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const PAGER: string;
@@ -269,6 +270,7 @@ declare module '$env/dynamic/private' {
 		LS_COLORS: string;
 		NODE: string;
 		NODE_PATH: string;
+		NO_AT_BRIDGE: string;
 		OLDPWD: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		PAGER: string;
