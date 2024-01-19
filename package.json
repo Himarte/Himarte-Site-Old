@@ -41,6 +41,7 @@
   "type": "module",
   "dependencies": {
     "@floating-ui/dom": "1.5.4",
+    "@sveltejs/adapter-vercel": "^5.1.0",
     "blip-chat-widget": "^1.10.0",
     "highlight.js": "11.9.0",
     "lucide-svelte": "^0.312.0",

@@ -2,7 +2,8 @@
 import root from '../root.svelte';
 import { set_building, set_prerendering } from '__sveltekit/environment';
 import { set_assets } from '__sveltekit/paths';
-import { set_private_env, set_public_env, set_safe_public_env } from '../../../node_modules/.pnpm/@sveltejs+kit@2.3.5_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/shared-server.js';
+import { set_manifest, set_read_implementation } from '__sveltekit/server';
+import { set_private_env, set_public_env, set_safe_public_env } from '../../../node_modules/@sveltejs/kit/src/runtime/shared-server.js';
 
 export const options = {
 	app_dir: "_app",
@@ -17,10 +18,10 @@ export const options = {
 	root,
 	service_worker: false,
 	templates: {
-		app: ({ head, body, assets, nonce, env }) => "<!doctype html>\n<html lang=\"pt-br\" class=\"dark\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta\n      name=\"description\"\n      content=\"Conectando você ao futuro com velocidade, confiabilidade e inovação - HIMARTE NET, onde acreditamos que o futuro é feito bem aqui.\"\n    />\n    <meta\n      name=\"keywords\"\n      content=\"provedor de internet, conexão de alta velocidade, serviços de banda larga, HIMARTE NET, internet confiável, himarte\"\n    />\n    <link rel=\"icon\" href=\"" + assets + "/icon2.ico\" />\n    <link\n      rel=\"icon\"\n      type=\"image/png\"\n      sizes=\"32x32\"\n      href=\"" + assets + "/icon32.png\"\n    />\n    <link\n      rel=\"icon\"\n      type=\"image/png\"\n      sizes=\"16x16\"\n      href=\"" + assets + "/icon16.png\"\n    />\n    <title>HIMARTE</title>\n    <meta name=\"viewport\" content=\"width=device-width\" />\n    " + head + "\n  </head>\n  <body\n    data-sveltekit-preload-data=\"hover\"\n    data-theme=\"theme_hi_marte\"\n    id=\"svelte\"\n  >\n    <div style=\"display: contents\" class=\"h-full overflow-hidden\">\n      " + body + "\n    </div>\n  </body>\n</html>\n",
+		app: ({ head, body, assets, nonce, env }) => "<!doctype html>\r\n<html lang=\"pt-br\" class=\"dark\">\r\n  <head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta\r\n      name=\"description\"\r\n      content=\"Conectando você ao futuro com velocidade, confiabilidade e inovação - HIMARTE NET, onde acreditamos que o futuro é feito bem aqui.\"\r\n    />\r\n    <meta\r\n      name=\"keywords\"\r\n      content=\"provedor de internet, conexão de alta velocidade, serviços de banda larga, HIMARTE NET, internet confiável, himarte\"\r\n    />\r\n    <link rel=\"icon\" href=\"" + assets + "/icon2.ico\" />\r\n    <link\r\n      rel=\"icon\"\r\n      type=\"image/png\"\r\n      sizes=\"32x32\"\r\n      href=\"" + assets + "/icon32.png\"\r\n    />\r\n    <link\r\n      rel=\"icon\"\r\n      type=\"image/png\"\r\n      sizes=\"16x16\"\r\n      href=\"" + assets + "/icon16.png\"\r\n    />\r\n    <title>HIMARTE</title>\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    " + head + "\r\n  </head>\r\n  <body\r\n    data-sveltekit-preload-data=\"hover\"\r\n    data-theme=\"theme_hi_marte\"\r\n    id=\"svelte\"\r\n  >\r\n    <div style=\"display: contents\" class=\"h-full overflow-hidden\">\r\n      " + body + "\r\n    </div>\r\n  </body>\r\n</html>\r\n",
 		error: ({ status, message }) => "<!doctype html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<title>" + message + "</title>\n\n\t\t<style>\n\t\t\tbody {\n\t\t\t\t--bg: white;\n\t\t\t\t--fg: #222;\n\t\t\t\t--divider: #ccc;\n\t\t\t\tbackground: var(--bg);\n\t\t\t\tcolor: var(--fg);\n\t\t\t\tfont-family:\n\t\t\t\t\tsystem-ui,\n\t\t\t\t\t-apple-system,\n\t\t\t\t\tBlinkMacSystemFont,\n\t\t\t\t\t'Segoe UI',\n\t\t\t\t\tRoboto,\n\t\t\t\t\tOxygen,\n\t\t\t\t\tUbuntu,\n\t\t\t\t\tCantarell,\n\t\t\t\t\t'Open Sans',\n\t\t\t\t\t'Helvetica Neue',\n\t\t\t\t\tsans-serif;\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t\tjustify-content: center;\n\t\t\t\theight: 100vh;\n\t\t\t\tmargin: 0;\n\t\t\t}\n\n\t\t\t.error {\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t\tmax-width: 32rem;\n\t\t\t\tmargin: 0 1rem;\n\t\t\t}\n\n\t\t\t.status {\n\t\t\t\tfont-weight: 200;\n\t\t\t\tfont-size: 3rem;\n\t\t\t\tline-height: 1;\n\t\t\t\tposition: relative;\n\t\t\t\ttop: -0.05rem;\n\t\t\t}\n\n\t\t\t.message {\n\t\t\t\tborder-left: 1px solid var(--divider);\n\t\t\t\tpadding: 0 0 0 1rem;\n\t\t\t\tmargin: 0 0 0 1rem;\n\t\t\t\tmin-height: 2.5rem;\n\t\t\t\tdisplay: flex;\n\t\t\t\talign-items: center;\n\t\t\t}\n\n\t\t\t.message h1 {\n\t\t\t\tfont-weight: 400;\n\t\t\t\tfont-size: 1em;\n\t\t\t\tmargin: 0;\n\t\t\t}\n\n\t\t\t@media (prefers-color-scheme: dark) {\n\t\t\t\tbody {\n\t\t\t\t\t--bg: #222;\n\t\t\t\t\t--fg: #ddd;\n\t\t\t\t\t--divider: #666;\n\t\t\t\t}\n\t\t\t}\n\t\t</style>\n\t</head>\n\t<body>\n\t\t<div class=\"error\">\n\t\t\t<span class=\"status\">" + status + "</span>\n\t\t\t<div class=\"message\">\n\t\t\t\t<h1>" + message + "</h1>\n\t\t\t</div>\n\t\t</div>\n\t</body>\n</html>\n"
 	},
-	version_hash: "1pfzlbq"
+	version_hash: "1behdi3"
 };
 
 export async function get_hooks() {
@@ -30,4 +31,4 @@ export async function get_hooks() {
 	};
 }
 
-export { set_assets, set_building, set_prerendering, set_private_env, set_public_env, set_safe_public_env };
+export { set_assets, set_building, set_manifest, set_prerendering, set_private_env, set_public_env, set_read_implementation, set_safe_public_env };
