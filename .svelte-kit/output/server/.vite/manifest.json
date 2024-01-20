@@ -57,7 +57,7 @@
       "_client.js"
     ]
   },
-  "node_modules/.pnpm/@sveltejs+kit@2.3.5_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+  "node_modules/.pnpm/@sveltejs+kit@2.4.1_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.12/node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
     "imports": [
       "_internal.js",
@@ -66,7 +66,7 @@
       "_index2.js"
     ],
     "isEntry": true,
-    "src": "node_modules/.pnpm/@sveltejs+kit@2.3.5_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.11/node_modules/@sveltejs/kit/src/runtime/server/index.js"
+    "src": "node_modules/.pnpm/@sveltejs+kit@2.4.1_@sveltejs+vite-plugin-svelte@3.0.1_svelte@4.2.9_vite@5.0.12/node_modules/@sveltejs/kit/src/runtime/server/index.js"
   },
   "src/lib/assets/img/extras/hi-astronauta-main.webp": {
     "file": "_app/immutable/assets/hi-astronauta-main.kJ4k9XxY.webp",
@@ -191,7 +191,7 @@
   },
   "src/routes/sobre-nos/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.C4SSZL_W.css"
+      "_app/immutable/assets/_page.4d9aGttF.css"
     ],
     "file": "entries/pages/sobre-nos/_page.svelte.js",
     "imports": [
