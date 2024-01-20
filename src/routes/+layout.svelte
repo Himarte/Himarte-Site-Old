@@ -13,8 +13,8 @@
 	import typescript from 'highlight.js/lib/languages/typescript';
 
 	// Skeleton Stores
-	// import { initializeStores } from '@skeletonlabs/skeleton';
-	// initializeStores();
+	import { initializeStores } from '@skeletonlabs/skeleton';
+	initializeStores();
 
 	hljs.registerLanguage('xml', xml); // for HTML
 	hljs.registerLanguage('css', css);
