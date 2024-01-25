@@ -81,7 +81,7 @@
 	</p>
 </picture>
 
-<img src={Wave1t} alt="Wave1" class="flex w-full opacity-30" />
+<img src={Wave1t} alt="Degrade de cores" class="flex w-full opacity-30" />
 
 <section class="flex flex-col items-center justify-center gap-10 p-10 md:pt-20">
 	<div class="flex flex-col gap-10 md:flex-row">
@@ -112,7 +112,7 @@
 <ClienteList {clientes} />
 
 <section class="flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-around">
-	<img src={MiniAstro} alt="mini astro" class="hidden md:flex md:w-[35rem]" />
+	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[35rem]" />
 
 	<article class="flex w-[55rem] flex-col items-center justify-center gap-5 md:gap-10">
 		<h1 class="fontSpace flex items-center justify-center text-center text-2xl md:text-4xl">
