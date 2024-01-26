@@ -3,3 +3,9 @@ node_modules
 /.svelte-kit
 /.vscode
 .env
+/pnpm-lock.yaml
+/yarn.lock
+/bun.lockb
+bun.lock
+build
+/build
