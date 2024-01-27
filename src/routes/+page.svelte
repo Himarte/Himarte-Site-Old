@@ -27,18 +27,18 @@
 	// import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	// injectSpeedInsights();
 
-	// Listas de clientes
-	import ClienteList from '$lib/assets/components/Clientes/ClienteList.svelte';
-	let clientes = [
-		{ img: imgMedlife, alt: 'Logo Medlife' },
-		{ img: imgSicredi, alt: 'Logo Sicredi' },
-		{ img: imgRbs, alt: 'Logo RBS' },
-		{ img: imgUnimed, alt: 'Logo unimed' },
-		{ img: imgSaoJoao, alt: 'Logo São João' },
-		{ img: imgMagalu, alt: 'Logo Magalu' }
+	// Listas de clientes-----------------------
+	// import ClienteList from '$lib/assets/components/Clientes/ClienteList.svelte';
+	// let clientes = [
+	// 	{ img: imgMedlife, alt: 'Logo Medlife' },
+	// 	{ img: imgSicredi, alt: 'Logo Sicredi' },
+	// 	{ img: imgRbs, alt: 'Logo RBS' },
+	// 	{ img: imgUnimed, alt: 'Logo unimed' },
+	// 	{ img: imgSaoJoao, alt: 'Logo São João' },
+	// 	{ img: imgMagalu, alt: 'Logo Magalu' }
 
-		// É so adicionar aqui os novos clientes obs: não esquecer de importar a imagem +
-	];
+	// 	// É so adicionar aqui os novos clientes obs: não esquecer de importar a imagem +
+	// ];
 
 	// Interaçao do texto DIGITANDO...
 	let frase = 'O FUTURO É AQUI';
@@ -109,7 +109,7 @@
 	</div>
 </section>
 
-<ClienteList {clientes} />
+<!-- <ClienteList {clientes} /> -->
 
 <section class="flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-around">
 	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[35rem]" />
