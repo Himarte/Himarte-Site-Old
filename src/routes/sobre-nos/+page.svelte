@@ -7,13 +7,13 @@
 	<h1 class="h1 text-center font-bold gradient-heading fontSpace">Bem vindo!</h1>
 	<h3 class="h3">Um pouco sobre a nós...</h3>
 
-	<article>
+	<p>
 		A Himarte Net, anteriormente conhecida como Infotec, é uma empresa pioneira e bem-sucedida que
 		teve suas raízes em Candelária, onde foi fundada em 2002 pelos visionários Márcia Martin e Hiuri
 		Ilha. Especializada inicialmente em serviços de informática, a empresa rapidamente se destacou
 		ao se tornar a primeira a fornecer internet via rádio em diversas localidades, marcando o início
 		de uma jornada que a levaria a se posicionar como líder no setor de telecomunicações.
-	</article>
+	</p>
 
 	<h3 class="h3">Nossa história...</h3>
 	<p>
@@ -24,6 +24,23 @@
 		variedade de planos residenciais e empresariais, juntamente com serviços de transporte de dados,
 		destacando-se como uma referência confiável no fornecimento de internet de alta qualidade.
 	</p>
+
+	<h3 class="h3" style="margin-bottom: 1em;">Missão, Visão e Valores...</h3>
+	<ul>
+		<li>
+			<strong>Missão:</strong> Prover conexões de alta qualidade, conectando comunidades e facilitando
+			o acesso à informação.
+		</li>
+		<li>
+			<strong>Visão:</strong> Consolidar-se como líder regional em serviços de internet, expandindo para
+			novas localidades e proporcionando inovações tecnológicas aos clientes.
+		</li>
+		<li>
+			<strong>Valores:</strong> Compromisso com a excelência no atendimento, transparência e integridade
+			em todas as operações, inovação constante para superar as expectativas dos clientes, respeito pela
+			comunidade e foco no crescimento sustentável.
+		</li>
+	</ul>
 </section>
 <section class="px-10 py-10 space-y-5">
 	<h2 class="h5 md:h2 font-semibold gradient-heading">Encontre a HIMARTE mais proxima de você!</h2>
