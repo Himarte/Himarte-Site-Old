@@ -7,38 +7,20 @@
 	import planetaSaturno from '$lib/assets/img/planetas/saturno.webp';
 	import planetaJupiter from '$lib/assets/img/planetas/jupiter.webp';
 	import planetaMarte from '$lib/assets/img/planetas/marte.webp';
-	import PlanetaCard from '$lib/assets/components/PlanetaCard.svelte';
 	import planetaPlutao from '$lib/assets/img/planetas/plutao.webp';
 
-	// imagens parceiros
-	import imgMedlife from '$lib/assets/img/parceiros/logo-medlife.webp';
-	import imgSicredi from '$lib/assets/img/parceiros/logo-sicredi.webp';
-	import imgRbs from '$lib/assets/img/parceiros/logo-rbs.webp';
-	import imgUnimed from '$lib/assets/img/parceiros/logo-unimed.webp';
-	import imgSaoJoao from '$lib/assets/img/parceiros/logo-sao-joao.webp';
-	import imgMagalu from '$lib/assets/img/parceiros/logo-magalu.webp';
+	// componentes dos planetas e preços
+	import PlanetaCard from '$lib/assets/components/PlanetaCard.svelte';
+	import PlanetaCardProfissional from '$lib/assets/components/PlanetaCardProfissional.svelte';
 
 	// images extras
 	import MiniAstro from '$lib/assets/img/extras/mini-astro.webp';
 	import Wave1t from '$lib/assets/img/extras/wave1t 2.webp';
 	import seta from '$lib/assets/img/extras/seta2.webp';
-
-	// teste
-	// import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
-	// injectSpeedInsights();
-
-	// Listas de clientes-----------------------
-	// import ClienteList from '$lib/assets/components/Clientes/ClienteList.svelte';
-	// let clientes = [
-	// 	{ img: imgMedlife, alt: 'Logo Medlife' },
-	// 	{ img: imgSicredi, alt: 'Logo Sicredi' },
-	// 	{ img: imgRbs, alt: 'Logo RBS' },
-	// 	{ img: imgUnimed, alt: 'Logo unimed' },
-	// 	{ img: imgSaoJoao, alt: 'Logo São João' },
-	// 	{ img: imgMagalu, alt: 'Logo Magalu' }
-
-	// 	// É so adicionar aqui os novos clientes obs: não esquecer de importar a imagem +
-	// ];
+	import { Tab, TabGroup } from '@skeletonlabs/skeleton';
+	import PlanetaCardFibraDedicada from '$lib/assets/components/PlanetaCardFibraDedicada.svelte';
+	import UsersRound from 'lucide-svelte/icons/users-round';
+	import Building2 from 'lucide-svelte/icons/building-2';
 
 	// Interaçao do texto DIGITANDO...
 	let frase = 'O FUTURO É AQUI';
@@ -71,6 +53,8 @@
 			.withCustomCommonUrl(import.meta.env.VITE_LINK_BLIP_CHAT);
 		blipClient.build();
 	});
+
+	let tabSet: number = 0;
 </script>
 
 <picture
@@ -83,31 +67,132 @@
 
 <img src={Wave1t} alt="Degrade de cores" class="flex w-full opacity-30" />
 
-<section class="flex flex-col items-center justify-center gap-10 p-10 md:pt-20">
-	<div class="flex flex-col gap-10 md:flex-row">
-		<!-- =========================================================== -->
-		<div class="relative">
-			<figure
-				class="absolute -left-[5.5rem] -top-[3.5rem] hidden w-52 -rotate-[20deg] sm:flex vibate"
-			>
-				<img src={seta} alt="Seta indicando o melhor preço" class="w-16 -rotate-6" />
-				<figcaption
-					class="absolute right-[1.3rem] bg-primary-800/40 -top-[0.9rem] rounded-xl border-2 px-2 text-xl font-bold text-white shadow-[0_0px_2rem_0.1rem] shadow-primary-700 hover:border-2 hover:border-white vibrate"
-				>
-					Melhor Preço
-				</figcaption>
-			</figure>
-			<PlanetaCard {blipClient} imagem={planetaSaturno} nome="Saturno" megas="400" preco="99" />
-		</div>
-		<PlanetaCard {blipClient} imagem={planetaJupiter} nome="Jupiter" megas="700" preco="149" />
-		<PlanetaCard {blipClient} imagem={planetaMarte} nome="Marte" megas="1" preco="199" />
-	</div>
-	<div class="flex flex-col gap-10 md:flex-row">
-		<PlanetaCard {blipClient} imagem={planetaVenus} nome="Venus" megas="90" preco="79" />
-		<PlanetaCard {blipClient} imagem={planetaUrano} nome="Urano" megas="120" preco="89" />
-		<PlanetaCard {blipClient} imagem={planetaPlutao} nome="Plutão" megas="60" preco="59" />
-	</div>
-</section>
+<TabGroup justify="justify-center gap-5">
+	<Tab
+		bind:group={tabSet}
+		name="tab1"
+		value={0}
+		hover="hover:text-gray-300"
+		active="border-b border-primary-600"
+	>
+		<span class="flex flex-col items-center">
+			<UsersRound />
+			Pessoa Fisica</span
+		>
+	</Tab>
+	<Tab
+		bind:group={tabSet}
+		name="tab2"
+		value={1}
+		hover="hover:text-gray-300"
+		active="border-b border-primary-600 "
+	>
+		<span class="flex flex-col items-center">
+			<Building2 />
+			<span>CNPJ</span>
+		</span></Tab
+	>
+	<!-- Tab Panels --->
+	<svelte:fragment slot="panel">
+		<section class="flex flex-col items-center justify-center gap-10 p-10 md:pt-20">
+			{#if tabSet === 0}
+				<!-- CARD DOS PREÇOS CPF -->
+
+				<div class="flex flex-col gap-10 md:flex-row">
+					<!-- =========================================================== -->
+					<div class="relative">
+						<figure
+							class="absolute -left-[5.5rem] -top-[3.5rem] hidden w-52 -rotate-[20deg] sm:flex vibate"
+						>
+							<img src={seta} alt="Seta indicando o melhor preço" class="w-16 -rotate-6" />
+							<figcaption
+								class="absolute right-[1.3rem] bg-primary-800/40 -top-[0.9rem] rounded-xl border-2 px-2 text-xl font-bold text-white shadow-[0_0px_2rem_0.1rem] shadow-primary-700 hover:border-2 hover:border-white vibrate"
+							>
+								Melhor Preço
+							</figcaption>
+						</figure>
+						<PlanetaCard
+							{blipClient}
+							imagem={planetaSaturno}
+							nome="Saturno"
+							megas="400"
+							preco="99"
+						/>
+					</div>
+					<PlanetaCard
+						{blipClient}
+						imagem={planetaJupiter}
+						nome="Jupiter"
+						megas="700"
+						preco="149"
+					/>
+					<PlanetaCard {blipClient} imagem={planetaMarte} nome="Marte" megas="1000" preco="199" />
+				</div>
+				<div class="flex flex-col gap-10 md:flex-row">
+					<PlanetaCard {blipClient} imagem={planetaVenus} nome="Venus" megas="90" preco="79" />
+					<PlanetaCard {blipClient} imagem={planetaUrano} nome="Urano" megas="120" preco="89" />
+					<PlanetaCard {blipClient} imagem={planetaPlutao} nome="Plutão" megas="60" preco="59" />
+				</div>
+			{:else if tabSet === 1}
+				<!-- CARD DOS PREÇOS CNPJ -->
+				<div class="flex flex-col gap-10 md:flex-row">
+					<!-- =========================================================== -->
+
+					<PlanetaCardProfissional
+						{blipClient}
+						imagem={planetaVenus}
+						nome="Venus"
+						megas="300"
+						preco="350"
+						ipFixo={true}
+					/>
+
+					<PlanetaCardProfissional
+						{blipClient}
+						imagem={planetaMarte}
+						nome="Marte"
+						megas="500"
+						preco="550"
+						ipFixo={true}
+					/>
+					<PlanetaCardProfissional
+						{blipClient}
+						imagem={planetaJupiter}
+						nome="Jupiter"
+						megas="1000"
+						preco="1100"
+						ipFixo={true}
+					/>
+				</div>
+				<div class="flex flex-col gap-10 md:flex-row">
+					<PlanetaCardProfissional
+						{blipClient}
+						imagem={planetaUrano}
+						nome="Urano"
+						megas="300"
+						preco="200"
+						ipFixo={false}
+					/>
+					<PlanetaCardProfissional
+						{blipClient}
+						imagem={planetaPlutao}
+						nome="Plutão"
+						megas="200"
+						preco="150"
+						ipFixo={false}
+					/>
+
+					<PlanetaCardFibraDedicada
+						{blipClient}
+						imagem={planetaSaturno}
+						nome="Fibra Dedicada"
+						ipFixo={true}
+					/>
+				</div>
+			{/if}
+		</section>
+	</svelte:fragment>
+</TabGroup>
 
 <!-- <ClienteList {clientes} /> -->
 
