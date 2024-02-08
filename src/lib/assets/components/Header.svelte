@@ -32,7 +32,7 @@
 	</svelte:fragment>
 	<svelte:fragment slot="trail">
 		<a
-			href="https://portal.himarte.com.br/person_users/login"
+			href="https://himarte.portal.7az.com.br/login"
 			target="_blank"
 			class="flex btn-sm rounded-full md:btn variant-ghost-primary hover:variant-filled-primary font-semibold"
 			aria-label="Acessar a área do cliente">Area do Cliente</a
