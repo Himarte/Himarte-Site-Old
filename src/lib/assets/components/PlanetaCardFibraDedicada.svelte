@@ -28,7 +28,7 @@
 	<div>
 		<h5 class="text-4xl font-bold text-primary-600 mb-4">
 			{nome}
-			<span class="text-sm border-2 rounded-2xl px-2 border-primary-700 text-gray-300">PRO.</span>
+			<span class="text-sm border-2 rounded-2xl px-2 border-primary-700 text-gray-300">PRO</span>
 		</h5>
 		<div class="flex flex-col items-baseline text-white">
 			<span class="flex uppercase"><Plus color="#EF562F" />Assistência dedicada</span>

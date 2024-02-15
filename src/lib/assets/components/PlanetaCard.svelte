@@ -42,7 +42,7 @@
 			<span class="text-4xl font-extrabold tracking-tight">{preco}</span>
 			<span class="text-2xl font-extrabold tracking-tight text-primary-600">,</span>
 			<span class="text-2xl font-extrabold tracking-tight">90</span>
-			<span class="ms-1 text-xl font-normal text-gray-400">/Mês</span>
+			<span class="ms-1 text-xl font-normal text-gray-400">/Mês*</span>
 		</span>
 		<button
 			on:click={openChat}

@@ -200,10 +200,12 @@
 	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[35rem]" />
 
 	<article class="flex w-[55rem] flex-col items-center justify-center gap-5 md:gap-10">
-		<h1 class="fontSpace flex items-center justify-center text-center text-2xl md:text-4xl">
+		<h1
+			class="h1 fontSpace gradient-heading flex items-center justify-center text-center text-2xl md:text-4xl"
+		>
 			Quem somos?
 		</h1>
-		<p class="text-md p-5 text-justify md:text-2xl">
+		<p class="text-md p-5 text-justify md:text-2xl" style="font-size: 22px">
 			Bem-vindo à Himarte, sua porta de entrada para o futuro digital! Somos mais do que um provedor
 			de internet, somos pioneiros em conectividade. Na Himarte, a experiência do cliente é nossa
 			prioridade, e nosso compromisso com a mais alta qualidade reflete-se em cada byte que
@@ -211,7 +213,7 @@
 			confiável, mas convidamos você a "Dizer Hi para o futuro".
 		</p>
 		<p class="text-md p-5 text-justify md:text-2xl">
-			Na Himarte, <span class="uppercase underline decoration-primary-600"> o futuro é aqui</span>!
+			Na Himarte, <span class="uppercase underline decoration-primary-600"> o futuro é aqui !</span>
 		</p>
 	</article>
 </section>
