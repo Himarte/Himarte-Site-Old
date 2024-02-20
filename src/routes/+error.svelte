@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import { redirect } from '@sveltejs/kit';
 
-	// Redireciona para a raiz ("/") quando a página é carregada
+	// Redireciona para a raiz ("/") quando da algum erro ou a pagina nao existe
 	throw redirect(300, '/');
 </script>
 

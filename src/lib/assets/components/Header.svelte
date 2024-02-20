@@ -10,18 +10,18 @@
 	];
 </script>
 
-<AppBar class="px-10 md:px-28" slotDefault="flex justify-center gap-5" background="bg-surface-700">
+<AppBar class="px-10 md:px-28" slotDefault="flex justify-center" background="bg-surface-600">
 	<svelte:fragment slot="lead">
 		<a href="/" target="_self">
-			<img src={LogoPrincipal} class="h-8 sm:h-10" alt="Logo da Himarte" />
+			<img src={LogoPrincipal} class="h-8 sm:h-12 lg:min-w-36" alt="Logo da Himarte" />
 		</a>
 	</svelte:fragment>
 	<svelte:fragment>
 		<nav aria-label="Menu principal">
-			<ul class="hidden md:flex" role="navigation">
+			<ul class="hidden md:flex gap-5" role="navigation">
 				{#each links as link (link.href)}
 					<a
-						class="btn md:text-xl hover:variant-soft-primary"
+						class="btn md:text-xl font-semibold hover:variant-soft-primary"
 						href={link.href}
 						target="_self"
 						class:active={$page.url.pathname === link.href}>{link.text}</a
@@ -34,7 +34,7 @@
 		<a
 			href="https://himarte.portal.7az.com.br/login"
 			target="_blank"
-			class="flex btn-sm rounded-full md:btn variant-ghost-primary hover:variant-filled-primary font-semibold"
+			class="flex btn-sm rounded-full text-base md:text-xl md:btn variant-ghost-primary hover:variant-filled-primary font-semibold"
 			aria-label="Acessar a área do cliente">Area do Cliente</a
 		>
 	</svelte:fragment>
@@ -44,9 +44,5 @@
 	.active {
 		font-weight: 600;
 		color: rgb(var(--color-primary-500));
-	}
-
-	.active:hover {
-		color: rgb(var(--color-primary-600));
 	}
 </style>
