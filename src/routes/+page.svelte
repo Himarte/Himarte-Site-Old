@@ -23,21 +23,24 @@
 	import Building2 from 'lucide-svelte/icons/building-2';
 
 	// Interaçao do texto DIGITANDO...
-	let frase = 'O FUTURO É AQUI';
+	let fraseOriginal = 'O FUTURO É AQUI';
 	let fraseDigitada = '';
 	let i = 0;
-	let typewriter: any;
+	let escritaIntervalo: any;
 
-	const typeChar = () => {
-		if (i < frase.length) {
-			fraseDigitada += frase[i];
-			i += 1;
-		} else {
-			clearInterval(typewriter);
-		}
+	const digitando = () => {
+		escritaIntervalo = setInterval(() => {
+			if (i < fraseOriginal.length) {
+				fraseDigitada += fraseOriginal[i];
+				i += 1;
+			} else {
+				clearInterval(escritaIntervalo);
+			}
+		}, 160);
 	};
-	const digitando = () => (typewriter = setInterval(typeChar, 130));
 	onMount(digitando);
+	// ---------------------------------------------
+
 	// ---------------------------------------------
 
 	let BlipChat: any;
@@ -193,8 +196,6 @@
 		</section>
 	</svelte:fragment>
 </TabGroup>
-
-<!-- <ClienteList {clientes} /> -->
 
 <section class="flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-around">
 	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[35rem]" />

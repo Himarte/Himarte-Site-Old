@@ -9,10 +9,13 @@
 
 	const openChat = () => {
 		blipClient.toogleChat();
-		blipClient.sendMessage({
-			type: 'text/plain',
-			content: 'Olá, gostaria de saber mais sobre o plano do planeta <strong>' + nome + '</strong>.'
-		});
+		setTimeout(() => {
+			blipClient.sendMessage({
+				type: 'text/plain',
+				content:
+					'Olá, gostaria de saber mais sobre o plano do planeta <strong>' + nome + '</strong>.'
+			});
+		}, 2000);
 	};
 </script>
 
