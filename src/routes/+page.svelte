@@ -15,8 +15,8 @@
 
 	// images extras
 	import MiniAstro from '$lib/assets/img/extras/mini-astro.webp';
-	import Wave1t from '$lib/assets/img/extras/wave1t 2.webp';
-	import seta from '$lib/assets/img/extras/seta2.webp';
+	import Wave from '$lib/assets/img/extras/wave.webp';
+	import seta from '$lib/assets/img/extras/seta.webp';
 	import { Tab, TabGroup } from '@skeletonlabs/skeleton';
 	import PlanetaCardFibraDedicada from '$lib/assets/components/PlanetaCardFibraDedicada.svelte';
 	import UsersRound from 'lucide-svelte/icons/users-round';
@@ -68,7 +68,7 @@
 	</p>
 </picture>
 
-<img src={Wave1t} alt="Degrade de cores" class="flex w-full opacity-30" />
+<img src={Wave} alt="Degrade de cores" class="flex w-full opacity-30" />
 
 <TabGroup justify="justify-center gap-5">
 	<Tab
@@ -197,24 +197,31 @@
 	</svelte:fragment>
 </TabGroup>
 
-<section class="flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-around">
-	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[35rem]" />
+<section class="flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-center gap-2">
+	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[29rem]" />
 
 	<article class="flex w-[55rem] flex-col items-center justify-center gap-5 md:gap-10">
 		<h1
-			class="h1 fontSpace gradient-heading flex items-center justify-center text-center text-2xl md:text-4xl"
+			class="h1 fontSpace gradient-heading flex items-center font-bold justify-center text-center text-2xl md:text-4xl"
 		>
 			Quem somos?
 		</h1>
-		<p class="text-md p-5 text-justify md:text-2xl" style="font-size: 22px">
-			Bem-vindo à Himarte, sua porta de entrada para o futuro digital! Somos mais do que um provedor
-			de internet, somos pioneiros em conectividade. Na Himarte, a experiência do cliente é nossa
-			prioridade, e nosso compromisso com a mais alta qualidade reflete-se em cada byte que
-			entregamos. Exploramos novos horizontes no universo digital, não apenas oferecemos internet
-			confiável, mas convidamos você a "Dizer Hi para o futuro".
+		<p class="text-md p-5 text-justify md:text-xl">
+			<span class="text-center w-full flex justify-center md:text-2xl mb-2"
+				>Bem-vindo à Himarte, sua porta de entrada para o futuro digital!</span
+			>
+			Somos mais do que um provedor de internet, somos
+			<span class="text-primary-500">pioneiros em conectividade</span>. Na Himarte, a experiência do
+			cliente é nossa prioridade, e nosso
+			<span class="text-primary-500">compromisso com a mais alta qualidade</span>
+			reflete-se em cada byte que entregamos.<br /><span>
+				Exploramos novos horizontes no universo digital, não apenas oferecemos <span
+					class="text-primary-500">internet confiável</span
+				>, mas convidamos você a dizer Hi para o futuro pois na Himarte</span
+			>
 		</p>
-		<p class="text-md p-5 text-justify md:text-2xl">
-			Na Himarte, <span class="uppercase underline decoration-primary-600"> o futuro é aqui !</span>
+		<p class="text-md p-5 md:p-0 text-justify md:text-3xl">
+			<span class="uppercase font-bold gradient-heading"> o futuro é aqui!</span>
 		</p>
 	</article>
 </section>

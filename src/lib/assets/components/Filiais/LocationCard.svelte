@@ -14,7 +14,7 @@
 	let loading = true;
 </script>
 
-<div class="flex md:w-1/2 md:p-2">
+<div class="flex md:w-1/2 md:p-4 w-full justify-center">
 	<a
 		class="card md:flex card-hover md:w-full overflow-hidden border border-primary-800"
 		href={location.url}
@@ -26,7 +26,7 @@
 				<Spinning />
 			{/if}
 			<iframe
-				class="map-frame"
+				class="w-full h-72 md:w-96 md:h-[250px]"
 				src={location.url}
 				allowfullscreen={true}
 				loading="lazy"
@@ -48,8 +48,8 @@
 </div>
 
 <style>
-	.map-frame {
+	/* .map-frame {
 		width: 25rem;
 		height: 250px;
-	}
+	} */
 </style>
