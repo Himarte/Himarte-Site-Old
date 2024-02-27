@@ -198,7 +198,7 @@
 </TabGroup>
 
 <section class="flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-center gap-2">
-	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[29rem]" />
+	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[29rem]" loading="lazy" />
 
 	<article class="flex w-[55rem] flex-col items-center justify-center gap-5 md:gap-10">
 		<h1
