@@ -107,7 +107,12 @@
 						<figure
 							class="absolute -left-[5.5rem] -top-[3.5rem] hidden w-52 -rotate-[20deg] sm:flex vibate"
 						>
-							<img src={seta} alt="Seta indicando o melhor preço" class="w-16 -rotate-6" />
+							<img
+								src={seta}
+								alt="Seta indicando o melhor preço"
+								class="w-16 -rotate-6"
+								loading="lazy"
+							/>
 							<figcaption
 								class="absolute right-[1.3rem] bg-primary-800/40 -top-[0.9rem] rounded-xl border-2 px-2 text-xl font-bold text-white shadow-[0_0px_2rem_0.1rem] shadow-primary-700 hover:border-2 hover:border-white vibrate"
 							>
