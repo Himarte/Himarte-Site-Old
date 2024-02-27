@@ -7,7 +7,8 @@ export const listaFiliais: any[] = [
 		schedule: '08:30 - 12:00 | 13:00 - 18:00',
 		days: 'Segunda a Sexta',
 		schedule2: '08:00 - 12:00',
-		days2: 'Sábado'
+		days2: 'Sábado',
+		link: 'https://maps.app.goo.gl/gcn9whgELU6MuAuR7'
 	},
 	{
 		url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.1010305099617!2d-52.5019599!3d-29.7168326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951cbacfad314b5f%3A0x21c08751489fdd15!2sR.%20Cl%C3%A1udio%20Manoel%2C%2034%20-%20Centro%2C%20Vera%20Cruz%20-%20RS%2C%2096880-000!5e0!3m2!1spt-BR!2sbr!4v1704916342959!5m2!1spt-BR!2sbr',
@@ -16,7 +17,8 @@ export const listaFiliais: any[] = [
 		schedule: '08:30 - 12:00 | 13:30 - 18:00',
 		days: 'Segunda a Sexta',
 		schedule2: '08:00 - 12:00',
-		days2: 'Sábado'
+		days2: 'Sábado',
+		link: 'https://maps.app.goo.gl/N2BophAoV8BRfkpB6'
 	},
 	{
 		url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.8313322753793!2d-52.380830074465095!3d-29.98427696370144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951b5d438b3601f9%3A0xece5e30052035b44!2sR.%20Andrade%20Neves%2C%20545%20-%20Centro%2C%20Rio%20Pardo%20-%20RS%2C%2096640-000!5e0!3m2!1spt-BR!2sbr!4v1704917277535!5m2!1spt-BR!2sbr',
@@ -25,7 +27,8 @@ export const listaFiliais: any[] = [
 		schedule: '08:30 - 12:00 | 13:30 - 18:00',
 		days: 'Segunda a Sexta',
 		schedule2: '08:00 - 12:00',
-		days2: 'Sábado'
+		days2: 'Sábado',
+		link: 'https://maps.app.goo.gl/eeKHHbRnYcKaVVGk8'
 	},
 
 	{
@@ -35,7 +38,8 @@ export const listaFiliais: any[] = [
 		schedule: '08:30 - 12:00 | 13:30 - 18:00',
 		days: 'Segunda a Sexta',
 		schedule2: '08:00 - 12:00',
-		days2: 'Sábado'
+		days2: 'Sábado',
+		link: 'https://maps.app.goo.gl/yM85og8nVN1j1Zkh8'
 	},
 
 	{
@@ -45,7 +49,8 @@ export const listaFiliais: any[] = [
 		schedule: '08:30 - 12:00 | 13:30 - 18:00',
 		days: 'Segunda a Sexta',
 		schedule2: '08:00 - 12:00',
-		days2: 'Sábado'
+		days2: 'Sábado',
+		link: 'https://maps.app.goo.gl/o1Df1j2EsaqNaGx29'
 	},
 
 	{
@@ -55,6 +60,7 @@ export const listaFiliais: any[] = [
 		schedule: '08:30 - 12:00 | 13:30 - 18:00',
 		days: 'Segunda a Sexta',
 		schedule2: '08:00 - 12:00',
-		days2: 'Sábado'
+		days2: 'Sábado',
+		link: 'https://maps.app.goo.gl/72SJiiRRZEe619qQ7'
 	}
 ];

@@ -8,6 +8,7 @@
 		days: string;
 		schedule2: string;
 		days2: string;
+		link: string;
 	}
 
 	export let location: Location;
@@ -17,7 +18,7 @@
 <div class="flex md:w-1/2 md:p-4 w-full justify-center">
 	<a
 		class="card md:flex card-hover md:w-full overflow-hidden border border-primary-800"
-		href={location.url}
+		href={location.link}
 		aria-label={location.title}
 		target="_blank"
 	>
@@ -38,11 +39,11 @@
 		<div
 			class="flex flex-col w-full py-20 md:py-0 justify-center items-center space-y-2 whitespace-nowrap"
 		>
-			<h3 class="h3 text-primary-500">{location.city}</h3>
-			<h6 class="h6">{location.days}</h6>
-			<h6 class="h6">{location.schedule}</h6>
-			<h6 class="h6">{location.days2}</h6>
-			<h6 class="h6">{location.schedule2}</h6>
+			<h3 class="h4 text-primary-500">{location.city}</h3>
+			<h6 class="h7">{location.days}</h6>
+			<h6 class="h7">{location.schedule}</h6>
+			<h6 class="h7">{location.days2}</h6>
+			<h6 class="h7">{location.schedule2}</h6>
 		</div>
 	</a>
 </div>
