@@ -46,10 +46,3 @@
 		</div>
 	</a>
 </div>
-
-<style>
-	/* .map-frame {
-		width: 25rem;
-		height: 250px;
-	} */
-</style>
