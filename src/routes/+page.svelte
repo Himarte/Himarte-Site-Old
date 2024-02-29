@@ -21,6 +21,7 @@
 	import PlanetaCardFibraDedicada from '$lib/assets/components/PlanetaCardFibraDedicada.svelte';
 	import UsersRound from 'lucide-svelte/icons/users-round';
 	import Building2 from 'lucide-svelte/icons/building-2';
+	import notebookImg from '$lib/assets/img/extras/notebook4.webp';
 
 	// Interaçao do texto DIGITANDO...
 	let fraseOriginal = 'O FUTURO É AQUI';
@@ -201,32 +202,52 @@
 		</section>
 	</svelte:fragment>
 </TabGroup>
+<section
+	class="flex px-5 md:px-28 md:pt-32 items-center justify-center gap-24 relative h-[27rem md:h-[25rem] pt-10"
+>
+	<div class="flex flex-col justify-evenly md:justify-center items-center md:gap-16 h-80">
+		<h1
+			class="h2 font-bold gradient-heading2 text-center max-w-96 md:max-w-[33rem] transform translate-y-[-5.8rem] md:transform-none uppercase"
+		>
+			Veja até onde a Himarte pode te levar!
+		</h1>
+		<a
+			href="https://www.minhaconexao.com.br/?server_id=001805"
+			target="_blank"
+			class="btn variant-glass-surface md:variant-outline-primary md:hover:variant-filled-primary text-2xl font-semibold transform translate-y-[-2rem]"
+			>Teste a sua velocidade</a
+		>
+	</div>
+	<img
+		src={notebookImg}
+		loading="lazy"
+		alt="Imagem de um notebook no espaço com um botão de teste de velocidade"
+		class="absolute -z-10 md:static w-[35rem] transform scale-x-[-1] translate-x-1 md:translate-x-36 md:rotate-12"
+	/>
+</section>
 
-<section class="flex h-[36rem] px-5 md:px-10 md:h-[50rem] md:justify-center gap-2">
+<section
+	class="flex h-[25rem] mt-10 md:mt-0 mb-10 md:mb-0 px-5 md:px-10 md:h-[50rem] md:justify-center gap-2"
+>
 	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[29rem]" loading="lazy" />
 
-	<article class="flex w-[55rem] flex-col items-center justify-center gap-5 md:gap-10">
-		<h1
-			class="h1 fontSpace gradient-heading flex items-center font-bold justify-center text-center text-2xl md:text-4xl"
-		>
-			Quem somos?
-		</h1>
-		<p class="text-md p-5 text-justify md:text-xl">
-			<span class="text-center w-full flex justify-center md:text-2xl mb-2"
+	<article class="flex w-[55rem] flex-col items-center justify-center gap-0 md:gap-5">
+		<p class="h2 text-justify">
+			<span class="uppercase font-bold gradient-heading">O futuro é aqui!</span>
+		</p>
+		<p class="text-md p-5 text-justify md:text-xl w-full">
+			<span class="text-center w-full flex justify-center h4 mb-4 md:mb-7"
 				>Bem-vindo à Himarte, sua porta de entrada para o futuro digital!</span
 			>
 			Somos mais do que um provedor de internet, somos
-			<span class="text-primary-500">pioneiros em conectividade</span>. Na Himarte, a experiência do
-			cliente é nossa prioridade, e nosso
+			<span class="text-primary-500">pioneiros em conectividade</span>.<br /> Na Himarte, a
+			experiência do cliente é nossa prioridade, e nosso
 			<span class="text-primary-500">compromisso com a mais alta qualidade</span>
 			reflete-se em cada byte que entregamos.<br /><span>
 				Exploramos novos horizontes no universo digital, não apenas oferecemos <span
 					class="text-primary-500">internet confiável</span
 				>, mas convidamos você a dizer Hi para o futuro pois na Himarte</span
 			>
-		</p>
-		<p class="text-md p-5 md:p-0 text-justify md:text-3xl">
-			<span class="uppercase font-bold gradient-heading"> o futuro é aqui!</span>
 		</p>
 	</article>
 </section>

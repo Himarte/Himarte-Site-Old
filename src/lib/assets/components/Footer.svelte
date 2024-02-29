@@ -33,7 +33,7 @@
 	<div class="flex flex-col md:flex-row md:px-32">
 		<div class="flex flex-col items-center md:items-start md:w-1/3">
 			<img src={LogoRodape} alt="Logo Himarte" class="w-32 md:w-36 h-8 md:h-10 mb-3" />
-			<p class="px-5 md:px-0 text-sm md:text-lg fontSpace">O futuro é aqui</p>
+			<p class="hidden md:flex px-5 md:px-0 text-sm md:text-lg fontSpace">O futuro é aqui</p>
 		</div>
 
 		<ul class="flex items-center p-8 md:p-0 gap-10 md:w-1/3 justify-center">
@@ -46,7 +46,7 @@
 
 		<ul class="hidden md:flex flex-col gap-3 md:w-1/3 md:items-end">
 			<!-- Links adicionais -->
-			 <a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Sobre</a>
+			<a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Sobre</a>
 			<a href="/trabalhe-conosco" class="text-primary-500 hover:text-primary-600"
 				>Trabalhe conosco</a
 			>
