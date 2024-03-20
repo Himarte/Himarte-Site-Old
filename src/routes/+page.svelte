@@ -152,7 +152,6 @@
 						imagem={planetaVenus}
 						nome="Venus"
 						megas="300"
-						preco="350"
 						ipFixo={true}
 					/>
 
@@ -161,7 +160,6 @@
 						imagem={planetaMarte}
 						nome="Marte"
 						megas="500"
-						preco="550"
 						ipFixo={true}
 					/>
 					<PlanetaCardProfissional
@@ -169,7 +167,6 @@
 						imagem={planetaJupiter}
 						nome="Jupiter"
 						megas="1000"
-						preco="1100"
 						ipFixo={true}
 					/>
 				</div>
@@ -179,7 +176,6 @@
 						imagem={planetaUrano}
 						nome="Urano"
 						megas="300"
-						preco="200"
 						ipFixo={false}
 					/>
 					<PlanetaCardProfissional
@@ -187,7 +183,6 @@
 						imagem={planetaPlutao}
 						nome="Plutão"
 						megas="200"
-						preco="150"
 						ipFixo={false}
 					/>
 

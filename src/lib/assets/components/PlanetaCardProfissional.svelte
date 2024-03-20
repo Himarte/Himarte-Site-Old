@@ -4,7 +4,6 @@
 	export let nome: string;
 	export let imagem: any;
 	export let megas: string;
-	export let preco: string;
 	export let blipClient: any;
 	export let ipFixo: boolean;
 
@@ -17,9 +16,7 @@
 				nome +
 				'</strong> profissional, no caso seria <strong>' +
 				megas +
-				'</strong> megas com valor de <strong>' +
-				preco +
-				'</strong> reais.'
+				'</strong> megas com valor de <strong>'
 		});
 	};
 </script>
@@ -35,7 +32,7 @@
 	/>
 
 	<div>
-		<h5 class="text-4xl font-bold text-primary-600">
+		<h5 class="text-4xl font-bold text-primary-600 mb-3">
 			{nome}
 			<span class="text-sm border-2 rounded-2xl px-2 border-primary-700 text-gray-300">PRO</span>
 		</h5>
@@ -50,13 +47,6 @@
 		</div>
 	</div>
 	<div class="flex flex-col">
-		<span class="flex items-baseline justify-center text-white">
-			<span class="text-2xl font-semibold text-primary-600">R$</span>
-			<span class="text-4xl font-extrabold tracking-tight">{preco}</span>
-			<span class="text-2xl font-extrabold tracking-tight text-primary-600">,</span>
-			<span class="text-2xl font-extrabold tracking-tight">90</span>
-			<span class="ms-1 text-xl font-normal text-gray-400">/Mês</span>
-		</span>
 		<button
 			on:click={openChat}
 			class="btn variant-outline-primary mt-1 w-full font-semibold uppercase hover:variant-filled-primary"
