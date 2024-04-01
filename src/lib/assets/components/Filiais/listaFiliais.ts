@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const listaFiliais: any[] = [
 	{
-		url: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.102343842047!2d-52.432947938128684!3d-29.716794553625597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ca341c88d2aa9%3A0xa9fa7eeeda54d7cf!2sR.%20Ramiro%20Barcelos%2C%201058%20-%20Centro%2C%20Santa%20Cruz%20do%20Sul%20-%20RS%2C%2096810-054!5e0!3m2!1spt-BR!2sbr!4v1705692190248!5m2!1spt-BR!2sbr',
+		url: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d728.3843630086606!2d-52.43018057539583!3d-29.725567503944752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ca36c00bd5853%3A0x616fb46dea836058!2sHIMARTE%20NET!5e0!3m2!1spt-BR!2sbr!4v1711995173755!5m2!1spt-BR!2sbr',
 		title: 'Himarte Net Localização Santa Cruz do Sul',
 		city: 'Santa Cruz do Sul',
 		schedule: '08:30 - 12:00 | 13:00 - 18:00',
