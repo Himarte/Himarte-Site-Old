@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
-	import { AppShell, Toast } from '@skeletonlabs/skeleton';
+	import { AppShell, Toast, type PopupSettings } from '@skeletonlabs/skeleton';
 	import Header from '$lib/assets/components/Header.svelte';
 	import Footer from '$lib/assets/components/Footer.svelte';
 	// Highlight JS
