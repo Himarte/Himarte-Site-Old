@@ -17,7 +17,18 @@
 		// Defines which side of your trigger the popup will appear
 		placement: 'bottom'
 	};
+
+	import { onMount } from 'svelte';
+	import { Clock8 } from 'lucide-svelte';
+
+	let innerWidth: number;
+
+	onMount(() => {
+		innerWidth = window.innerWidth;
+	});
 </script>
+
+<svelte:window bind:innerWidth />
 
 <AppBar class="px-5 md:px-28" slotDefault="flex justify-center" background="bg-surface-600">
 	<svelte:fragment slot="lead">
@@ -48,18 +59,52 @@
 				aria-label="Acessar a área do cliente">Area do Cliente</a
 			>
 
-			<button
-				class="btn-icon variant-ghost-primary hover:variant-filled-primary h-10 w-10 p-1 rounded-full"
-				use:popup={popupFeatured}><Phone /></button
-			>
+			{#if innerWidth <= 768}
+				<a
+					class="flex btn-icon variant-ghost-primary justify-center h-10 w-10 p-1 rounded-full"
+					href="tel:5130568251"
+				>
+					<Phone />
+				</a>
+			{:else}
+				<button
+					class="btn-icon variant-ghost-primary hover:variant-filled-primary h-10 w-10 p-1 rounded-full"
+					use:popup={popupFeatured}><Phone /></button
+				>
+			{/if}
 
 			<div
-				class="bg-[#111B2D] rounded-xl p-4 w-48 shadow-xl border-[0.3px] border-opacity-65 border-surface-900"
+				class="bg-[#111B2D] rounded-xl p-3 w-64 shadow-xl justify-center items-center border-[0.3px] border-opacity-65 border-surface-900"
 				data-popup="popupFeatured"
 			>
-				<div class="flex justify-center gap-2 md:gap-5">
-					<Headset />
-					<p>(51) 3056-8251</p>
+				<div class="flex justify-center gap-3 mb-1">
+					<Clock8 />
+
+					<span class="font-semibold">Horários de Atendimento</span>
+				</div>
+				<div class="flex justify-center">
+					<span class="">Segunda a Sabado</span>
+				</div>
+				<div class="flex justify-center">
+					<span class="">08:00 | 12:00 - 13:00 | 22:00</span>
+				</div>
+				<div class="flex justify-center">
+					<span class="">Domingo</span>
+				</div>
+				<div class="flex justify-center">
+					<span class="">08:00 | 12:00 - 13:00 | 17:00</span>
+				</div>
+
+				<div class="flex justify-center border-t mt-3 pt-3">
+					<div class="flex gap-3 justify-center">
+						<Headset />
+
+						<a
+							href="https://wa.me/51996474579?text=Eu%20gostaria%20de%20falar%20com%20um%20atendente%20da%20Himarte%2C%20eu%20vim%20atravez%20do%20site"
+							target="_blank"
+							class="hover:text-primary-500">(51) 3056-8251</a
+						>
+					</div>
 				</div>
 				<div
 					class="arrow bg-surface-100-800-token border-[0.3px] border-l border-t border-opacity-65 border-surface-500"
