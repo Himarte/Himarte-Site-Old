@@ -100,7 +100,7 @@
 						<Headset />
 
 						<a
-							href="https://wa.me/51996474579?text=Eu%20gostaria%20de%20falar%20com%20um%20atendente%20da%20Himarte%2C%20eu%20vim%20atravez%20do%20site"
+							href="https://wa.me/555130568251?text=Eu%20gostaria%20de%20falar%20com%20um%20atendente%20da%20Himarte%2C%20eu%20vim%20atravez%20do%20site"
 							target="_blank"
 							class="hover:text-primary-500">(51) 3056-8251</a
 						>
