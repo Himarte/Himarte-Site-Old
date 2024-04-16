@@ -14,9 +14,7 @@
 			content:
 				'Olá, gostaria de saber mais sobre o plano do planeta <strong>' +
 				nome +
-				'</strong> profissional, no caso seria <strong>' +
-				megas +
-				'</strong> megas com valor de <strong>'
+				'</strong> profissional.'
 		});
 	};
 </script>
