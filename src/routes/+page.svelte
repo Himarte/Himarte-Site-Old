@@ -202,7 +202,7 @@
 		<h1
 			class="h2 font-bold gradient-heading2 text-center max-w-96 md:max-w-[33rem] transform translate-y-[-5.8rem] md:transform-none uppercase"
 		>
-			Veja até onde a Himarte pode te levar!!
+			Veja até onde a Himarte pode te levar!!!
 		</h1>
 		<a
 			href="https://www.minhaconexao.com.br/?server_id=001805"
