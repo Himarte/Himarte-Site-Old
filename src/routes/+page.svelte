@@ -195,9 +195,7 @@
 		</section>
 	</svelte:fragment>
 </TabGroup>
-<section
-	class="flex px-5 md:px-28 md:pt-32 items-center justify-center gap-24 relative h-[27rem md:h-[25rem] pt-10"
->
+<section class="flex px-5 md:px-28 items-center justify-center gap-24 w-full relative py-16">
 	<div class="flex flex-col justify-evenly md:justify-center items-center md:gap-16 h-80">
 		<h1
 			class="h2 font-bold gradient-heading2 text-center max-w-96 md:max-w-[33rem] transform translate-y-[-5.8rem] md:transform-none uppercase"
@@ -219,29 +217,32 @@
 	/>
 </section>
 
-<section
-	class="flex h-[25rem] mt-10 md:mt-0 mb-10 md:mb-0 px-5 md:px-10 md:h-[50rem] md:justify-center gap-2"
->
-	<img src={MiniAstro} alt="Mini astronauta" class="hidden md:flex md:w-[29rem]" loading="lazy" />
+<section class="flex items-center justify-center justify-centerpx-8 md:px-56 pb-16 pt-0">
+	<img
+		src={MiniAstro}
+		alt="Mini astronauta"
+		class="hidden md:flex md:w-[20rem] h-[38rem]"
+		loading="lazy"
+	/>
 
-	<article class="flex w-[55rem] flex-col items-center justify-center gap-0 md:gap-5">
-		<p class="h2 text-justify">
-			<span class="uppercase font-bold gradient-heading">O futuro é aqui!</span>
-		</p>
-		<p class="text-md p-5 text-justify md:text-xl w-full">
-			<span class="text-center w-full flex justify-center h4 mb-4 md:mb-7"
-				>Bem-vindo à Himarte, sua porta de entrada para o futuro digital!</span
-			>
-			Somos mais do que um provedor de internet, somos
-			<span class="text-primary-500">pioneiros em conectividade</span>.<br /> Na Himarte, a
-			experiência do cliente é nossa prioridade, e nosso
-			<span class="text-primary-500">compromisso com a mais alta qualidade</span>
-			reflete-se em cada byte que entregamos.<br /><span>
-				Exploramos novos horizontes no universo digital, não apenas oferecemos <span
-					class="text-primary-500">internet confiável</span
-				>, mas convidamos você a dizer Hi para o futuro pois na Himarte</span
-			>
-		</p>
+	<article class="flex flex-col w-full h-full items-center justify-center gap-2 md:gap-5 px-0">
+		<h2 class="h2 uppercase font-bold gradient-heading">O futuro é aqui!</h2>
+		<span class="text-center w-full font-bold md:h4 text-sm md:text-xl"
+			>Bem-vindo à Himarte, sua porta de entrada para o futuro digital!</span
+		>
+		<div class="w-full md:w-2/3 flex mt-5 md:mt-0 px-5 md:px-0">
+			<div class="iframe-container">
+				<iframe
+					class="md:border-2 border border-primary-500 rounded-md md:rounded-2xl border-opacity-70"
+					src="https://www.youtube-nocookie.com/embed/seGVeab1a-I?si=PoyImY2uxZ11CmHh"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				></iframe>
+			</div>
+		</div>
 	</article>
 </section>
 
@@ -270,5 +271,18 @@
 	}
 	.mainImgBg {
 		background-image: url('$lib/assets/img/extras/hi-astronauta-main.webp');
+	}
+	.iframe-container {
+		position: relative;
+		width: 100%;
+		padding-bottom: 56.25%;
+		height: 0;
+	}
+	.iframe-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 </style>

@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 	import { AppBar, popup, type PopupSettings } from '@skeletonlabs/skeleton';
 	import Phone from 'lucide-svelte/icons/phone';
-	import Headset from 'lucide-svelte/icons/headphones';
+	import PhoneIncoming from 'lucide-svelte/icons/phone-incoming';
 	const links = [
 		{ href: '/', text: 'Home' },
 		{ href: '/sobre-nos', text: 'Sobre' },
@@ -22,13 +22,7 @@
 	import { Clock8 } from 'lucide-svelte';
 
 	let innerWidth: number;
-
-	onMount(() => {
-		innerWidth = window.innerWidth;
-	});
 </script>
-
-<svelte:window bind:innerWidth />
 
 <AppBar class="px-5 md:px-28" slotDefault="flex justify-center" background="bg-surface-600">
 	<svelte:fragment slot="lead">
@@ -97,7 +91,7 @@
 
 				<div class="flex justify-center border-t mt-3 pt-3">
 					<div class="flex gap-3 justify-center">
-						<Headset />
+						<PhoneIncoming />
 
 						<a
 							href="https://wa.me/555130568251?text=Eu%20gostaria%20de%20falar%20com%20um%20atendente%20da%20Himarte%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site."

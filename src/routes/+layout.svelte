@@ -26,15 +26,6 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
-
-	import posthog from 'posthog-js';
-	import { browser } from '$app/environment';
-	import { beforeNavigate, afterNavigate } from '$app/navigation';
-
-	if (browser) {
-		beforeNavigate(() => posthog.capture('$pageleave'));
-		afterNavigate(() => posthog.capture('$pageview'));
-	}
 </script>
 
 <Toast />
@@ -45,7 +36,7 @@
 		<Header />
 	</svelte:fragment>
 	<!-- Page Route Content -->
-	<main class="relative">
+	<main class="relative flex flex-col w-full h-full">
 		<slot />
 	</main>
 	<svelte:fragment slot="pageFooter">

@@ -53,5 +53,5 @@
 			<a href="/sobre-nos" class="text-primary-500 hover:text-primary-600">Filiais</a>
 		</ul>
 	</div>
-	<p class="text-center text-sm">&copy;{currentYear} Quiliao</p>
+	<p class="text-center text-sm">&copy;{currentYear} Himarte Net</p>
 </footer>
