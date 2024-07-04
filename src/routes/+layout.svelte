@@ -11,7 +11,7 @@
 	import css from 'highlight.js/lib/languages/css';
 	import javascript from 'highlight.js/lib/languages/javascript';
 	import typescript from 'highlight.js/lib/languages/typescript';
-
+	import { page } from '$app/stores';
 	// Skeleton Stores
 	import { initializeStores } from '@skeletonlabs/skeleton';
 	initializeStores();
@@ -26,6 +26,8 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	let linktree = $page.url.pathname === '/linktree' ? false : true;
 </script>
 
 <Toast />
@@ -33,13 +35,17 @@
 <!-- App Shell -->
 <AppShell>
 	<svelte:fragment slot="header">
-		<Header />
+		{#if linktree}
+			<Header />
+		{/if}
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<main class="relative flex flex-col w-full h-full">
 		<slot />
 	</main>
 	<svelte:fragment slot="pageFooter">
-		<Footer />
+		{#if linktree}
+			<Footer />
+		{/if}
 	</svelte:fragment>
 </AppShell>
