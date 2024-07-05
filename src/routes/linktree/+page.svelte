@@ -7,6 +7,7 @@
 	import facebookIcon from '$lib/assets/img/extras/facebookIcone.webp';
 	import linkedinIcon from '$lib/assets/img/extras/linkedinIcon.webp';
 	import whatsappIcon from '$lib/assets/img/extras/whatsIcon.webp';
+	import logoNomeComepleto from '$lib/assets/img/logos/logo-nome.webp';
 </script>
 
 <div
@@ -26,6 +27,14 @@
 		<nav
 			class="flex flex-col justify-center absolute items-center z-30 w-full h-full !bg-transparent gap-5"
 		>
+			<a
+				target="_blank"
+				href="https://himarte.com.br/"
+				class="w-full absolute z-40 top-16 md:top-14 flex justify-center items-center"
+			>
+				<img src={logoNomeComepleto} alt="Logo Himarte" class="w-1/2" />
+			</a>
+
 			<div class="w-5/6 flex items-center justify-center gap-3 mb-10">
 				<a
 					target="_blank"
