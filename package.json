@@ -14,9 +14,10 @@
   "devDependencies": {
     "@skeletonlabs/skeleton": "2.7.1",
     "@skeletonlabs/tw-plugin": "0.3.1",
-    "@sveltejs/adapter-auto": "^3.2.1",
-    "@sveltejs/adapter-vercel": "^5.3.1",
-    "@sveltejs/kit": "^2.5.10",
+    "@sveltejs/adapter-auto": "^3.2.2",
+    "@sveltejs/adapter-vercel": "^5.4.0",
+    "@sveltejs/kit": "^2.5.18",
+
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/typography": "0.5.10",
@@ -29,16 +30,18 @@
     "autoprefixer": "10.4.17",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-svelte": "^2.39.3",
+    "eslint-plugin-svelte": "^2.41.0",
     "postcss": "8.4.33",
     "prettier": "^3.3.2",
-    "prettier-plugin-svelte": "^3.2.4",
+    "prettier-plugin-svelte": "^3.2.5",
     "svelte": "^4.2.18",
-    "svelte-check": "^3.8.0",
+    "svelte-check": "^3.8.4",
     "tailwindcss": "3.4.1",
     "tslib": "^2.6.3",
-    "typescript": "^5.4.5",
-    "vite": "^5.3.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3",
+
+   
     "vite-plugin-tailwind-purgecss": "0.2.0"
   },
   "type": "module",
@@ -47,7 +50,7 @@
     "blip-chat-widget": "^1.11.0",
     "highlight.js": "11.9.0",
     "lucide-svelte": "^0.312.0",
-    "nodemailer": "^6.9.13",
+    "nodemailer": "^6.9.14",
     "sanitize-html": "^2.13.0"
   }
 }

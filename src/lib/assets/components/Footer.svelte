@@ -29,7 +29,7 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="flex flex-col justify-between md:h-36">
+<footer class="flex flex-col justify-between md:h-36 pt-5">
 	<div class="flex flex-col md:flex-row md:px-32">
 		<div class="flex flex-col items-center md:items-start md:w-1/3">
 			<img src={LogoRodape} alt="Logo Himarte" class="w-32 md:w-36 h-8 md:h-10 mb-3" />

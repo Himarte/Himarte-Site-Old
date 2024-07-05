@@ -18,7 +18,6 @@
 		placement: 'bottom'
 	};
 
-	import { onMount } from 'svelte';
 	import { Clock8 } from 'lucide-svelte';
 
 	let innerWidth: number;
@@ -94,7 +93,7 @@
 						<PhoneIncoming />
 
 						<a
-							href="https://wa.me/555130568251?text=Eu%20gostaria%20de%20falar%20com%20um%20atendente%20da%20Himarte%2C%20estou%20entrando%20em%20contato%20atrav%C3%A9s%20do%20site."
+							href="https://wa.me/555130568251?text=Ola!%20Tudo%20bem?"
 							target="_blank"
 							class="hover:text-primary-500">(51) 3056-8251</a
 						>
