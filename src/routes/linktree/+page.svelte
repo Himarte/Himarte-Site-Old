@@ -8,6 +8,7 @@
 	import linkedinIcon from '$lib/assets/img/extras/linkedinIcon.webp';
 	import whatsappIcon from '$lib/assets/img/extras/whatsIcon.webp';
 	import logoNomeComepleto from '$lib/assets/img/logos/logo-nome-quliadade2.png';
+	import baixeNossoApp from '$lib/assets/img/extras/BaixeApp.webp';
 </script>
 
 <svelte:head>
@@ -49,10 +50,10 @@
 		<img
 			src={astroColorido}
 			alt="Imagem colorida de um astronauta"
-			class="absolute object-cover h-full w-full mix-blend-difference !rounded-3xl aspect-auto blur-[3px]"
+			class="absolute object-cover h-full w-full mix-blend-difference !rounded-3xl aspect-auto blur-[10px]"
 		/>
 		<nav
-			class="flex flex-col justify-center absolute items-center z-30 w-full h-full !bg-transparent gap-10"
+			class="flex flex-col justify-center absolute items-center z-30 w-full h-full !bg-transparent"
 		>
 			<a
 				target="_blank"
@@ -88,6 +89,12 @@
 					</a>
 				</div>
 			</div>
+
+			<img
+				src={baixeNossoApp}
+				alt="Texto dizendo Baixe nosso aplicativo"
+				class="w-2/3 pt-12 pb-5"
+			/>
 
 			<div class="w-5/6 flex flex-col items-center justify-center gap-3">
 				<a
