@@ -12,6 +12,7 @@
 	import javascript from 'highlight.js/lib/languages/javascript';
 	import typescript from 'highlight.js/lib/languages/typescript';
 	import { page } from '$app/stores';
+
 	// Skeleton Stores
 	import { initializeStores } from '@skeletonlabs/skeleton';
 	initializeStores();
@@ -25,9 +26,15 @@
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
+	import { onMount } from 'svelte';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
 	let linktree = $page.url.pathname === '/linktree' ? false : true;
+	onMount(async () => {
+		const res = await fetch('/api/meta-pixel', {
+			method: 'POST'
+		});
+	});
 </script>
 
 <Toast />
