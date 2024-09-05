@@ -23,7 +23,7 @@
 <AppBar class="px-5 md:px-28" slotDefault="flex justify-center" background="bg-surface-600">
 	<svelte:fragment slot="lead">
 		<a href="/" target="_self">
-			<img src={LogoPrincipal} class="h-6 sm:h-12 lg:min-w-36" alt="Logo da Himarte" />
+			<img src={LogoPrincipal} class="h-6 sm:h-12 md:min-w-36" alt="Logo da Himarte" />
 		</a>
 	</svelte:fragment>
 	<svelte:fragment>
