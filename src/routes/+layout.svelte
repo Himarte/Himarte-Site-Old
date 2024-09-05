@@ -31,7 +31,7 @@
 
 	let linktree = $page.url.pathname === '/linktree' ? false : true;
 	onMount(async () => {
-		const res = await fetch('/api/meta-pixel', {
+		await fetch('/api/meta-pixel', {
 			method: 'POST'
 		});
 	});

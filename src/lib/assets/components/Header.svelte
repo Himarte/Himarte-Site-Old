@@ -10,11 +10,8 @@
 		{ href: '/trabalhe-conosco', text: 'Trabalhe Conosco' }
 	];
 	const popupFeatured: PopupSettings = {
-		// Represents the type of event that opens/closed the popup
 		event: 'click',
-		// Matches the data-popup value on your popup element
 		target: 'popupFeatured',
-		// Defines which side of your trigger the popup will appear
 		placement: 'bottom'
 	};
 
@@ -67,7 +64,7 @@
 			{/if}
 
 			<div
-				class="bg-[#111B2D] rounded-xl p-3 w-64 shadow-xl justify-center items-center border-[0.3px] border-opacity-65 border-surface-900"
+				class="bg-[#111B2D] rounded-xl p-3 w-72 shadow-xl justify-center items-center border-[0.3px] border-opacity-65 border-surface-900"
 				data-popup="popupFeatured"
 			>
 				<div class="flex justify-center gap-3 mb-1">
@@ -76,16 +73,22 @@
 					<span class="font-semibold">Horários de Atendimento</span>
 				</div>
 				<div class="flex justify-center">
-					<span class="">Segunda a Sabado</span>
+					<span class="font-semibold">Segunda a Sabado</span>
+				</div>
+				<div class="flex justify-center mb-2">
+					<span class="">08:30 - 12:00 | 13:00 - 22:00</span>
 				</div>
 				<div class="flex justify-center">
-					<span class="">08:00 | 12:00 - 13:00 | 22:00</span>
+					<span class="font-semibold">Domingo</span>
+				</div>
+				<div class="flex justify-center mb-2">
+					<span class="">08:00 - 12:00 | 13:00 - 17:00</span>
 				</div>
 				<div class="flex justify-center">
-					<span class="">Domingo</span>
+					<span class="font-semibold">Feriados</span>
 				</div>
 				<div class="flex justify-center">
-					<span class="">08:00 | 12:00 - 13:00 | 17:00</span>
+					<span class=""> 13:00 - 17:00</span>
 				</div>
 
 				<div class="flex justify-center border-t mt-3 pt-3">
