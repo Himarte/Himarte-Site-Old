@@ -67,22 +67,22 @@
 				class="bg-[#111B2D] rounded-xl p-3 w-72 shadow-xl justify-center items-center border-[0.3px] border-opacity-65 border-surface-900"
 				data-popup="popupFeatured"
 			>
-				<div class="flex justify-center gap-3 mb-1">
-					<Clock8 />
+				<div class="flex relative justify-center gap-3 mb-1">
+					<Clock8 class="absolute left-3" />
 
-					<span class="font-semibold">Horários de Atendimento</span>
+					<span class="font-semibold text-center"> Atendimento Suporte </span>
 				</div>
 				<div class="flex justify-center">
 					<span class="font-semibold">Segunda a Sabado</span>
 				</div>
-				<div class="flex justify-center mb-2">
-					<span class="">08:30 - 12:00 | 13:00 - 22:00</span>
+				<div class="flex justify-center mb-1">
+					<span class="">08:30 - 22:00</span>
 				</div>
 				<div class="flex justify-center">
 					<span class="font-semibold">Domingo</span>
 				</div>
-				<div class="flex justify-center mb-2">
-					<span class="">08:00 - 12:00 | 13:00 - 17:00</span>
+				<div class="flex justify-center mb-1">
+					<span class="">08:00 - 17:00</span>
 				</div>
 				<div class="flex justify-center">
 					<span class="font-semibold">Feriados</span>
